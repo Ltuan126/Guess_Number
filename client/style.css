@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; margin: 16px; }
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 12px; }
+.card { border:1px solid #ddd; border-radius:8px; padding:10px; }
+#log, #chatBox { border:1px solid #ccc; height:200px; overflow:auto; padding:6px; background:#fafafa; }
+.flex { display:flex; gap:8px; }
+input[type='text'], input[type='number'] { padding:6px; }
+.small { color:#666; font-size:12px; }
+#timer { font-weight:bold; }

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>🎮 Đoán Số Online</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      html,
+      body {
+        font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+      }
+      @media (prefers-color-scheme: dark) {
+        .glass {
+          background: rgba(17, 24, 39, 0.6);
+          border-color: rgba(255, 255, 255, 0.08);
+        }
+      }
+      .scroll-area {
+        scrollbar-width: thin;
+      }
+    </style>
+  </head>
+  <body
+    class="h-full bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 text-slate-800 dark:text-slate-100"
+  >
+    <div class="min-h-full px-4 sm:px-6 lg:px-8 py-6">
+      <!-- Header -->
+      <header class="max-w-6xl mx-auto mb-6 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span
+            class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/80 dark:bg-black/30 shadow ring-1 ring-white/40 dark:ring-white/10"
+          >
+            🎯
+          </span>
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-white drop-shadow">
+              Đoán Số Online
+            </h1>
+            <p class="text-white/80 text-sm">
+              Chơi cùng bạn bè • Realtime • Nhiều phòng
+            </p>
+          </div>
+        </div>
+        <div class="hidden sm:flex items-center gap-3">
+          <a
+            href="#"
+            id="roomLabel"
+            class="text-white/90 text-sm px-3 py-1.5 rounded-lg glass"
+            >Phòng: lobby</a
+          >
+          <span class="text-white/90 text-sm px-3 py-1.5 rounded-lg glass"
+            >⏱️ Còn lại: <b id="timer">--</b></span
+          >
+        </div>
+      </header>
+
+      <!-- Main Grid -->
+      <main class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Game Column -->
+        <section class="lg:col-span-2 glass rounded-2xl p-5 shadow-xl">
+          <div class="flex flex-col md:flex-row md:items-end gap-3">
+            <div class="grow">
+              <label class="block text-sm font-semibold text-white/90 mb-1"
+                >Tên của bạn</label
+              >
+              <input
+                id="name"
+                class="w-full rounded-xl px-4 py-3 bg-white/70 dark:bg-white/5 border border-white/40 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-white/60 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400"
+                placeholder="Ví dụ: Tuấn"
+              />
+            </div>
+            <button
+              id="joinBtn"
+              class="rounded-xl px-5 py-3 bg-emerald-500 hover:bg-emerald-600 active:bg-emerald-700 text-white font-semibold shadow transition"
+            >
+              Vào game
+            </button>
+          </div>
+
+          <div class="mt-5 grid sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-sm font-semibold text-white/90 mb-1"
+                >Số bạn đoán</label
+              >
+              <input
+                id="guess"
+                type="number"
+                inputmode="numeric"
+                class="w-full rounded-xl px-4 py-3 bg-white/70 dark:bg-white/5 border border-white/40 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-white/60 text-slate-900 dark:text-slate-100 placeholder:text-slate-500 dark:placeholder:text-slate-400"
+                placeholder="Nhập số..."
+              />
+            </div>
+            <button
+              id="sendBtn"
+              class="rounded-xl px-5 py-3 bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 text-white font-semibold shadow transition"
+            >
+              Gửi
+            </button>
+          </div>
+
+          <div
+            class="mt-6 rounded-2xl bg-white/60 dark:bg-white/5 border border-white/40 dark:border-white/10 p-4"
+          >
+            <div class="flex items-center justify-between mb-3">
+              <h2 class="font-semibold text-slate-900 dark:text-slate-100">
+                Vòng hiện tại
+              </h2>
+              <span
+                id="round"
+                class="text-sm text-slate-600 dark:text-slate-300"
+                >Vòng ? – [1, 100]</span
+              >
+            </div>
+            <div
+              id="log"
+              class="scroll-area h-52 overflow-auto rounded-xl p-3 bg-white/70 dark:bg-black/30 text-sm leading-6"
+            ></div>
+          </div>
+
+          <!-- Chat -->
+          <div
+            class="mt-6 rounded-2xl bg-white/60 dark:bg-white/5 border border-white/40 dark:border-white/10 p-4"
+          >
+            <div class="flex items-center justify-between mb-3">
+              <h2 class="font-semibold">💬 Chat</h2>
+            </div>
+            <div
+              id="chatBox"
+              class="scroll-area h-48 overflow-auto rounded-xl p-3 bg-white/70 dark:bg-black/30 text-sm leading-6"
+            ></div>
+            <div class="mt-3 flex gap-2">
+              <input
+                id="chatInput"
+                class="flex-1 rounded-xl px-4 py-3 bg-white/70 dark:bg-white/5 border border-white/40 dark:border-white/10 focus:outline-none focus:ring-2 focus:ring-white/60"
+                placeholder="Nhập tin nhắn..."
+              />
+              <button
+                id="chatBtn"
+                class="rounded-xl px-4 py-3 bg-pink-500 hover:bg-pink-600 active:bg-pink-700 text-white font-semibold shadow transition"
+              >
+                Gửi
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sidebar -->
+        <aside class="glass rounded-2xl p-5 shadow-xl">
+          <div class="flex items-center justify-between mb-3">
+            <h2 class="font-semibold">🏆 Bảng điểm</h2>
+            <button
+              id="soundBtn"
+              class="text-xs px-3 py-1.5 rounded-lg bg-white/60 dark:bg-white/10 border border-white/40 dark:border-white/10"
+            >
+              🔔 Âm
+            </button>
+          </div>
+          <ul id="scoreboard" class="space-y-2"></ul>
+
+          <div
+            class="mt-6 rounded-xl bg-white/60 dark:bg-white/5 border border-white/40 dark:border-white/10 p-3 text-sm"
+          >
+            <p class="opacity-80">
+              Mẹo: mở nhiều tab để chơi cùng bạn bè. Thêm
+              <code>?room=tên</code> vào URL để tạo phòng riêng.
+            </p>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <audio id="ding" preload="auto">
+      <source
+        src="https://cdn.jsdelivr.net/gh/junyanz/CycleGAN/datasets/sound/confirmation.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <script src="./game.js"></script>
+  </body>
+</html>
