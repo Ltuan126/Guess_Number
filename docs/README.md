@@ -20,32 +20,6 @@ Dự án **Guess Number** là một ứng dụng web nhiều người chơi. Ng�
 - **Triển khai**: Docker, docker-compose, Nginx (serve client)
 - **Test**: Python unittest/pytest + script test client (socket)
 
-## 📂 Cấu trúc thư mục
-
-guess-number-web-final/
-│
-├── client/ # Giao diện web (HTML, CSS, JS)
-│ ├── index.html
-│ ├── style.css
-│ └── game.js
-│
-├── server/ # Backend Flask-SocketIO
-│ ├── server.py
-│ ├── requirements.txt
-│ └── tests/ # Unit tests (sẽ bổ sung)
-│
-├── docker/ # Dockerfile + docker-compose
-│ ├── Dockerfile
-│ └── docker-compose.yml
-│
-├── docs/ # Tài liệu, demo script, báo cáo
-│
-└── README.md # Giới thiệu & hướng dẫn
-
-r
-Sao chép
-Chỉnh sửa
-
 ## ▶️ Cách chạy
 
 ### Cách 1: Chạy bằng Python (local)
