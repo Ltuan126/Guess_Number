@@ -144,12 +144,27 @@ socket.on("round", (d) => {
   const r = d?.room || room;
   const roundId = d?.round ?? "?";
   const range = d?.range || [1, 100];
+
+  // Cập nhật tiêu đề vòng
   if (elRound)
     elRound.textContent = `Phòng ${r} – Vòng ${roundId} – [${range[0]}, ${range[1]}]`;
   startCountdown(d?.endsAt);
   log(`=== Vòng ${roundId} bắt đầu ===`);
   setJoinedState(true);
+
+  // Hiển thị hint CHỈ ở hintBox
+  const hintBox = document.getElementById("hintBox");
+  if (hintBox) {
+    if (d.hint) {
+      hintBox.style.display = "block";
+      hintBox.textContent = "💡 Gợi ý: " + d.hint;
+    } else {
+      hintBox.style.display = "none";
+      hintBox.textContent = "";
+    }
+  }
 });
+
 
 socket.on("scoreboard", (d) => {
   const scores = d?.scores || d || {};
