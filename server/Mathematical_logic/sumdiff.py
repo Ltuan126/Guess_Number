@@ -9,3 +9,4 @@ def hint(secret:int)->tuple[str,str]:
     a = random.randint(secret+3, secret+12)
     b = a - secret
     return (f"Là hiệu của {a} và {b} (a - b)", "sumdiff")
+    # Trả lời dạng "Là tổng của a và b" hoặc "Là hiệu của a và b (a - b)"
