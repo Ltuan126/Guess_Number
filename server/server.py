@@ -1,39 +1,64 @@
 from flask import Flask, request
 from flask_socketio import SocketIO, emit, join_room
-import random, time
 from collections import defaultdict
+import random, time, os
+
+# import hàm chọn gợi ý
+from Mathematical_logic.scheduler import choose_hint_for_round
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'secret!'
-socketio = SocketIO(app, cors_allowed_origins="*")
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'secret!')
+socketio = SocketIO(app, cors_allowed_origins="*", async_mode="eventlet")
 
-RANGE_DEFAULT = (1,100)
-ROUND_TIME = 30  # seconds
+ROUND_TIME = int(os.getenv("ROUND_TIME", 30))
+def now_ms(): return int(time.time() * 1000)
 
-def now_ms(): return int(time.time()*1000)
+def range_for_round(rnum: int):
+    if rnum <= 1: return 1, 10
+    blk = (rnum - 2) // 3
+    return 10, 100 + 100 * blk
 
-rooms = {}  # room -> dict
-def ensure_room(room):
+rooms = {}
+
+def ensure_room(room: str):
     if room not in rooms:
-        lo, hi = RANGE_DEFAULT
+        lo, hi = range_for_round(1)
         rooms[room] = dict(
-            secret=random.randint(lo,hi),
             round=1, lo=lo, hi=hi,
+            secret=random.randint(lo, hi),
             scores=defaultdict(int),
-            endsAt= now_ms() + ROUND_TIME*1000,
-            lastGuessTs=defaultdict(lambda:0)
+            endsAt=now_ms() + ROUND_TIME * 1000,
+            lastGuessTs=defaultdict(lambda: 0),
+            hints=[],
+            hint_text=""
         )
 
-def new_round(room):
+def new_round(room: str):
     r = rooms[room]
     r["round"] += 1
+    r["lo"], r["hi"] = range_for_round(r["round"])
     r["secret"] = random.randint(r["lo"], r["hi"])
-    r["endsAt"] = now_ms() + ROUND_TIME*1000
-    socketio.emit("round", {"room": room, "round": r["round"], "range":[r["lo"],r["hi"]], "endsAt": r["endsAt"]}, to=room)
+    r["endsAt"] = now_ms() + ROUND_TIME * 1000
+
+    # chỉ từ round 2 mới có gợi ý
+    hint_text, tag = choose_hint_for_round(r["round"], r["secret"], r["hints"])
+    r["hint_text"] = hint_text if tag != "none" else ""
+    if tag != "none": r["hints"].append(tag)
+
+    payload = {
+        "room": room,
+        "round": r["round"],
+        "range": [r["lo"], r["hi"]],
+        "endsAt": r["endsAt"],
+    }
+    if r["hint_text"]:
+        payload["hint"] = r["hint_text"]
+
+    socketio.emit("round", payload, to=room)
 
 @app.route("/")
 def home():
-    return "Guess Number Server Day3 Running!"
+    return "Guess Number Server Running!"
 
 @socketio.on("join")
 def on_join(data):
@@ -43,7 +68,15 @@ def on_join(data):
     join_room(room)
     emit("message", {"room": room, "msg": f"{name} đã tham gia phòng {room}"}, to=room)
     r = rooms[room]
-    emit("round", {"room": room, "round": r["round"], "range":[r["lo"],r["hi"]], "endsAt": r["endsAt"]})
+    payload = {
+        "room": room,
+        "round": r["round"],
+        "range": [r["lo"], r["hi"]],
+        "endsAt": r["endsAt"]
+    }
+    if r.get("hint_text"):
+        payload["hint"] = r["hint_text"]
+    emit("round", payload)
     emit("scoreboard", {"room": room, "scores": r["scores"]})
 
 @socketio.on("guess")
@@ -56,12 +89,10 @@ def on_guess(data):
         emit("result", {"msg": "INVALID"}); return
 
     ensure_room(room); r = rooms[room]
-    # check timer
     if now_ms() > r["endsAt"]:
         socketio.emit("message", {"room": room, "msg": f"Hết giờ! Số đúng là {r['secret']}."}, to=room)
         new_round(room)
 
-    # naive rate limit per sid
     sid = request.sid
     last = r["lastGuessTs"][sid]
     if now_ms() - last < 500:
