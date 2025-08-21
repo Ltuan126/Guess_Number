@@ -1,0 +1,669 @@
+2025-08-20 23:44:59,642 - __main__ - INFO - Logging configured for development environment
+2025-08-20 23:44:59,642 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-20 23:45:00,500 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:45:00,505 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-20 23:45:00,506 - __main__ - INFO - Environment: development
+2025-08-20 23:45:00,506 - __main__ - INFO - Host: 0.0.0.0
+2025-08-20 23:45:00,506 - __main__ - INFO - Port: 5000
+2025-08-20 23:45:00,506 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-20 23:45:00,506 - __main__ - INFO - Development mode with auto-reload
+2025-08-20 23:45:00,513 - werkzeug - INFO -  * Restarting with stat
+2025-08-20 23:45:00,598 - __main__ - INFO - Logging configured for development environment
+2025-08-20 23:45:00,598 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-20 23:45:01,471 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:45:01,476 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-20 23:45:01,476 - __main__ - INFO - Environment: development
+2025-08-20 23:45:01,476 - __main__ - INFO - Host: 0.0.0.0
+2025-08-20 23:45:01,476 - __main__ - INFO - Port: 5000
+2025-08-20 23:45:01,476 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-20 23:45:01,477 - __main__ - INFO - Development mode with auto-reload
+2025-08-20 23:45:01,483 - werkzeug - WARNING -  * Debugger is active!
+2025-08-20 23:45:01,489 - werkzeug - INFO -  * Debugger PIN: 793-119-022
+2025-08-20 23:46:18,232 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:46:18,237 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-20 23:46:18,237 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-20 23:46:44,011 - __main__ - INFO - Logging configured for development environment
+2025-08-20 23:46:44,011 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-20 23:46:44,852 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:46:44,857 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-20 23:46:44,858 - __main__ - INFO - Environment: development
+2025-08-20 23:46:44,858 - __main__ - INFO - Host: 0.0.0.0
+2025-08-20 23:46:44,858 - __main__ - INFO - Port: 5000
+2025-08-20 23:46:44,858 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-20 23:46:44,858 - __main__ - INFO - Development mode with auto-reload
+2025-08-20 23:46:44,864 - werkzeug - INFO -  * Restarting with stat
+2025-08-20 23:46:44,964 - __main__ - INFO - Logging configured for development environment
+2025-08-20 23:46:44,964 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-20 23:46:45,806 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:46:45,811 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-20 23:46:45,811 - __main__ - INFO - Environment: development
+2025-08-20 23:46:45,811 - __main__ - INFO - Host: 0.0.0.0
+2025-08-20 23:46:45,811 - __main__ - INFO - Port: 5000
+2025-08-20 23:46:45,811 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-20 23:46:45,812 - __main__ - INFO - Development mode with auto-reload
+2025-08-20 23:46:45,817 - werkzeug - WARNING -  * Debugger is active!
+2025-08-20 23:46:45,823 - werkzeug - INFO -  * Debugger PIN: 793-119-022
+2025-08-20 23:47:03,020 - __main__ - INFO - Logging configured for testing environment
+2025-08-20 23:47:03,020 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-20 23:47:03,887 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:47:03,893 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-20 23:47:03,893 - __main__ - INFO - Environment: testing
+2025-08-20 23:47:03,893 - __main__ - INFO - Host: 0.0.0.0
+2025-08-20 23:47:03,893 - __main__ - INFO - Port: 5001
+2025-08-20 23:47:03,894 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-20 23:47:03,894 - __main__ - INFO - Development mode with auto-reload
+2025-08-20 23:47:03,900 - werkzeug - INFO -  * Restarting with stat
+2025-08-20 23:47:03,983 - __main__ - INFO - Logging configured for testing environment
+2025-08-20 23:47:03,983 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-20 23:47:04,823 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:47:04,828 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-20 23:47:04,829 - __main__ - INFO - Environment: testing
+2025-08-20 23:47:04,829 - __main__ - INFO - Host: 0.0.0.0
+2025-08-20 23:47:04,829 - __main__ - INFO - Port: 5001
+2025-08-20 23:47:04,829 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-20 23:47:04,829 - __main__ - INFO - Development mode with auto-reload
+2025-08-20 23:47:04,834 - werkzeug - WARNING -  * Debugger is active!
+2025-08-20 23:47:04,841 - werkzeug - INFO -  * Debugger PIN: 793-119-022
+2025-08-20 23:47:24,220 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:54:04,114 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-20 23:54:04,128 - server - INFO - Created room: test_room (Test Room)
+2025-08-20 23:54:04,129 - server - INFO - Player Player joined room test_room
+2025-08-20 23:54:04,129 - socketio.server - INFO - emitting event "room_deleted" to test_room [/]
+2025-08-20 23:54:04,129 - server - INFO - Deleted room: test_room
+2025-08-20 23:54:04,130 - server - INFO - Created room: test_room (Test Room)
+2025-08-20 23:54:04,130 - server - INFO - Player Player joined room test_room
+2025-08-20 23:54:04,130 - socketio.server - INFO - emitting event "room_deleted" to test_room [/]
+2025-08-20 23:54:04,130 - server - INFO - Deleted room: test_room
+2025-08-20 23:54:04,131 - server - INFO - Created room: test_room (Test Room)
+2025-08-20 23:54:04,131 - server - INFO - Player Player joined room test_room
+2025-08-20 23:54:04,131 - socketio.server - INFO - emitting event "room_deleted" to test_room [/]
+2025-08-20 23:54:04,131 - server - INFO - Deleted room: test_room
+2025-08-20 23:54:04,132 - server - INFO - Created room: test_room (Test Room)
+2025-08-20 23:54:04,132 - server - INFO - Player Player joined room test_room
+2025-08-20 23:54:04,132 - server - INFO - DEBUG: Room test_room, Target: 53, Range: [1, 100], Guess: 50
+2025-08-20 23:54:05,232 - socketio.server - INFO - emitting event "room_deleted" to test_room [/]
+2025-08-20 23:54:05,233 - server - INFO - Deleted room: test_room
+2025-08-20 23:54:05,233 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,233 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,234 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,234 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,234 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,234 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,235 - server - INFO - Created room: test_room_123 (First Room)
+2025-08-20 23:54:05,235 - server - WARNING - Create room failed: Room test_room_123 already exists
+2025-08-20 23:54:05,235 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,235 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,236 - server - INFO - Created room: test_room_0 (Room 0)
+2025-08-20 23:54:05,236 - server - INFO - Created room: test_room_1 (Room 1)
+2025-08-20 23:54:05,236 - server - INFO - Created room: test_room_2 (Room 2)
+2025-08-20 23:54:05,237 - server - INFO - Created room: test_room_3 (Room 3)
+2025-08-20 23:54:05,237 - server - INFO - Created room: test_room_4 (Room 4)
+2025-08-20 23:54:05,237 - server - INFO - Created room: test_room_5 (Room 5)
+2025-08-20 23:54:05,237 - server - INFO - Created room: test_room_6 (Room 6)
+2025-08-20 23:54:05,237 - server - INFO - Created room: test_room_7 (Room 7)
+2025-08-20 23:54:05,237 - server - INFO - Created room: test_room_8 (Room 8)
+2025-08-20 23:54:05,237 - server - INFO - Created room: test_room_9 (Room 9)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_10 (Room 10)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_11 (Room 11)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_12 (Room 12)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_13 (Room 13)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_14 (Room 14)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_15 (Room 15)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_16 (Room 16)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_17 (Room 17)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_18 (Room 18)
+2025-08-20 23:54:05,238 - server - INFO - Created room: test_room_19 (Room 19)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_20 (Room 20)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_21 (Room 21)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_22 (Room 22)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_23 (Room 23)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_24 (Room 24)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_25 (Room 25)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_26 (Room 26)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_27 (Room 27)
+2025-08-20 23:54:05,239 - server - INFO - Created room: test_room_28 (Room 28)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_29 (Room 29)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_30 (Room 30)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_31 (Room 31)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_32 (Room 32)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_33 (Room 33)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_34 (Room 34)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_35 (Room 35)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_36 (Room 36)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_37 (Room 37)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_38 (Room 38)
+2025-08-20 23:54:05,240 - server - INFO - Created room: test_room_39 (Room 39)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_40 (Room 40)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_41 (Room 41)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_42 (Room 42)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_43 (Room 43)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_44 (Room 44)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_45 (Room 45)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_46 (Room 46)
+2025-08-20 23:54:05,241 - server - INFO - Created room: test_room_47 (Room 47)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_48 (Room 48)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_49 (Room 49)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_50 (Room 50)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_51 (Room 51)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_52 (Room 52)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_53 (Room 53)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_54 (Room 54)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_55 (Room 55)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_56 (Room 56)
+2025-08-20 23:54:05,242 - server - INFO - Created room: test_room_57 (Room 57)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_58 (Room 58)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_59 (Room 59)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_60 (Room 60)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_61 (Room 61)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_62 (Room 62)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_63 (Room 63)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_64 (Room 64)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_65 (Room 65)
+2025-08-20 23:54:05,243 - server - INFO - Created room: test_room_66 (Room 66)
+2025-08-20 23:54:05,244 - server - INFO - Created room: test_room_67 (Room 67)
+2025-08-20 23:54:05,244 - server - INFO - Created room: test_room_68 (Room 68)
+2025-08-20 23:54:05,244 - server - INFO - Created room: test_room_69 (Room 69)
+2025-08-20 23:54:05,244 - server - INFO - Created room: test_room_70 (Room 70)
+2025-08-20 23:54:05,244 - server - INFO - Created room: test_room_71 (Room 71)
+2025-08-20 23:54:05,244 - server - INFO - Created room: test_room_72 (Room 72)
+2025-08-20 23:54:05,244 - server - INFO - Created room: test_room_73 (Room 73)
+2025-08-20 23:54:05,245 - server - INFO - Created room: test_room_74 (Room 74)
+2025-08-20 23:54:05,245 - server - INFO - Created room: test_room_75 (Room 75)
+2025-08-20 23:54:05,245 - server - INFO - Created room: test_room_76 (Room 76)
+2025-08-20 23:54:05,245 - server - INFO - Created room: test_room_77 (Room 77)
+2025-08-20 23:54:05,245 - server - INFO - Created room: test_room_78 (Room 78)
+2025-08-20 23:54:05,245 - server - INFO - Created room: test_room_79 (Room 79)
+2025-08-20 23:54:05,246 - server - INFO - Created room: test_room_80 (Room 80)
+2025-08-20 23:54:05,246 - server - INFO - Created room: test_room_81 (Room 81)
+2025-08-20 23:54:05,246 - server - INFO - Created room: test_room_82 (Room 82)
+2025-08-20 23:54:05,246 - server - INFO - Created room: test_room_83 (Room 83)
+2025-08-20 23:54:05,246 - server - INFO - Created room: test_room_84 (Room 84)
+2025-08-20 23:54:05,246 - server - INFO - Created room: test_room_85 (Room 85)
+2025-08-20 23:54:05,247 - server - INFO - Created room: test_room_86 (Room 86)
+2025-08-20 23:54:05,247 - server - INFO - Created room: test_room_87 (Room 87)
+2025-08-20 23:54:05,247 - server - INFO - Created room: test_room_88 (Room 88)
+2025-08-20 23:54:05,247 - server - INFO - Created room: test_room_89 (Room 89)
+2025-08-20 23:54:05,247 - server - INFO - Created room: test_room_90 (Room 90)
+2025-08-20 23:54:05,247 - server - INFO - Created room: test_room_91 (Room 91)
+2025-08-20 23:54:05,247 - server - INFO - Created room: test_room_92 (Room 92)
+2025-08-20 23:54:05,248 - server - INFO - Created room: test_room_93 (Room 93)
+2025-08-20 23:54:05,248 - server - INFO - Created room: test_room_94 (Room 94)
+2025-08-20 23:54:05,248 - server - INFO - Created room: test_room_95 (Room 95)
+2025-08-20 23:54:05,248 - server - INFO - Created room: test_room_96 (Room 96)
+2025-08-20 23:54:05,248 - server - INFO - Created room: test_room_97 (Room 97)
+2025-08-20 23:54:05,248 - server - INFO - Created room: test_room_98 (Room 98)
+2025-08-20 23:54:05,248 - server - INFO - Created room: test_room_99 (Room 99)
+2025-08-20 23:54:05,248 - server - WARNING - Create room failed: Max rooms reached
+2025-08-20 23:54:05,248 - socketio.server - INFO - emitting event "room_deleted" to test_room_0 [/]
+2025-08-20 23:54:05,249 - server - INFO - Deleted room: test_room_0
+2025-08-20 23:54:05,249 - socketio.server - INFO - emitting event "room_deleted" to test_room_1 [/]
+2025-08-20 23:54:05,249 - server - INFO - Deleted room: test_room_1
+2025-08-20 23:54:05,249 - socketio.server - INFO - emitting event "room_deleted" to test_room_2 [/]
+2025-08-20 23:54:05,249 - server - INFO - Deleted room: test_room_2
+2025-08-20 23:54:05,249 - socketio.server - INFO - emitting event "room_deleted" to test_room_3 [/]
+2025-08-20 23:54:05,249 - server - INFO - Deleted room: test_room_3
+2025-08-20 23:54:05,249 - socketio.server - INFO - emitting event "room_deleted" to test_room_4 [/]
+2025-08-20 23:54:05,249 - server - INFO - Deleted room: test_room_4
+2025-08-20 23:54:05,250 - socketio.server - INFO - emitting event "room_deleted" to test_room_5 [/]
+2025-08-20 23:54:05,250 - server - INFO - Deleted room: test_room_5
+2025-08-20 23:54:05,250 - socketio.server - INFO - emitting event "room_deleted" to test_room_6 [/]
+2025-08-20 23:54:05,250 - server - INFO - Deleted room: test_room_6
+2025-08-20 23:54:05,250 - socketio.server - INFO - emitting event "room_deleted" to test_room_7 [/]
+2025-08-20 23:54:05,250 - server - INFO - Deleted room: test_room_7
+2025-08-20 23:54:05,250 - socketio.server - INFO - emitting event "room_deleted" to test_room_8 [/]
+2025-08-20 23:54:05,250 - server - INFO - Deleted room: test_room_8
+2025-08-20 23:54:05,250 - socketio.server - INFO - emitting event "room_deleted" to test_room_9 [/]
+2025-08-20 23:54:05,251 - server - INFO - Deleted room: test_room_9
+2025-08-20 23:54:05,251 - socketio.server - INFO - emitting event "room_deleted" to test_room_10 [/]
+2025-08-20 23:54:05,251 - server - INFO - Deleted room: test_room_10
+2025-08-20 23:54:05,251 - socketio.server - INFO - emitting event "room_deleted" to test_room_11 [/]
+2025-08-20 23:54:05,251 - server - INFO - Deleted room: test_room_11
+2025-08-20 23:54:05,251 - socketio.server - INFO - emitting event "room_deleted" to test_room_12 [/]
+2025-08-20 23:54:05,251 - server - INFO - Deleted room: test_room_12
+2025-08-20 23:54:05,251 - socketio.server - INFO - emitting event "room_deleted" to test_room_13 [/]
+2025-08-20 23:54:05,251 - server - INFO - Deleted room: test_room_13
+2025-08-20 23:54:05,252 - socketio.server - INFO - emitting event "room_deleted" to test_room_14 [/]
+2025-08-20 23:54:05,252 - server - INFO - Deleted room: test_room_14
+2025-08-20 23:54:05,252 - socketio.server - INFO - emitting event "room_deleted" to test_room_15 [/]
+2025-08-20 23:54:05,252 - server - INFO - Deleted room: test_room_15
+2025-08-20 23:54:05,252 - socketio.server - INFO - emitting event "room_deleted" to test_room_16 [/]
+2025-08-20 23:54:05,252 - server - INFO - Deleted room: test_room_16
+2025-08-20 23:54:05,252 - socketio.server - INFO - emitting event "room_deleted" to test_room_17 [/]
+2025-08-20 23:54:05,253 - server - INFO - Deleted room: test_room_17
+2025-08-20 23:54:05,253 - socketio.server - INFO - emitting event "room_deleted" to test_room_18 [/]
+2025-08-20 23:54:05,253 - server - INFO - Deleted room: test_room_18
+2025-08-20 23:54:05,253 - socketio.server - INFO - emitting event "room_deleted" to test_room_19 [/]
+2025-08-20 23:54:05,253 - server - INFO - Deleted room: test_room_19
+2025-08-20 23:54:05,254 - socketio.server - INFO - emitting event "room_deleted" to test_room_20 [/]
+2025-08-20 23:54:05,254 - server - INFO - Deleted room: test_room_20
+2025-08-20 23:54:05,254 - socketio.server - INFO - emitting event "room_deleted" to test_room_21 [/]
+2025-08-20 23:54:05,255 - server - INFO - Deleted room: test_room_21
+2025-08-20 23:54:05,255 - socketio.server - INFO - emitting event "room_deleted" to test_room_22 [/]
+2025-08-20 23:54:05,255 - server - INFO - Deleted room: test_room_22
+2025-08-20 23:54:05,255 - socketio.server - INFO - emitting event "room_deleted" to test_room_23 [/]
+2025-08-20 23:54:05,255 - server - INFO - Deleted room: test_room_23
+2025-08-20 23:54:05,255 - socketio.server - INFO - emitting event "room_deleted" to test_room_24 [/]
+2025-08-20 23:54:05,256 - server - INFO - Deleted room: test_room_24
+2025-08-20 23:54:05,256 - socketio.server - INFO - emitting event "room_deleted" to test_room_25 [/]
+2025-08-20 23:54:05,256 - server - INFO - Deleted room: test_room_25
+2025-08-20 23:54:05,256 - socketio.server - INFO - emitting event "room_deleted" to test_room_26 [/]
+2025-08-20 23:54:05,256 - server - INFO - Deleted room: test_room_26
+2025-08-20 23:54:05,257 - socketio.server - INFO - emitting event "room_deleted" to test_room_27 [/]
+2025-08-20 23:54:05,257 - server - INFO - Deleted room: test_room_27
+2025-08-20 23:54:05,257 - socketio.server - INFO - emitting event "room_deleted" to test_room_28 [/]
+2025-08-20 23:54:05,257 - server - INFO - Deleted room: test_room_28
+2025-08-20 23:54:05,257 - socketio.server - INFO - emitting event "room_deleted" to test_room_29 [/]
+2025-08-20 23:54:05,258 - server - INFO - Deleted room: test_room_29
+2025-08-20 23:54:05,258 - socketio.server - INFO - emitting event "room_deleted" to test_room_30 [/]
+2025-08-20 23:54:05,258 - server - INFO - Deleted room: test_room_30
+2025-08-20 23:54:05,258 - socketio.server - INFO - emitting event "room_deleted" to test_room_31 [/]
+2025-08-20 23:54:05,259 - server - INFO - Deleted room: test_room_31
+2025-08-20 23:54:05,259 - socketio.server - INFO - emitting event "room_deleted" to test_room_32 [/]
+2025-08-20 23:54:05,259 - server - INFO - Deleted room: test_room_32
+2025-08-20 23:54:05,259 - socketio.server - INFO - emitting event "room_deleted" to test_room_33 [/]
+2025-08-20 23:54:05,259 - server - INFO - Deleted room: test_room_33
+2025-08-20 23:54:05,260 - socketio.server - INFO - emitting event "room_deleted" to test_room_34 [/]
+2025-08-20 23:54:05,260 - server - INFO - Deleted room: test_room_34
+2025-08-20 23:54:05,261 - socketio.server - INFO - emitting event "room_deleted" to test_room_35 [/]
+2025-08-20 23:54:05,261 - server - INFO - Deleted room: test_room_35
+2025-08-20 23:54:05,261 - socketio.server - INFO - emitting event "room_deleted" to test_room_36 [/]
+2025-08-20 23:54:05,261 - server - INFO - Deleted room: test_room_36
+2025-08-20 23:54:05,261 - socketio.server - INFO - emitting event "room_deleted" to test_room_37 [/]
+2025-08-20 23:54:05,261 - server - INFO - Deleted room: test_room_37
+2025-08-20 23:54:05,262 - socketio.server - INFO - emitting event "room_deleted" to test_room_38 [/]
+2025-08-20 23:54:05,262 - server - INFO - Deleted room: test_room_38
+2025-08-20 23:54:05,262 - socketio.server - INFO - emitting event "room_deleted" to test_room_39 [/]
+2025-08-20 23:54:05,262 - server - INFO - Deleted room: test_room_39
+2025-08-20 23:54:05,262 - socketio.server - INFO - emitting event "room_deleted" to test_room_40 [/]
+2025-08-20 23:54:05,262 - server - INFO - Deleted room: test_room_40
+2025-08-20 23:54:05,262 - socketio.server - INFO - emitting event "room_deleted" to test_room_41 [/]
+2025-08-20 23:54:05,263 - server - INFO - Deleted room: test_room_41
+2025-08-20 23:54:05,263 - socketio.server - INFO - emitting event "room_deleted" to test_room_42 [/]
+2025-08-20 23:54:05,263 - server - INFO - Deleted room: test_room_42
+2025-08-20 23:54:05,263 - socketio.server - INFO - emitting event "room_deleted" to test_room_43 [/]
+2025-08-20 23:54:05,263 - server - INFO - Deleted room: test_room_43
+2025-08-20 23:54:05,263 - socketio.server - INFO - emitting event "room_deleted" to test_room_44 [/]
+2025-08-20 23:54:05,264 - server - INFO - Deleted room: test_room_44
+2025-08-20 23:54:05,264 - socketio.server - INFO - emitting event "room_deleted" to test_room_45 [/]
+2025-08-20 23:54:05,264 - server - INFO - Deleted room: test_room_45
+2025-08-20 23:54:05,264 - socketio.server - INFO - emitting event "room_deleted" to test_room_46 [/]
+2025-08-20 23:54:05,264 - server - INFO - Deleted room: test_room_46
+2025-08-20 23:54:05,264 - socketio.server - INFO - emitting event "room_deleted" to test_room_47 [/]
+2025-08-20 23:54:05,265 - server - INFO - Deleted room: test_room_47
+2025-08-20 23:54:05,265 - socketio.server - INFO - emitting event "room_deleted" to test_room_48 [/]
+2025-08-20 23:54:05,265 - server - INFO - Deleted room: test_room_48
+2025-08-20 23:54:05,265 - socketio.server - INFO - emitting event "room_deleted" to test_room_49 [/]
+2025-08-20 23:54:05,265 - server - INFO - Deleted room: test_room_49
+2025-08-20 23:54:05,265 - socketio.server - INFO - emitting event "room_deleted" to test_room_50 [/]
+2025-08-20 23:54:05,265 - server - INFO - Deleted room: test_room_50
+2025-08-20 23:54:05,266 - socketio.server - INFO - emitting event "room_deleted" to test_room_51 [/]
+2025-08-20 23:54:05,266 - server - INFO - Deleted room: test_room_51
+2025-08-20 23:54:05,266 - socketio.server - INFO - emitting event "room_deleted" to test_room_52 [/]
+2025-08-20 23:54:05,266 - server - INFO - Deleted room: test_room_52
+2025-08-20 23:54:05,266 - socketio.server - INFO - emitting event "room_deleted" to test_room_53 [/]
+2025-08-20 23:54:05,266 - server - INFO - Deleted room: test_room_53
+2025-08-20 23:54:05,266 - socketio.server - INFO - emitting event "room_deleted" to test_room_54 [/]
+2025-08-20 23:54:05,266 - server - INFO - Deleted room: test_room_54
+2025-08-20 23:54:05,267 - socketio.server - INFO - emitting event "room_deleted" to test_room_55 [/]
+2025-08-20 23:54:05,267 - server - INFO - Deleted room: test_room_55
+2025-08-20 23:54:05,267 - socketio.server - INFO - emitting event "room_deleted" to test_room_56 [/]
+2025-08-20 23:54:05,267 - server - INFO - Deleted room: test_room_56
+2025-08-20 23:54:05,267 - socketio.server - INFO - emitting event "room_deleted" to test_room_57 [/]
+2025-08-20 23:54:05,267 - server - INFO - Deleted room: test_room_57
+2025-08-20 23:54:05,267 - socketio.server - INFO - emitting event "room_deleted" to test_room_58 [/]
+2025-08-20 23:54:05,268 - server - INFO - Deleted room: test_room_58
+2025-08-20 23:54:05,268 - socketio.server - INFO - emitting event "room_deleted" to test_room_59 [/]
+2025-08-20 23:54:05,268 - server - INFO - Deleted room: test_room_59
+2025-08-20 23:54:05,268 - socketio.server - INFO - emitting event "room_deleted" to test_room_60 [/]
+2025-08-20 23:54:05,268 - server - INFO - Deleted room: test_room_60
+2025-08-20 23:54:05,268 - socketio.server - INFO - emitting event "room_deleted" to test_room_61 [/]
+2025-08-20 23:54:05,268 - server - INFO - Deleted room: test_room_61
+2025-08-20 23:54:05,268 - socketio.server - INFO - emitting event "room_deleted" to test_room_62 [/]
+2025-08-20 23:54:05,269 - server - INFO - Deleted room: test_room_62
+2025-08-20 23:54:05,269 - socketio.server - INFO - emitting event "room_deleted" to test_room_63 [/]
+2025-08-20 23:54:05,269 - server - INFO - Deleted room: test_room_63
+2025-08-20 23:54:05,269 - socketio.server - INFO - emitting event "room_deleted" to test_room_64 [/]
+2025-08-20 23:54:05,269 - server - INFO - Deleted room: test_room_64
+2025-08-20 23:54:05,269 - socketio.server - INFO - emitting event "room_deleted" to test_room_65 [/]
+2025-08-20 23:54:05,269 - server - INFO - Deleted room: test_room_65
+2025-08-20 23:54:05,270 - socketio.server - INFO - emitting event "room_deleted" to test_room_66 [/]
+2025-08-20 23:54:05,270 - server - INFO - Deleted room: test_room_66
+2025-08-20 23:54:05,270 - socketio.server - INFO - emitting event "room_deleted" to test_room_67 [/]
+2025-08-20 23:54:05,270 - server - INFO - Deleted room: test_room_67
+2025-08-20 23:54:05,271 - socketio.server - INFO - emitting event "room_deleted" to test_room_68 [/]
+2025-08-20 23:54:05,271 - server - INFO - Deleted room: test_room_68
+2025-08-20 23:54:05,271 - socketio.server - INFO - emitting event "room_deleted" to test_room_69 [/]
+2025-08-20 23:54:05,271 - server - INFO - Deleted room: test_room_69
+2025-08-20 23:54:05,272 - socketio.server - INFO - emitting event "room_deleted" to test_room_70 [/]
+2025-08-20 23:54:05,272 - server - INFO - Deleted room: test_room_70
+2025-08-20 23:54:05,272 - socketio.server - INFO - emitting event "room_deleted" to test_room_71 [/]
+2025-08-20 23:54:05,272 - server - INFO - Deleted room: test_room_71
+2025-08-20 23:54:05,272 - socketio.server - INFO - emitting event "room_deleted" to test_room_72 [/]
+2025-08-20 23:54:05,273 - server - INFO - Deleted room: test_room_72
+2025-08-20 23:54:05,273 - socketio.server - INFO - emitting event "room_deleted" to test_room_73 [/]
+2025-08-20 23:54:05,273 - server - INFO - Deleted room: test_room_73
+2025-08-20 23:54:05,273 - socketio.server - INFO - emitting event "room_deleted" to test_room_74 [/]
+2025-08-20 23:54:05,273 - server - INFO - Deleted room: test_room_74
+2025-08-20 23:54:05,273 - socketio.server - INFO - emitting event "room_deleted" to test_room_75 [/]
+2025-08-20 23:54:05,273 - server - INFO - Deleted room: test_room_75
+2025-08-20 23:54:05,273 - socketio.server - INFO - emitting event "room_deleted" to test_room_76 [/]
+2025-08-20 23:54:05,274 - server - INFO - Deleted room: test_room_76
+2025-08-20 23:54:05,274 - socketio.server - INFO - emitting event "room_deleted" to test_room_77 [/]
+2025-08-20 23:54:05,274 - server - INFO - Deleted room: test_room_77
+2025-08-20 23:54:05,274 - socketio.server - INFO - emitting event "room_deleted" to test_room_78 [/]
+2025-08-20 23:54:05,274 - server - INFO - Deleted room: test_room_78
+2025-08-20 23:54:05,274 - socketio.server - INFO - emitting event "room_deleted" to test_room_79 [/]
+2025-08-20 23:54:05,275 - server - INFO - Deleted room: test_room_79
+2025-08-20 23:54:05,275 - socketio.server - INFO - emitting event "room_deleted" to test_room_80 [/]
+2025-08-20 23:54:05,275 - server - INFO - Deleted room: test_room_80
+2025-08-20 23:54:05,275 - socketio.server - INFO - emitting event "room_deleted" to test_room_81 [/]
+2025-08-20 23:54:05,275 - server - INFO - Deleted room: test_room_81
+2025-08-20 23:54:05,275 - socketio.server - INFO - emitting event "room_deleted" to test_room_82 [/]
+2025-08-20 23:54:05,275 - server - INFO - Deleted room: test_room_82
+2025-08-20 23:54:05,276 - socketio.server - INFO - emitting event "room_deleted" to test_room_83 [/]
+2025-08-20 23:54:05,276 - server - INFO - Deleted room: test_room_83
+2025-08-20 23:54:05,276 - socketio.server - INFO - emitting event "room_deleted" to test_room_84 [/]
+2025-08-20 23:54:05,276 - server - INFO - Deleted room: test_room_84
+2025-08-20 23:54:05,276 - socketio.server - INFO - emitting event "room_deleted" to test_room_85 [/]
+2025-08-20 23:54:05,276 - server - INFO - Deleted room: test_room_85
+2025-08-20 23:54:05,277 - socketio.server - INFO - emitting event "room_deleted" to test_room_86 [/]
+2025-08-20 23:54:05,277 - server - INFO - Deleted room: test_room_86
+2025-08-20 23:54:05,277 - socketio.server - INFO - emitting event "room_deleted" to test_room_87 [/]
+2025-08-20 23:54:05,277 - server - INFO - Deleted room: test_room_87
+2025-08-20 23:54:05,277 - socketio.server - INFO - emitting event "room_deleted" to test_room_88 [/]
+2025-08-20 23:54:05,277 - server - INFO - Deleted room: test_room_88
+2025-08-20 23:54:05,278 - socketio.server - INFO - emitting event "room_deleted" to test_room_89 [/]
+2025-08-20 23:54:05,278 - server - INFO - Deleted room: test_room_89
+2025-08-20 23:54:05,278 - socketio.server - INFO - emitting event "room_deleted" to test_room_90 [/]
+2025-08-20 23:54:05,278 - server - INFO - Deleted room: test_room_90
+2025-08-20 23:54:05,279 - socketio.server - INFO - emitting event "room_deleted" to test_room_91 [/]
+2025-08-20 23:54:05,279 - server - INFO - Deleted room: test_room_91
+2025-08-20 23:54:05,279 - socketio.server - INFO - emitting event "room_deleted" to test_room_92 [/]
+2025-08-20 23:54:05,279 - server - INFO - Deleted room: test_room_92
+2025-08-20 23:54:05,279 - socketio.server - INFO - emitting event "room_deleted" to test_room_93 [/]
+2025-08-20 23:54:05,279 - server - INFO - Deleted room: test_room_93
+2025-08-20 23:54:05,279 - socketio.server - INFO - emitting event "room_deleted" to test_room_94 [/]
+2025-08-20 23:54:05,280 - server - INFO - Deleted room: test_room_94
+2025-08-20 23:54:05,280 - socketio.server - INFO - emitting event "room_deleted" to test_room_95 [/]
+2025-08-20 23:54:05,280 - server - INFO - Deleted room: test_room_95
+2025-08-20 23:54:05,280 - socketio.server - INFO - emitting event "room_deleted" to test_room_96 [/]
+2025-08-20 23:54:05,280 - server - INFO - Deleted room: test_room_96
+2025-08-20 23:54:05,280 - socketio.server - INFO - emitting event "room_deleted" to test_room_97 [/]
+2025-08-20 23:54:05,280 - server - INFO - Deleted room: test_room_97
+2025-08-20 23:54:05,280 - socketio.server - INFO - emitting event "room_deleted" to test_room_98 [/]
+2025-08-20 23:54:05,280 - server - INFO - Deleted room: test_room_98
+2025-08-20 23:54:05,281 - socketio.server - INFO - emitting event "room_deleted" to test_room_99 [/]
+2025-08-20 23:54:05,281 - server - INFO - Deleted room: test_room_99
+2025-08-20 23:54:05,282 - server - INFO - Created room: public_room (Public Room)
+2025-08-20 23:54:05,282 - server - INFO - Created room: private_room (Private Room)
+2025-08-20 23:54:05,282 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,282 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,283 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,283 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,283 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,284 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,284 - server - WARNING - Join room failed: Player name TestPlayer already exists in room test_room_123
+2025-08-20 23:54:05,284 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,284 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,285 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,285 - server - INFO - Player Player1 joined room test_room_123
+2025-08-20 23:54:05,286 - server - INFO - Player Player2 joined room test_room_123
+2025-08-20 23:54:05,286 - server - WARNING - Join room failed: Room test_room_123 is full
+2025-08-20 23:54:05,286 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,286 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,286 - server - WARNING - Join room failed: Room non_existent_room not found
+2025-08-20 23:54:05,287 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,287 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,287 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,287 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,288 - server - INFO - Created room: test_room_123 (Private Room)
+2025-08-20 23:54:05,288 - server - WARNING - Join room failed: Wrong password for room test_room_123
+2025-08-20 23:54:05,288 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,288 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,288 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,289 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,289 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,289 - socketio.server - INFO - emitting event "player_left" to test_room_123 [/]
+2025-08-20 23:54:05,289 - server - INFO - Player TestPlayer left room test_room_123
+2025-08-20 23:54:05,290 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,290 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,290 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,291 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,291 - server - INFO - DEBUG: Room test_room_123, Target: 53, Range: [1, 100], Guess: 53
+2025-08-20 23:54:05,291 - server - INFO - DEBUG: New round 2 in room test_room_123, Target: 35, Range: [1, 100]
+2025-08-20 23:54:05,291 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:05,291 - server - INFO - Started new round 2 in room test_room_123
+2025-08-20 23:54:05,291 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,291 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,292 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,293 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,293 - server - INFO - DEBUG: Room test_room_123, Target: 66, Range: [1, 100], Guess: 56
+2025-08-20 23:54:05,293 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,293 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,294 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,294 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,294 - server - INFO - Make guess failed: Out of range guess 999 in room test_room_123
+2025-08-20 23:54:05,294 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,295 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,295 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,295 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,296 - server - INFO - DEBUG: Room test_room_123, Target: 70, Range: [1, 100], Guess: 69
+2025-08-20 23:54:05,296 - server - WARNING - Make guess failed: Rate limit exceeded for player TestPlayer in room test_room_123
+2025-08-20 23:54:05,296 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,296 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,297 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:05,297 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:05,297 - server - INFO - DEBUG: New round 1 in room test_room_123, Target: 2, Range: [1, 100]
+2025-08-20 23:54:05,297 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:05,297 - server - INFO - Started new round 1 in room test_room_123
+2025-08-20 23:54:05,297 - server - INFO - Room test_room_123 reset by admin
+2025-08-20 23:54:05,298 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:05,298 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:05,299 - server - INFO - Created room: test_room_789 (History Room)
+2025-08-20 23:54:05,299 - server - INFO - Player HistoryPlayer joined room test_room_789
+2025-08-20 23:54:05,299 - server - INFO - DEBUG: Room test_room_789, Target: 96, Range: [1, 100], Guess: 96
+2025-08-20 23:54:05,299 - server - INFO - DEBUG: New round 2 in room test_room_789, Target: 43, Range: [1, 100]
+2025-08-20 23:54:05,299 - socketio.server - INFO - emitting event "new_round" to test_room_789 [/]
+2025-08-20 23:54:05,300 - server - INFO - Started new round 2 in room test_room_789
+2025-08-20 23:54:05,500 - server - WARNING - Make guess failed: Rate limit exceeded for player HistoryPlayer in room test_room_789
+2025-08-20 23:54:05,701 - server - WARNING - Make guess failed: Rate limit exceeded for player HistoryPlayer in room test_room_789
+2025-08-20 23:54:05,902 - server - WARNING - Make guess failed: Rate limit exceeded for player HistoryPlayer in room test_room_789
+2025-08-20 23:54:06,103 - server - WARNING - Make guess failed: Rate limit exceeded for player HistoryPlayer in room test_room_789
+2025-08-20 23:54:06,304 - socketio.server - INFO - emitting event "room_deleted" to test_room_789 [/]
+2025-08-20 23:54:06,305 - server - INFO - Deleted room: test_room_789
+2025-08-20 23:54:06,308 - server - INFO - Created room: test_room_789 (History Room)
+2025-08-20 23:54:06,309 - server - INFO - Player HistoryPlayer joined room test_room_789
+2025-08-20 23:54:06,309 - server - INFO - DEBUG: Room test_room_789, Target: 36, Range: [1, 100], Guess: 36
+2025-08-20 23:54:06,310 - server - INFO - DEBUG: New round 2 in room test_room_789, Target: 67, Range: [1, 100]
+2025-08-20 23:54:06,311 - socketio.server - INFO - emitting event "new_round" to test_room_789 [/]
+2025-08-20 23:54:06,311 - server - INFO - Started new round 2 in room test_room_789
+2025-08-20 23:54:06,312 - socketio.server - INFO - emitting event "room_deleted" to test_room_789 [/]
+2025-08-20 23:54:06,312 - server - INFO - Deleted room: test_room_789
+2025-08-20 23:54:06,313 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:06,313 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:06,314 - server - INFO - DEBUG: Room test_room_123, Target: 37, Range: [1, 100], Guess: 37
+2025-08-20 23:54:06,314 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:06,314 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:06,315 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:06,315 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:06,315 - server - INFO - DEBUG: Room test_room_123, Target: 11, Range: [1, 100], Guess: 50
+2025-08-20 23:54:07,416 - server - INFO - DEBUG: Room test_room_123, Target: 11, Range: [1, 100], Guess: 50
+2025-08-20 23:54:08,516 - server - INFO - DEBUG: Room test_room_123, Target: 11, Range: [1, 100], Guess: 50
+2025-08-20 23:54:08,517 - server - WARNING - Make guess failed: Rate limit exceeded for player TestPlayer in room test_room_123
+2025-08-20 23:54:08,517 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:08,517 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:08,518 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:08,518 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:08,518 - server - INFO - DEBUG: Room test_room_123, Target: 39, Range: [1, 100], Guess: 50
+2025-08-20 23:54:08,518 - server - WARNING - Make guess failed: Rate limit exceeded for player TestPlayer in room test_room_123
+2025-08-20 23:54:09,619 - server - INFO - DEBUG: Room test_room_123, Target: 39, Range: [1, 100], Guess: 51
+2025-08-20 23:54:09,619 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,620 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,620 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,620 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,620 - server - INFO - DEBUG: Room test_room_123, Target: 97, Range: [1, 100], Guess: 50
+2025-08-20 23:54:09,621 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,621 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,621 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,621 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,622 - server - INFO - DEBUG: New round 2 in room test_room_123, Target: 48, Range: [1, 100]
+2025-08-20 23:54:09,622 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:09,622 - server - INFO - Started new round 2 in room test_room_123
+2025-08-20 23:54:09,622 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,622 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,623 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,623 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,623 - server - INFO - DEBUG: Room test_room_123, Target: 66, Range: [1, 100], Guess: 50
+2025-08-20 23:54:09,623 - server - WARNING - Make guess failed: Rate limit exceeded for player TestPlayer in room test_room_123
+2025-08-20 23:54:09,624 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,624 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,624 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,625 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,625 - server - INFO - DEBUG: New round 2 in room test_room_123, Target: 8, Range: [1, 100]
+2025-08-20 23:54:09,625 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:09,625 - server - INFO - Started new round 2 in room test_room_123
+2025-08-20 23:54:09,625 - server - INFO - DEBUG: New round 3 in room test_room_123, Target: 72, Range: [1, 100]
+2025-08-20 23:54:09,625 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:09,625 - server - INFO - Started new round 3 in room test_room_123
+2025-08-20 23:54:09,625 - server - INFO - DEBUG: New round 1 in room test_room_123, Target: 5, Range: [1, 100]
+2025-08-20 23:54:09,625 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:09,626 - server - INFO - Started new round 1 in room test_room_123
+2025-08-20 23:54:09,626 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,626 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,626 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,626 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,626 - server - INFO - Round ended in room test_room_123, starting new round
+2025-08-20 23:54:09,626 - server - INFO - DEBUG: New round 2 in room test_room_123, Target: 64, Range: [1, 100]
+2025-08-20 23:54:09,627 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:09,627 - server - INFO - Started new round 2 in room test_room_123
+2025-08-20 23:54:09,627 - server - INFO - DEBUG: Room test_room_123, Target: 64, Range: [1, 100], Guess: 50
+2025-08-20 23:54:09,627 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,627 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,627 - server - INFO - Created room: test_room_456 (Score Room)
+2025-08-20 23:54:09,627 - server - INFO - Player ScorePlayer joined room test_room_456
+2025-08-20 23:54:09,628 - server - INFO - DEBUG: New round 1 in room test_room_456, Target: 80, Range: [1, 100]
+2025-08-20 23:54:09,628 - socketio.server - INFO - emitting event "new_round" to test_room_456 [/]
+2025-08-20 23:54:09,628 - server - INFO - Started new round 1 in room test_room_456
+2025-08-20 23:54:09,628 - server - INFO - Room test_room_456 reset by admin
+2025-08-20 23:54:09,628 - socketio.server - INFO - emitting event "room_deleted" to test_room_456 [/]
+2025-08-20 23:54:09,628 - server - INFO - Deleted room: test_room_456
+2025-08-20 23:54:09,629 - server - INFO - Created room: test_room_456 (Score Room)
+2025-08-20 23:54:09,629 - server - INFO - Player ScorePlayer joined room test_room_456
+2025-08-20 23:54:09,629 - server - INFO - DEBUG: Room test_room_456, Target: 22, Range: [1, 100], Guess: 22
+2025-08-20 23:54:09,629 - server - INFO - DEBUG: New round 2 in room test_room_456, Target: 54, Range: [1, 100]
+2025-08-20 23:54:09,629 - socketio.server - INFO - emitting event "new_round" to test_room_456 [/]
+2025-08-20 23:54:09,629 - server - INFO - Started new round 2 in room test_room_456
+2025-08-20 23:54:09,629 - socketio.server - INFO - emitting event "room_deleted" to test_room_456 [/]
+2025-08-20 23:54:09,629 - server - INFO - Deleted room: test_room_456
+2025-08-20 23:54:09,630 - server - INFO - Created room: test_room_456 (Score Room)
+2025-08-20 23:54:09,630 - server - INFO - Player ScorePlayer joined room test_room_456
+2025-08-20 23:54:09,630 - server - INFO - Player Player2 joined room test_room_456
+2025-08-20 23:54:09,630 - server - INFO - DEBUG: Room test_room_456, Target: 21, Range: [1, 100], Guess: 21
+2025-08-20 23:54:09,630 - server - INFO - DEBUG: New round 2 in room test_room_456, Target: 96, Range: [1, 100]
+2025-08-20 23:54:09,631 - socketio.server - INFO - emitting event "new_round" to test_room_456 [/]
+2025-08-20 23:54:09,631 - server - INFO - Started new round 2 in room test_room_456
+2025-08-20 23:54:09,631 - server - INFO - DEBUG: Room test_room_456, Target: 96, Range: [1, 100], Guess: 96
+2025-08-20 23:54:09,631 - server - INFO - DEBUG: New round 3 in room test_room_456, Target: 50, Range: [1, 100]
+2025-08-20 23:54:09,631 - socketio.server - INFO - emitting event "new_round" to test_room_456 [/]
+2025-08-20 23:54:09,631 - server - INFO - Started new round 3 in room test_room_456
+2025-08-20 23:54:09,631 - socketio.server - INFO - emitting event "room_deleted" to test_room_456 [/]
+2025-08-20 23:54:09,632 - server - INFO - Deleted room: test_room_456
+2025-08-20 23:54:09,632 - server - INFO - Created room: test_room_456 (Score Room)
+2025-08-20 23:54:09,633 - server - INFO - Player ScorePlayer joined room test_room_456
+2025-08-20 23:54:09,633 - server - INFO - DEBUG: Room test_room_456, Target: 92, Range: [1, 100], Guess: 92
+2025-08-20 23:54:09,633 - server - INFO - DEBUG: New round 2 in room test_room_456, Target: 45, Range: [1, 100]
+2025-08-20 23:54:09,633 - socketio.server - INFO - emitting event "new_round" to test_room_456 [/]
+2025-08-20 23:54:09,633 - server - INFO - Started new round 2 in room test_room_456
+2025-08-20 23:54:09,633 - socketio.server - INFO - emitting event "room_deleted" to test_room_456 [/]
+2025-08-20 23:54:09,633 - server - INFO - Deleted room: test_room_456
+2025-08-20 23:54:09,634 - server - INFO - Created room: test_room_456 (Score Room)
+2025-08-20 23:54:09,634 - server - INFO - Player ScorePlayer joined room test_room_456
+2025-08-20 23:54:09,634 - server - INFO - DEBUG: Room test_room_456, Target: 54, Range: [1, 100], Guess: 50
+2025-08-20 23:54:09,634 - socketio.server - INFO - emitting event "room_deleted" to test_room_456 [/]
+2025-08-20 23:54:09,634 - server - INFO - Deleted room: test_room_456
+2025-08-20 23:54:09,635 - server - INFO - Created room: test_room_456 (Score Room)
+2025-08-20 23:54:09,635 - server - INFO - Player ScorePlayer joined room test_room_456
+2025-08-20 23:54:09,635 - server - INFO - DEBUG: Room test_room_456, Target: 42, Range: [1, 100], Guess: 42
+2025-08-20 23:54:09,635 - server - INFO - DEBUG: New round 2 in room test_room_456, Target: 47, Range: [1, 100]
+2025-08-20 23:54:09,635 - socketio.server - INFO - emitting event "new_round" to test_room_456 [/]
+2025-08-20 23:54:09,636 - server - INFO - Started new round 2 in room test_room_456
+2025-08-20 23:54:09,636 - socketio.server - INFO - emitting event "room_deleted" to test_room_456 [/]
+2025-08-20 23:54:09,636 - server - INFO - Deleted room: test_room_456
+2025-08-20 23:54:09,636 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,637 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,637 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,637 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,637 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,638 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,638 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,638 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,639 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,639 - server - INFO - DEBUG: Room test_room_123, Target: 77, Range: [1, 100], Guess: 77
+2025-08-20 23:54:09,639 - server - INFO - DEBUG: New round 2 in room test_room_123, Target: 9, Range: [1, 100]
+2025-08-20 23:54:09,639 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:09,639 - server - INFO - Started new round 2 in room test_room_123
+2025-08-20 23:54:09,639 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,640 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,640 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,640 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,640 - server - INFO - DEBUG: New round 1 in room test_room_123, Target: 14, Range: [1, 100]
+2025-08-20 23:54:09,641 - socketio.server - INFO - emitting event "new_round" to test_room_123 [/]
+2025-08-20 23:54:09,641 - server - INFO - Started new round 1 in room test_room_123
+2025-08-20 23:54:09,641 - server - INFO - Room test_room_123 reset by admin
+2025-08-20 23:54:09,641 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,641 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,651 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,651 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,652 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,652 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,654 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,654 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,656 - server - INFO - Created room: test_room_1 (Room 1)
+2025-08-20 23:54:09,656 - server - INFO - Created room: test_room_2 (Room 2)
+2025-08-20 23:54:09,657 - socketio.server - INFO - emitting event "room_deleted" to test_room_1 [/]
+2025-08-20 23:54:09,657 - server - INFO - Deleted room: test_room_1
+2025-08-20 23:54:09,657 - socketio.server - INFO - emitting event "room_deleted" to test_room_2 [/]
+2025-08-20 23:54:09,657 - server - INFO - Deleted room: test_room_2
+2025-08-20 23:54:09,659 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,660 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,660 - server - INFO - Chat in room test_room_123: TestPlayer: Hello World!
+2025-08-20 23:54:09,660 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,660 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,661 - server - INFO - Client connected: test_sid_123
+2025-08-20 23:54:09,662 - server - INFO - Client disconnected: test_sid_123
+2025-08-20 23:54:09,664 - server - INFO - Created room: public_room (Public Room)
+2025-08-20 23:54:09,664 - server - INFO - Created room: private_room (Private Room)
+2025-08-20 23:54:09,667 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,667 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,667 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,667 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,669 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,670 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,670 - server - INFO - Player TestPlayer joined Socket.IO room test_room_123
+2025-08-20 23:54:09,670 - server - INFO - First player joined room test_room_123, room already has round 1 ready
+2025-08-20 23:54:09,670 - server - INFO - Player TestPlayer successfully joined room test_room_123
+2025-08-20 23:54:09,671 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,671 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,674 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,674 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,675 - server - INFO - DEBUG: Room test_room_123, Target: 68, Range: [1, 100], Guess: 50
+2025-08-20 23:54:09,675 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,675 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,676 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,676 - server - INFO - Player TestPlayer joined room test_room_123
+2025-08-20 23:54:09,677 - server - INFO - DEBUG: New round 1 in room test_room_123, Target: 8, Range: [1, 100]
+2025-08-20 23:54:09,677 - server - INFO - Started new round 1 in room test_room_123
+2025-08-20 23:54:09,677 - server - INFO - Room test_room_123 reset by admin
+2025-08-20 23:54:09,677 - server - INFO - Room test_room_123 reset successfully
+2025-08-20 23:54:09,678 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,678 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,679 - server - WARNING - Create room failed: Empty room_id or room_name
+2025-08-20 23:54:09,679 - server - WARNING - Create room failed: Invalid room_id length: 2
+2025-08-20 23:54:09,679 - server - INFO - Created room: test_room_123 (Test Room)
+2025-08-20 23:54:09,679 - socketio.server - INFO - emitting event "room_deleted" to test_room_123 [/]
+2025-08-20 23:54:09,679 - server - INFO - Deleted room: test_room_123
+2025-08-20 23:54:09,680 - server - INFO - Created room: test_room (Test Room)
+2025-08-20 23:54:09,680 - server - WARNING - Join room failed: Invalid player_name length: 1
+2025-08-20 23:54:09,680 - server - INFO - Player Player_123 joined room test_room
+2025-08-20 23:54:09,680 - socketio.server - INFO - emitting event "room_deleted" to test_room [/]
+2025-08-20 23:54:09,680 - server - INFO - Deleted room: test_room

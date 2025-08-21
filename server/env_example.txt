@@ -1,0 +1,34 @@
+# Cấu hình môi trường cho Guess Number Game Server
+# Copy file này thành .env và điều chỉnh các giá trị
+
+# Flask Configuration
+SECRET_KEY=your_super_secret_key_here_change_this_in_production
+FLASK_ENV=development
+FLASK_DEBUG=False
+
+# Server Configuration
+HOST=0.0.0.0
+PORT=5000
+
+# Game Configuration
+GAME_ROUND_TIME=60
+GAME_MAX_PLAYERS_PER_ROOM=20
+GAME_MAX_ROOMS=100
+GAME_RATE_LIMIT_MS=1000
+
+# Logging Configuration
+LOG_LEVEL=INFO
+LOG_FILE=game_server.log
+
+# Database Configuration (nếu sử dụng database trong tương lai)
+# DATABASE_URL=sqlite:///game_server.db
+# DATABASE_URL=postgresql://user:password@localhost/game_db
+
+# Redis Configuration (nếu sử dụng Redis cho session)
+# REDIS_URL=redis://localhost:6379/0
+
+# Security Configuration
+CORS_ORIGINS=http://localhost:3000,http://localhost:8080
+RATE_LIMIT_ENABLED=true
+RATE_LIMIT_REQUESTS=100
+RATE_LIMIT_WINDOW=3600
