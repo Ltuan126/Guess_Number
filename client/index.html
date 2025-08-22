@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Number Guessing Game</title>
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
   <link rel="stylesheet" href="style.css" />
   <style>
     /* Optional minimal styles so layout looks okay even without style.css */
@@ -28,6 +29,10 @@
     input, .chat input{background:#0b1220;border:1px solid #334155;border-radius:10px;padding:10px;color:#e2e8f0;width:100%}
     label{display:block;margin-bottom:6px;color:#cbd5e1}
     .avatar{font-size:44px}
+    .status{background:#0b1220;border:1px solid #334155;border-radius:10px;padding:12px;margin:12px 0;text-align:center;min-height:20px}
+    .status.error{background:#1f2937;border-color:#dc2626;color:#fca5a5}
+    .status.success{background:#1f2937;border-color:#059669;color:#6ee7b7}
+    .status.info{background:#1f2937;border-color:#2563eb;color:#93c5fd}
     @media (max-width: 1024px){.container{grid-template-columns:1fr}}
   </style>
 </head>
@@ -36,6 +41,9 @@
   <section id="join-screen" class="card" style="max-width:560px;margin:40px auto;">
     <h1 class="title">Number Guessing Game</h1>
     <div class="avatar">👤</div>
+
+    <!-- Status display for errors/connection info -->
+    <div id="joinStatus" class="status info">🔄 Đang kết nối tới máy chủ...</div>
 
     <div class="form-group">
       <label for="username">Tên người chơi</label>
@@ -69,7 +77,7 @@
       <!-- Game Area -->
       <main class="card game">
         <p class="hint">Hãy đoán số từ 1–100</p>
-        <div class="guess-box">?</n></div>
+        <div class="guess-box">?</div>
         <div class="guess-input">
           <input type="number" id="guessInput" placeholder="Nhập số" />
           <button class="btn success" id="guessBtn">Đoán</button>
@@ -85,97 +93,6 @@
     </div>
   </section>
 
-  <script>
-    const joinBtn = document.getElementById("joinBtn");
-    const createBtn = document.getElementById("createBtn");
-    const joinScreen = document.getElementById("join-screen");
-    const gameScreen = document.getElementById("game-screen");
-
-    let socket;
-    let username;
-
-    function switchScreen() {
-      username = document.getElementById("username").value.trim() || "Khách";
-      const room = document.getElementById("room").value.trim();
-
-      // Ẩn màn hình join, hiện gameplay
-      joinScreen.classList.add("hidden");
-      gameScreen.classList.remove("hidden");
-
-      // Kết nối WebSocket
-      socket = new WebSocket("ws://localhost:8000/ws" + (room ? `?room=${encodeURIComponent(room)}` : ""));
-
-      socket.onopen = () => {
-        // Gửi một sự kiện join để server biết
-        socket.send(JSON.stringify({ type: "join", username, room }));
-      };
-
-      socket.onmessage = (event) => {
-        const data = JSON.parse(event.data);
-
-        if (data.type === "chat") {
-          const chatBox = document.getElementById("chatBox");
-          const p = document.createElement("p");
-          p.innerHTML = `<b>${data.username}:</b> ${data.message}`;
-          chatBox.appendChild(p);
-          chatBox.scrollTop = chatBox.scrollHeight;
-        }
-
-        if (data.type === "leaderboard") {
-          const list = document.getElementById("leaderboardList");
-          list.innerHTML = "";
-          data.scores.forEach((player) => {
-            const li = document.createElement("li");
-            li.innerHTML = `<span>${player.name}</span><span>${player.points} pts</span>`;
-            list.appendChild(li);
-          });
-        }
-
-        if (data.type === "result") {
-          const r = document.getElementById("result");
-          r.textContent = data.message;
-        }
-      };
-
-      socket.onclose = () => {
-        const r = document.getElementById("result");
-        r.textContent = "❌ Mất kết nối tới máy chủ.";
-      };
-    }
-
-    joinBtn.addEventListener("click", switchScreen);
-    createBtn.addEventListener("click", switchScreen);
-
-    // Gửi chat
-    document.getElementById("sendChat").addEventListener("click", () => {
-      const msgInput = document.getElementById("chatMsg");
-      const msg = msgInput.value;
-      if (msg.trim() !== "" && socket && socket.readyState === WebSocket.OPEN) {
-        socket.send(JSON.stringify({ type: "chat", username: username, message: msg }));
-        msgInput.value = "";
-      }
-    });
-
-    // Gửi đoán số
-    document.getElementById("guessBtn").addEventListener("click", () => {
-      const v = document.getElementById("guessInput").value;
-      const guess = parseInt(v, 10);
-      if (!Number.isNaN(guess) && socket && socket.readyState === WebSocket.OPEN) {
-        socket.send(JSON.stringify({ type: "guess", username: username, number: guess }));
-      }
-    });
-
-    // Enter để gửi nhanh
-    document.getElementById("chatMsg").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        document.getElementById("sendChat").click();
-      }
-    });
-    document.getElementById("guessInput").addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        document.getElementById("guessBtn").click();
-      }
-    });
-  </script>
+  <script src="./game.js"></script>
 </body>
 </html>
