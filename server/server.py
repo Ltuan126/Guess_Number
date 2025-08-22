@@ -469,6 +469,13 @@ class GameManager:
             'message': f"🎮 Vòng {room.round_number}: Đoán số từ {range_low} đến {range_high}"
         }, to=room.id)
         
+        # Emit event cũ để tương thích ngược
+        emit_legacy_events(room.id, 'round', {
+            'round_number': room.round_number,
+            'range': [range_low, range_high],
+            'end_time': new_round.end_time
+        })
+        
         logger.info(f"Started new round {room.round_number} in room {room.id}")
     
     def reset_room(self, room_id: str, admin_sid: str) -> Tuple[bool, str]:
@@ -539,8 +546,61 @@ class GameManager:
                 })
         return available_rooms
 
+# ---- Helper functions
+def emit_legacy_events(room_id, event_type, data):
+    """Emit các events cũ để tương thích ngược"""
+    try:
+        if event_type == 'round':
+            # Emit event 'round' cũ
+            socketio.emit('round', {
+                'room': room_id,
+                'round': data.get('round_number', '?'),
+                'range': data.get('range', [1, 100]),
+                'endsAt': data.get('end_time', 0) * 1000  # Convert to milliseconds
+            }, to=room_id)
+        
+        elif event_type == 'scoreboard':
+            # Emit event 'scoreboard' cũ
+            socketio.emit('scoreboard', data.get('scores', {}), to=room_id)
+            
+        elif event_type == 'message':
+            # Emit event 'message' cũ
+            socketio.emit('message', {
+                'room': room_id,
+                'msg': data.get('message', '')
+            }, to=room_id)
+            
+    except Exception as e:
+        logger.error(f"Error emitting legacy events: {e}")
+
 # Khởi tạo game manager
 game_manager = GameManager()
+
+# Tự động tạo phòng lobby mặc định
+def create_default_rooms():
+    """Tạo các phòng mặc định khi server khởi động"""
+    try:
+        # Tạo phòng lobby nếu chưa có
+        if "lobby" not in game_manager.rooms:
+            lobby_room = game_manager.create_room("lobby", "Phòng Lobby", 20)
+            if lobby_room:
+                logger.info("✅ Tạo phòng lobby mặc định thành công")
+            else:
+                logger.warning("❌ Không thể tạo phòng lobby mặc định")
+        
+        # Tạo phòng demo nếu chưa có
+        if "demo" not in game_manager.rooms:
+            demo_room = game_manager.create_room("demo", "Phòng Demo", 10)
+            if demo_room:
+                logger.info("✅ Tạo phòng demo thành công")
+            else:
+                logger.warning("❌ Không thể tạo phòng demo")
+                
+    except Exception as e:
+        logger.error(f"Lỗi khi tạo phòng mặc định: {e}")
+
+# Tạo phòng mặc định
+create_default_rooms()
 
 # Routes
 @app.route("/")
@@ -680,6 +740,26 @@ def on_join_room(data):
         emit('join_error', {'error': message})
         logger.warning(f"Failed to join room: {message}")
 
+@socketio.on('join')
+def on_join_legacy(data):
+    """Event handler cũ để tương thích ngược - chuyển đổi sang join_room"""
+    logger.info(f"Legacy 'join' event received, converting to 'join_room'")
+    
+    # Chuyển đổi data format cũ sang mới
+    room_id = data.get('room', '').strip()
+    player_name = data.get('name', 'Player').strip()[:20]
+    
+    if not room_id:
+        emit('join_error', {'error': 'ID phòng không được để trống'})
+        return
+    
+    # Gọi lại event handler mới
+    on_join_room({
+        'room_id': room_id,
+        'player_name': player_name,
+        'password': None
+    })
+
 @socketio.on('leave_room')
 def on_leave_room():
     """Rời phòng"""
@@ -704,6 +784,11 @@ def on_make_guess(data):
             'details': details
         })
         
+        # Emit event cũ để tương thích ngược
+        emit_legacy_events(room_id, 'message', {
+            'message': message
+        })
+        
         # Cập nhật bảng điểm nếu đoán đúng
         if details.get('correct', False):
             room = game_manager.rooms[room_id]
@@ -713,8 +798,32 @@ def on_make_guess(data):
                 'winner': details.get('winner', ''),
                 'round_number': room.round_number
             }, to=room_id)
+            
+            # Emit event cũ để tương thích ngược
+            emit_legacy_events(room_id, 'scoreboard', {
+                'scores': dict(room.scores)
+            })
     else:
         emit('guess_error', {'error': message})
+
+@socketio.on('guess')
+def on_guess_legacy(data):
+    """Event handler cũ để tương thích ngược - chuyển đổi sang make_guess"""
+    logger.info(f"Legacy 'guess' event received, converting to 'make_guess'")
+    
+    # Chuyển đổi data format cũ sang mới
+    room_id = data.get('room', '').strip()
+    try:
+        guess = int(data.get('number'))
+    except (ValueError, TypeError):
+        emit('guess_error', {'error': 'Số không hợp lệ'})
+        return
+    
+    # Gọi lại event handler mới
+    on_make_guess({
+        'room_id': room_id,
+        'guess': guess
+    })
 
 @socketio.on('chat_message')
 def on_chat_message(data):
@@ -752,6 +861,21 @@ def on_chat_message(data):
     
     socketio.emit('chat_message', chat_data, to=room_id)
     logger.info(f"Chat in room {room_id}: {player.name}: {message}")
+
+@socketio.on('chat')
+def on_chat_legacy(data):
+    """Event handler cũ để tương thích ngược - chuyển đổi sang chat_message"""
+    logger.info(f"Legacy 'chat' event received, converting to 'chat_message'")
+    
+    # Chuyển đổi data format cũ sang mới
+    room_id = data.get('room', '').strip()
+    message = data.get('text', '').strip()
+    
+    # Gọi lại event handler mới
+    on_chat_message({
+        'room_id': room_id,
+        'message': message
+    })
 
 @socketio.on('reset_room')
 def on_reset_room(data):
