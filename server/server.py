@@ -72,28 +72,28 @@ class Player:
     guesses_this_round: int = 0
     chat_messages: deque = None
     last_chat_time: float = 0
-    
+
     def __post_init__(self):
         if self.chat_messages is None:
             self.chat_messages = deque(maxlen=GAME_CONFIG['MAX_CHAT_PER_MINUTE'])
-    
+
     def can_make_guess(self) -> bool:
         """Kiểm tra có thể đoán số không"""
         current_time = time.time()
         time_limit = GAME_CONFIG['RATE_LIMIT_MS'] / 1000
-        return (current_time - self.last_guess_at >= time_limit and 
+        return (current_time - self.last_guess_at >= time_limit and
                 self.guesses_this_round < GAME_CONFIG['MAX_GUESSES_PER_ROUND'])
-    
+
     def can_send_chat(self) -> bool:
         """Kiểm tra có thể gửi chat không"""
         current_time = time.time()
         # Xóa tin nhắn cũ hơn 1 phút
-        while (self.chat_messages and 
+        while (self.chat_messages and
                current_time - self.chat_messages[0] > 60):
             self.chat_messages.popleft()
-        
+
         return len(self.chat_messages) < GAME_CONFIG['MAX_CHAT_PER_MINUTE']
-    
+
     def add_chat_message(self):
         """Thêm tin nhắn chat mới"""
         current_time = time.time()
@@ -124,7 +124,7 @@ class Room:
     password: Optional[str] = None
     is_private: bool = False
     game_history: deque = None
-    
+
     def __post_init__(self):
         if self.game_history is None:
             self.game_history = deque(maxlen=10)
@@ -135,7 +135,7 @@ class GameManager:
         self.player_rooms: Dict[str, str] = {}  # sid -> room_id
         self.cleanup_thread = None
         self.start_cleanup_thread()
-    
+
     def start_cleanup_thread(self):
         """Khởi động thread dọn dẹp phòng không hoạt động"""
         def cleanup_inactive_rooms():
@@ -143,7 +143,7 @@ class GameManager:
                 try:
                     current_time = time.time()
                     inactive_rooms = []
-                    
+
                     for room_id, room in self.rooms.items():
                         # Xóa phòng không có người chơi trong 5 phút
                         if len(room.players) == 0 and (current_time - room.created_at) > 300:
@@ -151,20 +151,38 @@ class GameManager:
                         # Xóa phòng không hoạt động trong 10 phút
                         elif not room.is_active and (current_time - room.created_at) > 600:
                             inactive_rooms.append(room_id)
-                    
+
                     for room_id in inactive_rooms:
                         self.delete_room(room_id)
                         logger.info(f"Cleaned up inactive room: {room_id}")
-                
+
                 except Exception as e:
                     logger.error(f"Error in cleanup thread: {e}")
-                
+
                 time.sleep(60)  # Chạy mỗi phút
-        
-        self.cleanup_thread = threading.Thread(target=cleanup_inactive_rooms, daemon=True)
-        self.cleanup_thread.start()
-    
-    def create_room(self, room_id: str, room_name: str, max_players: int = 10, 
+
+    def normalize_room_id(self, room_id: str) -> str:
+        """Chuẩn hóa room ID (chuyển về chữ thường)"""
+        return room_id.lower().strip()
+
+    def find_room_by_id(self, room_id: str) -> Optional[Room]:
+        """Tìm phòng theo ID (không phân biệt chữ hoa/thường)"""
+        normalized_id = self.normalize_room_id(room_id)
+
+        # Tìm chính xác trước
+        if room_id in self.rooms:
+            return self.rooms[room_id]
+
+        # Tìm theo ID đã chuẩn hóa
+        for existing_id, room in self.rooms.items():
+            if self.normalize_room_id(existing_id) == normalized_id:
+                return room
+
+        return None
+
+
+
+    def create_room(self, room_id: str, room_name: str, max_players: int = 10,
                    password: str = None, is_private: bool = False) -> Optional[Room]:
         """Tạo phòng mới"""
         # Validation input
@@ -195,10 +213,13 @@ class GameManager:
             logger.warning("Create room failed: Max rooms reached")
             return None
         
-        if room_id in self.rooms:
-            logger.warning(f"Create room failed: Room {room_id} already exists")
-            return None
-        
+        # Kiểm tra trùng lặp (không phân biệt chữ hoa/thường)
+        normalized_id = self.normalize_room_id(room_id)
+        for existing_id in self.rooms:
+            if self.normalize_room_id(existing_id) == normalized_id:
+                logger.warning(f"Create room failed: Room with similar ID already exists: {existing_id}")
+                return None
+
         # Tạo round đầu tiên
         range_low, range_high = GAME_CONFIG['RANGE_DEFAULT']
         current_time = time.time()
@@ -209,7 +230,7 @@ class GameManager:
             start_time=current_time,
             end_time=current_time + GAME_CONFIG['ROUND_TIME']
         )
-        
+
         room = Room(
             id=room_id,
             name=room_name,
@@ -223,33 +244,33 @@ class GameManager:
             password=password,
             is_private=is_private
         )
-        
+
         self.rooms[room_id] = room
         logger.info(f"Created room: {room_id} ({room_name})")
         return room
-    
+
     def delete_room(self, room_id: str):
         """Xóa phòng"""
-        if room_id in self.rooms:
-            room = self.rooms[room_id]
+        room = self.find_room_by_id(room_id)
+        if room:
             # Thông báo cho tất cả người chơi
             socketio.emit('room_deleted', {'room_id': room_id}, to=room_id)
             # Xóa khỏi quản lý
-            del self.rooms[room_id]
+            del self.rooms[room.id]  # Sử dụng room.id gốc để xóa
             logger.info(f"Deleted room: {room_id}")
-    
+
     def join_room(self, room_id: str, player_name: str, sid: str, password: str = None) -> Tuple[bool, str]:
         """Tham gia phòng"""
         # Validation input
         if not room_id or not player_name:
             logger.warning("Join room failed: Empty room_id or player_name")
             return False, "ID phòng và tên người chơi không được để trống"
-        
-        if (len(player_name) < GAME_CONFIG['MIN_PLAYER_NAME_LENGTH'] or 
+
+        if (len(player_name) < GAME_CONFIG['MIN_PLAYER_NAME_LENGTH'] or
             len(player_name) > GAME_CONFIG['MAX_PLAYER_NAME_LENGTH']):
             logger.warning(f"Join room failed: Invalid player_name length: {len(player_name)}")
             return False, f"Tên người chơi phải từ {GAME_CONFIG['MIN_PLAYER_NAME_LENGTH']} đến {GAME_CONFIG['MAX_PLAYER_NAME_LENGTH']} ký tự"
-        
+
         # Kiểm tra ký tự đặc biệt trong player_name - cho phép chữ cái Unicode (bao gồm tiếng Việt)
         import unicodedata
         allowed_chars = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_ -')
@@ -257,28 +278,28 @@ class GameManager:
             if char not in allowed_chars and not unicodedata.category(char).startswith('L'):
                 logger.warning(f"Join room failed: Invalid characters in player_name: {player_name}")
                 return False, "Tên người chơi chỉ được chứa chữ cái, số, dấu cách, gạch dưới và gạch ngang"
-        
-        if room_id not in self.rooms:
+
+                # Tìm phòng (không phân biệt chữ hoa/thường)
+        room = self.find_room_by_id(room_id)
+        if not room:
             logger.warning(f"Join room failed: Room {room_id} not found")
             return False, "Phòng không tồn tại"
-        
-        room = self.rooms[room_id]
-        
+
         # Kiểm tra mật khẩu
         if room.is_private and room.password != password:
             logger.warning(f"Join room failed: Wrong password for room {room_id}")
             return False, "Mật khẩu không đúng"
-        
+
         # Kiểm tra số lượng người chơi
         if len(room.players) >= room.max_players:
             logger.warning(f"Join room failed: Room {room_id} is full")
             return False, "Phòng đã đầy"
-        
+
         # Kiểm tra tên đã tồn tại
         if any(p.name == player_name for p in room.players.values()):
             logger.warning(f"Join room failed: Player name {player_name} already exists in room {room_id}")
             return False, "Tên người chơi đã tồn tại"
-        
+
         # Tạo người chơi mới
         player = Player(
             name=player_name,
@@ -286,63 +307,62 @@ class GameManager:
             joined_at=time.time(),
             last_guess_at=0
         )
-        
+
         room.players[sid] = player
         self.player_rooms[sid] = room_id
-        
+
         # Reset thời gian vòng chơi nếu vòng đã kết thúc
         current_time = time.time()
         if current_time > room.current_round.end_time:
             # Vòng đã kết thúc, tạo vòng mới
             self._start_new_round(room)
             logger.info(f"Round ended, started new round for new player {player_name}")
-        
+
         logger.info(f"Player {player_name} joined room {room_id}")
         return True, "Tham gia thành công"
-    
+
     def leave_room(self, sid: str):
         """Rời phòng"""
         if sid not in self.player_rooms:
             return
         
         room_id = self.player_rooms[sid]
-        if room_id not in self.rooms:
+        room = self.find_room_by_id(room_id)
+        if not room:
             return
-        
-        room = self.rooms[room_id]
         if sid in room.players:
             player_name = room.players[sid].name
             del room.players[sid]
             del self.player_rooms[sid]
-            
+
             # Thông báo cho phòng
             socketio.emit('player_left', {
                 'room_id': room_id,
                 'player_name': player_name,
                 'remaining_players': len(room.players)
             }, to=room_id)
-            
+
             # Nếu phòng trống, đánh dấu không hoạt động
             if len(room.players) == 0:
                 room.is_active = False
-            
+
             logger.info(f"Player {player_name} left room {room_id}")
-    
+
     def make_guess(self, room_id: str, sid: str, guess: int) -> Tuple[bool, str, dict]:
         """Thực hiện đoán số"""
         # Validation input
         if not isinstance(guess, int):
             logger.warning(f"Make guess failed: Invalid guess type: {type(guess)}")
             return False, "Số đoán phải là số nguyên", {}
-        
-        if room_id not in self.rooms or sid not in self.rooms[room_id].players:
+
+                # Tìm phòng (không phân biệt chữ hoa/thường)
+        room = self.find_room_by_id(room_id)
+        if not room or sid not in room.players:
             logger.warning(f"Make guess failed: Room {room_id} or player {sid} not found")
             return False, "Không tìm thấy phòng hoặc người chơi", {}
-        
-        room = self.rooms[room_id]
         player = room.players[sid]
         current_time = time.time()
-        
+
         # Kiểm tra thời gian
         if current_time > room.current_round.end_time:
             logger.info(f"Round ended in room {room_id}, starting new round")
@@ -350,7 +370,7 @@ class GameManager:
             self._start_new_round(room)
             # Cho phép đoán trong vòng mới
             return self.make_guess(room_id, sid, guess)
-        
+
         # Kiểm tra rate limit và số lần đoán
         if not player.can_make_guess():
             if current_time - player.last_guess_at < GAME_CONFIG['RATE_LIMIT_MS'] / 1000:
@@ -359,20 +379,20 @@ class GameManager:
             else:
                 logger.warning(f"Make guess failed: Max guesses per round exceeded for player {player.name} in room {room_id}")
                 return False, f"Bạn đã đoán quá {GAME_CONFIG['MAX_GUESSES_PER_ROUND']} lần trong vòng này", {}
-        
+
         # Kiểm tra phạm vi
         if guess < room.current_round.range_low or guess > room.current_round.range_high:
             logger.info(f"Make guess failed: Out of range guess {guess} in room {room_id}")
             return False, f"Số phải trong khoảng [{room.current_round.range_low}, {room.current_round.range_high}]", {}
-        
+
         # Cập nhật thông tin người chơi
         player.last_guess_at = current_time
         player.total_guesses += 1
         player.guesses_this_round += 1
-        
+
         # Debug: Log số cần đoán (chỉ để debug, sẽ xóa sau)
         logger.info(f"DEBUG: Room {room_id}, Target: {room.current_round.number}, Range: [{room.current_round.range_low}, {room.current_round.range_high}], Guess: {guess}")
-        
+
         # Kiểm tra kết quả
         if guess == room.current_round.number:
             # Đoán đúng
@@ -380,15 +400,15 @@ class GameManager:
             base_score = GAME_CONFIG['SCORE_CORRECT']
             streak_bonus = int(player.streak * GAME_CONFIG['SCORE_STREAK_MULTIPLIER'])
             total_score = base_score + time_bonus + streak_bonus
-            
+
             player.score += total_score
             player.correct_guesses += 1
             player.streak += 1
-            
+
             room.scores[player.name] = player.score
             room.current_round.winner = player.name
             room.current_round.total_guesses += 1
-            
+
             # Lưu lịch sử vòng
             round_history = {
                 'round_number': room.round_number,
@@ -398,13 +418,13 @@ class GameManager:
                 'duration': current_time - room.current_round.start_time
             }
             room.game_history.append(round_history)
-            
+
             # Lưu số đã đoán đúng trước khi tạo vòng mới
             correct_number = room.current_round.number
-            
+
             # Tạo vòng mới
             self._start_new_round(room)
-            
+
             return True, f"🎉 Chính xác! Số cần tìm là {correct_number}", {
                 'correct': True,
                 'score_gained': total_score,
@@ -417,7 +437,7 @@ class GameManager:
             # Đoán sai
             player.streak = 0
             room.current_round.total_guesses += 1
-            
+
             # Gợi ý rõ ràng hơn cho người chơi
             if guess < room.current_round.number:
                 hint = f"Số cần tìm lớn hơn {guess}"
@@ -429,7 +449,7 @@ class GameManager:
                 'range': [room.current_round.range_low, room.current_round.range_high],
                 'total_guesses': room.current_round.total_guesses
             }
-    
+
     def _start_new_round(self, room: Room, reset_mode: bool = False):
         """Bắt đầu vòng mới"""
         if reset_mode:
@@ -438,14 +458,14 @@ class GameManager:
             room.round_number = 1
         else:
             room.round_number += 1
-            
+
         # Reset guesses_this_round cho tất cả người chơi
         for player in room.players.values():
             player.guesses_this_round = 0
-            
+
         range_low, range_high = GAME_CONFIG['RANGE_DEFAULT']
         current_time = time.time()
-        
+
         new_round = GameRound(
             number=random.randint(range_low, range_high),
             range_low=range_low,
@@ -453,12 +473,12 @@ class GameManager:
             start_time=current_time,
             end_time=current_time + GAME_CONFIG['ROUND_TIME']
         )
-        
+
         room.current_round = new_round
-        
+
         # Debug: Log số mới được tạo
         logger.info(f"DEBUG: New round {room.round_number} in room {room.id}, Target: {new_round.number}, Range: [{new_round.range_low}, {new_round.range_high}]")
-        
+
         # Thông báo vòng mới
         socketio.emit('new_round', {
             'room_id': room.id,
@@ -468,40 +488,45 @@ class GameManager:
             'previous_winner': room.current_round.winner,
             'message': f"🎮 Vòng {room.round_number}: Đoán số từ {range_low} đến {range_high}"
         }, to=room.id)
-        
+
+        # Emit event cũ để tương thích ngược
+        emit_legacy_events(room.id, 'round', {
+            'round_number': room.round_number,
+            'range': [range_low, range_high],
+            'end_time': new_round.end_time
+        })
+
         logger.info(f"Started new round {room.round_number} in room {room.id}")
-    
+
     def reset_room(self, room_id: str, admin_sid: str) -> Tuple[bool, str]:
         """Reset phòng (chỉ admin)"""
-        if room_id not in self.rooms:
+        room = self.find_room_by_id(room_id)
+        if not room:
             return False, "Phòng không tồn tại"
-        
-        room = self.rooms[room_id]
         if admin_sid not in room.players:
             return False, "Bạn không phải người chơi trong phòng này"
-        
+
         # Reset điểm số
         for player in room.players.values():
             player.score = 0
             player.streak = 0
             player.total_guesses = 0
             player.correct_guesses = 0
-        
+
         room.scores.clear()
         room.game_history.clear()
-        
+
         # Tạo vòng mới (sẽ set round_number = 1)
         self._start_new_round(room, reset_mode=True)
-        
+
         logger.info(f"Room {room_id} reset by admin")
         return True, "Reset phòng thành công"
-    
+
     def get_room_info(self, room_id: str) -> Optional[dict]:
         """Lấy thông tin phòng"""
-        if room_id not in self.rooms:
+        room = self.find_room_by_id(room_id)
+        if not room:
             return None
-        
-        room = self.rooms[room_id]
         return {
             'id': room.id,
             'name': room.name,
@@ -524,7 +549,7 @@ class GameManager:
             'max_players': room.max_players,
             'current_players': len(room.players)
         }
-    
+
     def get_available_rooms(self) -> List[dict]:
         """Lấy danh sách phòng có sẵn"""
         available_rooms = []
@@ -539,8 +564,67 @@ class GameManager:
                 })
         return available_rooms
 
+# ---- Helper functions
+def emit_legacy_events(room_id, event_type, data, target_sid=None):
+    """Emit các events cũ để tương thích ngược"""
+    try:
+        if event_type == 'round':
+            # Emit event 'round' cũ
+            socketio.emit('round', {
+                'room': room_id,
+                'round': data.get('round_number', '?'),
+                'range': data.get('range', [1, 100]),
+                'endsAt': data.get('end_time', 0) * 1000  # Convert to milliseconds
+            }, to=room_id)
+
+        elif event_type == 'scoreboard':
+            # Emit event 'scoreboard' cũ
+            socketio.emit('scoreboard', data.get('scores', {}), to=room_id)
+
+        elif event_type == 'message':
+            # Emit event 'message' cũ - chỉ cho người chơi cụ thể nếu có target_sid
+            if target_sid:
+                socketio.emit('message', {
+                    'room': room_id,
+                    'msg': data.get('message', '')
+                }, to=target_sid)
+            else:
+                socketio.emit('message', {
+                    'room': room_id,
+                    'msg': data.get('message', '')
+                }, to=room_id)
+
+    except Exception as e:
+        logger.error(f"Error emitting legacy events: {e}")
+
 # Khởi tạo game manager
 game_manager = GameManager()
+
+# Tự động tạo phòng lobby mặc định
+def create_default_rooms():
+    """Tạo các phòng mặc định khi server khởi động"""
+    try:
+        # Tạo phòng lobby nếu chưa có
+        if "lobby" not in game_manager.rooms:
+            lobby_room = game_manager.create_room("lobby", "Phòng Lobby", 20)
+            if lobby_room:
+                logger.info("✅ Tạo phòng lobby mặc định thành công")
+            else:
+                logger.warning("❌ Không thể tạo phòng lobby mặc định")
+
+        # Tạo phòng demo nếu chưa có
+        if "demo" not in game_manager.rooms:
+            demo_room = game_manager.create_room("demo", "Phòng Demo", 10)
+            if demo_room:
+                logger.info("✅ Tạo phòng demo thành công")
+            else:
+                logger.warning("❌ Không thể tạo phòng demo")
+
+    except Exception as e:
+        logger.error(f"Lỗi khi tạo phòng mặc định: {e}")
+
+# Tạo phòng mặc định
+create_default_rooms()
 
 # Routes
 @app.route("/")
@@ -577,10 +661,10 @@ def create_room_api():
     max_players = min(data.get('max_players', 10), GAME_CONFIG['MAX_PLAYERS_PER_ROOM'])
     password = data.get('password', '').strip() or None
     is_private = bool(password)
-    
+
     if not room_id:
         return jsonify({"error": "ID phòng không được để trống"}), 400
-    
+
     room = game_manager.create_room(room_id, room_name, max_players, password, is_private)
     if room:
         return jsonify({
@@ -597,24 +681,24 @@ def on_create_room(data):
     room_id = data.get('room_id', '').strip()
     room_name = data.get('room_name', '').strip()
     max_players = data.get('max_players', 10)
-    
+
     if not room_id or not room_name:
         emit('create_room_error', {'error': 'ID phòng và tên phòng không được để trống'})
         return
-    
+
     # Tạo phòng
     room = game_manager.create_room(room_id, room_name, max_players)
-    
+
     if room:
         # Tham gia Socket.IO room ngay sau khi tạo
         join_room(room_id)
-        
+
         emit('room_created', {
             'room_id': room_id,
             'room_name': room_name,
             'max_players': max_players
         })
-        
+
         logger.info(f"Room {room_id} created successfully")
     else:
         emit('create_room_error', {'error': 'Không thể tạo phòng'})
@@ -635,26 +719,26 @@ def on_join_room(data):
     """Tham gia phòng"""
     room_id = data.get('room_id', '').strip()
     player_name = data.get('player_name', 'Player').strip()[:20]
-    
+
     # Xử lý password an toàn
     password_raw = data.get('password')
     if password_raw is None:
         password = None
     else:
         password = password_raw.strip() or None
-    
+
     if not room_id:
         emit('join_error', {'error': 'ID phòng không được để trống'})
         return
-    
+
     success, message = game_manager.join_room(room_id, player_name, request.sid, password)
     
     if success:
-        room = game_manager.rooms[room_id]
+        room = game_manager.find_room_by_id(room_id)
         # Tham gia Socket.IO room để nhận tin nhắn
         join_room(room_id)
         logger.info(f"Player {player_name} joined Socket.IO room {room_id}")
-        
+
         # Gửi thông tin phòng
         emit('room_joined', {
             'room_id': room_id,
@@ -662,23 +746,43 @@ def on_join_room(data):
             'player_name': player_name,
             'room_info': game_manager.get_room_info(room_id)
         })
-        
+
         # Thông báo cho phòng
         socketio.emit('player_joined', {
             'room_id': room_id,
             'player_name': player_name,
             'total_players': len(room.players)
         }, to=room_id)
-        
+
         # Nếu đây là người chơi đầu tiên, bắt đầu vòng 1
         if len(room.players) == 1:
             # Không cần gọi _start_new_round vì phòng đã có vòng 1 sẵn
             logger.info(f"First player joined room {room_id}, room already has round 1 ready")
-        
+
         logger.info(f"Player {player_name} successfully joined room {room_id}")
     else:
         emit('join_error', {'error': message})
         logger.warning(f"Failed to join room: {message}")
+
+@socketio.on('join')
+def on_join_legacy(data):
+    """Event handler cũ để tương thích ngược - chuyển đổi sang join_room"""
+    logger.info(f"Legacy 'join' event received, converting to 'join_room'")
+
+    # Chuyển đổi data format cũ sang mới
+    room_id = data.get('room', '').strip()
+    player_name = data.get('name', 'Player').strip()[:20]
+
+    if not room_id:
+        emit('join_error', {'error': 'ID phòng không được để trống'})
+        return
+
+    # Gọi lại event handler mới
+    on_join_room({
+        'room_id': room_id,
+        'player_name': player_name,
+        'password': None
+    })
 
 @socketio.on('leave_room')
 def on_leave_room():
@@ -695,53 +799,89 @@ def on_make_guess(data):
     except (ValueError, TypeError):
         emit('guess_error', {'error': 'Số không hợp lệ'})
         return
-    
+
     success, message, details = game_manager.make_guess(room_id, request.sid, guess)
-    
+
     if success:
         emit('guess_result', {
             'message': message,
             'details': details
         })
-        
+
+        # Emit event cũ để tương thích ngược - chỉ cho người chơi đã đoán
+        emit_legacy_events(room_id, 'message', {
+            'message': message
+        }, target_sid=request.sid)
+
         # Cập nhật bảng điểm nếu đoán đúng
         if details.get('correct', False):
-            room = game_manager.rooms[room_id]
-            socketio.emit('scoreboard_updated', {
-                'room_id': room_id,
-                'scores': dict(room.scores),
-                'winner': details.get('winner', ''),
-                'round_number': room.round_number
-            }, to=room_id)
+            room = game_manager.find_room_by_id(room_id)
+            if room:
+                socketio.emit('scoreboard_updated', {
+                    'room_id': room_id,
+                    'scores': dict(room.scores),
+                    'winner': details.get('winner', ''),
+                    'round_number': room.round_number
+                }, to=room_id)
+
+            # Emit event cũ để tương thích ngược
+            emit_legacy_events(room_id, 'scoreboard', {
+                'scores': dict(room.scores)
+            })
     else:
         emit('guess_error', {'error': message})
+
+@socketio.on('guess')
+def on_guess_legacy(data):
+    """Event handler cũ để tương thích ngược - chuyển đổi sang make_guess"""
+    logger.info(f"Legacy 'guess' event received, converting to 'make_guess'")
+
+    # Chuyển đổi data format cũ sang mới
+    room_id = data.get('room', '').strip()
+    try:
+        guess = int(data.get('number'))
+    except (ValueError, TypeError):
+        emit('guess_error', {'error': 'Số không hợp lệ'})
+        return
+
+    # Gọi lại event handler mới
+    on_make_guess({
+        'room_id': room_id,
+        'guess': guess
+    })
 
 @socketio.on('chat_message')
 def on_chat_message(data):
     """Gửi tin nhắn chat"""
     room_id = data.get('room_id', '').strip()
     message = data.get('message', '').strip()
-    
+
     # Validation input
     if not room_id or not message:
         emit('chat_error', {'error': 'ID phòng và tin nhắn không được để trống'})
         return
-    
+
     if len(message) > GAME_CONFIG['MAX_CHAT_LENGTH']:
         emit('chat_error', {'error': f'Tin nhắn quá dài (tối đa {GAME_CONFIG["MAX_CHAT_LENGTH"]} ký tự)'})
         return
-    
-    if room_id not in game_manager.rooms or request.sid not in game_manager.rooms[room_id].players:
-        logger.warning(f"Chat failed: Room {room_id} or player {request.sid} not found")
+
+                # Tìm phòng (không phân biệt chữ hoa/thường)
+    room = game_manager.find_room_by_id(room_id)
+    if not room:
+        logger.warning(f"Chat failed: Room {room_id} not found")
         emit('chat_error', {'error': 'Không thể gửi tin nhắn'})
         return
     
-    room = game_manager.rooms[room_id]
-    player = room.players[request.sid]
+    if request.sid not in room.players:
+        logger.warning(f"Chat failed: Player {request.sid} not found in room {room_id}")
+        emit('chat_error', {'error': 'Không thể gửi tin nhắn'})
+        return
     
+    player = room.players[request.sid]
+
     # Thêm tin nhắn chat mới
     player.add_chat_message()
-    
+
     chat_data = {
         'room_id': room_id,
         'player_name': player.name,
@@ -749,17 +889,32 @@ def on_chat_message(data):
         'timestamp': time.time(),
         'type': 'chat'
     }
-    
+
     socketio.emit('chat_message', chat_data, to=room_id)
     logger.info(f"Chat in room {room_id}: {player.name}: {message}")
+
+@socketio.on('chat')
+def on_chat_legacy(data):
+    """Event handler cũ để tương thích ngược - chuyển đổi sang chat_message"""
+    logger.info(f"Legacy 'chat' event received, converting to 'chat_message'")
+
+    # Chuyển đổi data format cũ sang mới
+    room_id = data.get('room', '').strip()
+    message = data.get('text', '').strip()
+
+    # Gọi lại event handler mới
+    on_chat_message({
+        'room_id': room_id,
+        'message': message
+    })
 
 @socketio.on('reset_room')
 def on_reset_room(data):
     """Reset phòng"""
     room_id = data.get('room_id', '').strip()
-    
+
     success, message = game_manager.reset_room(room_id, request.sid)
-    
+
     if success:
         emit('room_reset', {'message': message})
         socketio.emit('room_reset', {'message': message}, to=room_id)
@@ -772,7 +927,7 @@ def on_get_room_info(data):
     """Lấy thông tin phòng"""
     room_id = data.get('room_id', '').strip()
     room_info = game_manager.get_room_info(room_id)
-    
+
     if room_info:
         emit('room_info', room_info)
     else:
@@ -797,7 +952,7 @@ def internal_error(error):
 if __name__ == "__main__":
     logger.info("Starting Guess Number Server v2.0...")
     logger.info(f"Game config: {GAME_CONFIG}")
-    
+
     try:
         socketio.run(app, host="0.0.0.0", port=5000, debug=False)
     except KeyboardInterrupt:
