@@ -84,8 +84,33 @@ body {
 .btn.success { background: #28a745; color: #fff; }
 
 
+#gameheader {
+  display: flex;
+  justify-content: space-between; /* RoomID bên trái, Countdown bên phải */
+  align-items: center;
+  width: 100%;
+  max-width: 1070px;   
+  padding: 10px 20px;
+  position: relative;
+}
+
+#roomIdBox {
+  color: #7e7e7e; 
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#countdownBox {
+  color: #6d6d6d;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
 /* Game screen */
 .container {
+  position:relative;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr; 
   gap: 20px;
@@ -93,12 +118,6 @@ body {
   max-width: 1600px; 
   height: 90vh;
 }
-
-
-
-/* CHƯA FIX XONG*/
-
-
 
 
 .chat, .game, .leaderboard {
@@ -119,7 +138,7 @@ body {
   background: #fafafa;
   border-radius: 10px;
   box-shadow: inset 0 1px 4px rgba(0,0,0,0.05);
-
+  
   height: 678px;       
   max-height: 1000px;  
 }
@@ -138,52 +157,35 @@ body {
 
 /* Game box */
 .card.game p{
-    
     padding: 10px;
     text-align: center;
     font-size: 1.2rem;
     color: #555;
 }
 
- .guess-box {
-  font-size: 4rem;
+
+.guess-box {
+  font-size: 3rem;
   font-weight: bold;
-  width: 140px;
-  height: 140px;
-  margin:  auto;
+  text-align: center;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid #333;
+  width: 200px;
+  height: 200px;
+  line-height: 120px;
+  border: 1px solid black;
   border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  transition: transform 0.2s ease;
-}
-.guess-box.spin {
-  animation: spinNumbers 0.8s linear infinite;
-}
-@keyframes spinNumbers {
-  from { transform: rotateX(0deg); }
-  to { transform: rotateX(360deg); }
+  background: #fffefe;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
 }
 
-/*
-.countdown {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #ff4444;
-  margin: 15px 0;
-  text-align: center;
-  animation: pulse 1s infinite;
+.guess-box #secrect{
+  font-size: 100px;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
-  100% { transform: scale(1); opacity: 1; }
-}
-*/
 .guess-input {
   display: flex;
   gap: 10px;
@@ -205,18 +207,50 @@ body {
 }
 
 /* Leaderboard */
- .leaderboard ul {
+.leaderboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ .leaderboard #leaderboardList {
   list-style: none;
   padding: 0;
   margin: 0;
   flex: 1;
   overflow-y: auto;
-} 
+}
 
-.leaderboard li {
+#leaderboardList li {
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 10px 12px;
   border-bottom: 1px solid #eee;
   font-size: 1rem;
-} 
+  color: #333;
+  transition: background 0.2s;
+}
+
+#leaderboardList li:hover {
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+#leaderboardList li .score {
+  font-weight: bold;
+  color: #007bff;
+}
+
+#leaderboardList li:nth-child(1) {
+  background: #ffe98a;
+  font-weight: bold;
+}
+#leaderboardList li:nth-child(2) {
+  background: #e5f1ff;
+  font-weight: bold;
+}
+#leaderboardList li:nth-child(3) {
+  background: #ffe5e5;
+  font-weight: bold;
+}
