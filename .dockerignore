@@ -1,0 +1,6 @@
+.git
+.gitignore
+server/logs/
+__pycache__/
+*.pyc
+node_modules/
