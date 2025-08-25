@@ -1,0 +1,26 @@
+{
+  "test_room": {
+    "id": "test_room",
+    "name": "Test Room",
+    "created_at": 1756136189.0245485,
+    "current_round": {
+      "number": 46,
+      "range_low": 1,
+      "range_high": 100,
+      "start_time": 1756136189.0245485,
+      "end_time": 1756136489.0245485,
+      "winner": null,
+      "total_guesses": 0
+    },
+    "players": {
+      "sid1": {
+        "name": "Player_123",
+        "sid": "sid1",
+        "joined_at": 1756136189.025664,
+        "last_guess_at": 0,
+        "score": 0,
+        "streak": 0,
+        "total_guesses": 0,
+        "correct_guesses": 0,
+        "guesses_this_round": 0,
+        "chat_messages": 

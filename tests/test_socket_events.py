@@ -251,15 +251,17 @@ class TestSocketEvents(unittest.TestCase):
             self.assertEqual(call_args[0], 'room_reset')
             self.assertEqual(call_args[1]['message'], 'Reset phòng thành công')
             
-            # Kiểm tra socketio.emit đã được gọi 2 lần:
+            # Kiểm tra socketio.emit đã được gọi 3 lần:
             # 1. new_round (từ _start_new_round)
-            # 2. room_reset (từ on_reset_room)
-            self.assertEqual(mock_socketio_emit.call_count, 2)
+            # 2. round (legacy event từ _start_new_round)
+            # 3. room_reset (từ on_reset_room)
+            self.assertEqual(mock_socketio_emit.call_count, 3)
             
             # Kiểm tra các event đã được gọi
             calls = mock_socketio_emit.call_args_list
             event_names = [call[0][0] for call in calls]
             self.assertIn('new_round', event_names)
+            self.assertIn('round', event_names)  # Legacy event
             self.assertIn('room_reset', event_names)
     
     @patch('server.emit')
