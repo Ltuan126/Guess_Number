@@ -1,6 +1,22 @@
+# Bỏ Git
 .git
 .gitignore
+
+# Logs
 server/logs/
+
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Node (nếu có dùng trong client)
 node_modules/
+
+# Thư mục test & docs không cần build image
+tests/
+docs/
+
+# Env
+.env

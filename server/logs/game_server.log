@@ -1,1 +1,1232 @@
 2025-08-25 22:55:08,126 - __main__ - INFO - Server stopped by user
+2025-08-25 16:23:14,657 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-25 16:23:14,660 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-25 16:23:14,661 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-25 16:23:14,661 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-25 16:23:14,661 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-25 16:23:14,663 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-25 16:23:14,664 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 16:26:50,011 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-25 16:26:50,015 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-25 16:26:50,015 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-25 16:26:50,016 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:26:50,016 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-25 16:26:50,016 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-25 16:26:50,017 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:26:50,017 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-25 16:26:50,020 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-25 16:26:50,020 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 16:27:21,334 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet OPEN data {'sid': 'mvELwbxxDk4tp2qFAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:27:21,388 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet MESSAGE data 0
+2025-08-25 16:27:21,389 - __main__ - INFO - Client connected: dGX2UExiwjQ884ZIAAAB
+2025-08-25 16:27:21,390 - socketio.server - INFO - emitting event "connected" to dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:21,390 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["connected",{"sid":"dGX2UExiwjQ884ZIAAAB"}]
+2025-08-25 16:27:21,391 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 0{"sid":"dGX2UExiwjQ884ZIAAAB"}
+2025-08-25 16:27:21,971 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received request to upgrade to websocket
+2025-08-25 16:27:22,066 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Upgrade to websocket successful
+2025-08-25 16:27:25,687 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 16:27:25,688 - socketio.server - INFO - received event "get_available_rooms" from dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:25,689 - socketio.server - INFO - emitting event "available_rooms" to dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:25,690 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 16:27:38,240 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"Tuấn","password":""}]
+2025-08-25 16:27:38,241 - socketio.server - INFO - received event "join_room" from dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:38,246 - __main__ - INFO - Created new player Tuấn
+2025-08-25 16:27:38,251 - __main__ - INFO - Player Tuấn joined room lobby
+2025-08-25 16:27:38,252 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:27:38,253 - socketio.server - INFO - dGX2UExiwjQ884ZIAAAB is entering room lobby [/]
+2025-08-25 16:27:38,254 - __main__ - INFO - Player Tuấn joined Socket.IO room lobby
+2025-08-25 16:27:38,255 - socketio.server - INFO - emitting event "room_joined" to dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:38,256 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"Tu\u1ea5n","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":1,"current_round":{"range":[1,100],"end_time":1756139510.015892,"total_guesses":0},"players":[{"name":"Tu\u1ea5n","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 16:27:38,256 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 16:27:38,257 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"Tu\u1ea5n","current_players":1}]
+2025-08-25 16:27:38,258 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 16:27:38,259 - __main__ - INFO - Player Tuấn successfully joined room lobby
+2025-08-25 16:27:38,261 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:27:46,340 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:27:46,343 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:27:49,495 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet MESSAGE data 2["make_guess",{"room_id":"lobby","guess":20}]
+2025-08-25 16:27:49,495 - socketio.server - INFO - received event "make_guess" from dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:49,497 - socketio.server - INFO - emitting event "new_round" to lobby [/]
+2025-08-25 16:27:49,498 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["new_round",{"room_id":"lobby","round_number":2,"range":[1,100],"end_time":1756139569.4970849,"previous_winner":null,"message":"\ud83c\udfae V\u00f2ng 2: \u0110o\u00e1n s\u1ed1 t\u1eeb 1 \u0111\u1ebfn 100"}]
+2025-08-25 16:27:49,499 - socketio.server - INFO - emitting event "round" to lobby [/]
+2025-08-25 16:27:49,501 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["round",{"room":"lobby","round":2,"range":[1,100],"endsAt":1756139569497.085}]
+2025-08-25 16:27:49,501 - __main__ - INFO - Started new round 2 in room lobby
+2025-08-25 16:27:49,502 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:27:49,503 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:27:49,504 - socketio.server - INFO - emitting event "guess_result" to dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:49,504 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["guess_result",{"message":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 20","details":{"correct":true,"score_gained":34,"new_total_score":34,"streak":1,"time_bonus":24,"streak_bonus":0,"total_guesses":0}}]
+2025-08-25 16:27:49,506 - socketio.server - INFO - emitting event "message" to dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:27:49,509 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["message",{"room":"lobby","msg":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 20"}]
+2025-08-25 16:27:49,510 - socketio.server - INFO - emitting event "scoreboard_updated" to lobby [/]
+2025-08-25 16:27:49,511 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["scoreboard_updated",{"scores":{"Tu\u1ea5n":34}}]
+2025-08-25 16:27:49,511 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:28:03,164 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet MESSAGE data 2["chat_message",{"room_id":"lobby","message":"ủa hên dữ má"}]
+2025-08-25 16:28:03,165 - socketio.server - INFO - received event "chat_message" from dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:28:03,166 - socketio.server - INFO - emitting event "chat_message" to lobby [/]
+2025-08-25 16:28:03,168 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["chat_message",{"room_id":"lobby","player_name":"Tu\u1ea5n","message":"\u1ee7a h\u00ean d\u1eef m\u00e1","timestamp":1756139283.1664314,"type":"chat"}]
+2025-08-25 16:28:03,169 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:28:03,170 - __main__ - INFO - Chat in room lobby: Tuấn: ủa hên dữ má
+2025-08-25 16:28:11,344 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:28:11,346 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:28:24,155 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet MESSAGE data 2["leave_room"]
+2025-08-25 16:28:24,156 - socketio.server - INFO - received event "leave_room" from dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:28:24,157 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 16:28:24,157 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"Tu\u1ea5n","current_players":0}]
+2025-08-25 16:28:24,158 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:28:24,158 - __main__ - INFO - Player Tuấn left room lobby
+2025-08-25 16:28:24,159 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:28:24,160 - socketio.server - INFO - emitting event "room_left" to dGX2UExiwjQ884ZIAAAB [/]
+2025-08-25 16:28:24,161 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet MESSAGE data 2["room_left",{"message":"\u0110\u00e3 r\u1eddi ph\u00f2ng"}]
+2025-08-25 16:28:36,349 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:28:36,351 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:29:01,357 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:29:01,359 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:29:26,365 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:29:26,368 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:29:51,374 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:29:51,376 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:30:16,381 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:30:16,383 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:30:41,385 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:30:41,387 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:31:06,393 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:31:06,395 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:31:31,400 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:31:31,403 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:31:56,408 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:31:56,410 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:32:21,415 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:32:21,418 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:32:46,420 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:32:46,423 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:33:11,429 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:33:11,432 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:33:36,438 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:33:36,440 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:34:01,445 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:34:01,448 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:34:26,448 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:34:26,451 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:34:51,460 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:34:51,462 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:35:16,468 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:35:16,470 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:35:41,475 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:35:41,478 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:36:06,484 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:36:06,487 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:36:31,492 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Sending packet PING data None
+2025-08-25 16:36:31,502 - engineio.server - INFO - mvELwbxxDk4tp2qFAAAA: Received packet PONG data 
+2025-08-25 16:36:50,455 - __main__ - INFO - Client disconnected: dGX2UExiwjQ884ZIAAAB
+2025-08-25 16:36:50,456 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:48:11,991 - engineio.server - INFO - m2JvD0CFQ-ORHbnmAAAC: Sending packet OPEN data {'sid': 'm2JvD0CFQ-ORHbnmAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:48:12,045 - engineio.server - INFO - m2JvD0CFQ-ORHbnmAAAC: Received packet MESSAGE data 0
+2025-08-25 16:48:12,046 - __main__ - INFO - Client connected: ODGqaF5F-V2p1nxVAAAD
+2025-08-25 16:48:12,047 - socketio.server - INFO - emitting event "connected" to ODGqaF5F-V2p1nxVAAAD [/]
+2025-08-25 16:48:12,048 - engineio.server - INFO - m2JvD0CFQ-ORHbnmAAAC: Sending packet MESSAGE data 2["connected",{"sid":"ODGqaF5F-V2p1nxVAAAD"}]
+2025-08-25 16:48:12,049 - engineio.server - INFO - m2JvD0CFQ-ORHbnmAAAC: Sending packet MESSAGE data 0{"sid":"ODGqaF5F-V2p1nxVAAAD"}
+2025-08-25 16:48:12,051 - engineio.server - INFO - m2JvD0CFQ-ORHbnmAAAC: Received request to upgrade to websocket
+2025-08-25 16:48:12,696 - engineio.server - INFO - m2JvD0CFQ-ORHbnmAAAC: Upgrade to websocket successful
+2025-08-25 16:48:15,365 - __main__ - INFO - Client disconnected: ODGqaF5F-V2p1nxVAAAD
+2025-08-25 16:48:15,366 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:48:15,422 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Sending packet OPEN data {'sid': 'YdUlsQcrRlJxQoBZAAAE', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:48:15,471 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Received packet MESSAGE data 0
+2025-08-25 16:48:15,472 - __main__ - INFO - Client connected: lz2C7yf0ak-bSlsKAAAF
+2025-08-25 16:48:15,473 - socketio.server - INFO - emitting event "connected" to lz2C7yf0ak-bSlsKAAAF [/]
+2025-08-25 16:48:15,474 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Sending packet MESSAGE data 2["connected",{"sid":"lz2C7yf0ak-bSlsKAAAF"}]
+2025-08-25 16:48:15,474 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Sending packet MESSAGE data 0{"sid":"lz2C7yf0ak-bSlsKAAAF"}
+2025-08-25 16:48:15,477 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Received request to upgrade to websocket
+2025-08-25 16:48:15,541 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Upgrade to websocket successful
+2025-08-25 16:48:40,427 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Sending packet PING data None
+2025-08-25 16:48:40,430 - engineio.server - INFO - YdUlsQcrRlJxQoBZAAAE: Received packet PONG data 
+2025-08-25 16:48:56,937 - __main__ - INFO - Client disconnected: lz2C7yf0ak-bSlsKAAAF
+2025-08-25 16:48:56,938 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:48:57,008 - engineio.server - INFO - NBmNxv4m5WQ6ulxXAAAG: Sending packet OPEN data {'sid': 'NBmNxv4m5WQ6ulxXAAAG', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:48:57,063 - engineio.server - INFO - NBmNxv4m5WQ6ulxXAAAG: Received packet MESSAGE data 0
+2025-08-25 16:48:57,064 - __main__ - INFO - Client connected: mjZYTnUcdKALF-0AAAAH
+2025-08-25 16:48:57,065 - socketio.server - INFO - emitting event "connected" to mjZYTnUcdKALF-0AAAAH [/]
+2025-08-25 16:48:57,065 - engineio.server - INFO - NBmNxv4m5WQ6ulxXAAAG: Sending packet MESSAGE data 2["connected",{"sid":"mjZYTnUcdKALF-0AAAAH"}]
+2025-08-25 16:48:57,066 - engineio.server - INFO - NBmNxv4m5WQ6ulxXAAAG: Sending packet MESSAGE data 0{"sid":"mjZYTnUcdKALF-0AAAAH"}
+2025-08-25 16:48:57,067 - engineio.server - INFO - NBmNxv4m5WQ6ulxXAAAG: Received request to upgrade to websocket
+2025-08-25 16:48:57,112 - engineio.server - INFO - NBmNxv4m5WQ6ulxXAAAG: Upgrade to websocket successful
+2025-08-25 16:48:57,627 - __main__ - INFO - Client disconnected: mjZYTnUcdKALF-0AAAAH
+2025-08-25 16:48:57,627 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:48:57,680 - engineio.server - INFO - mL-ZwOpRC-T56g2JAAAI: Sending packet OPEN data {'sid': 'mL-ZwOpRC-T56g2JAAAI', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:48:57,744 - engineio.server - INFO - mL-ZwOpRC-T56g2JAAAI: Received packet MESSAGE data 0
+2025-08-25 16:48:57,745 - __main__ - INFO - Client connected: KByU6FnV2jxmTQYvAAAJ
+2025-08-25 16:48:57,746 - socketio.server - INFO - emitting event "connected" to KByU6FnV2jxmTQYvAAAJ [/]
+2025-08-25 16:48:57,747 - engineio.server - INFO - mL-ZwOpRC-T56g2JAAAI: Sending packet MESSAGE data 2["connected",{"sid":"KByU6FnV2jxmTQYvAAAJ"}]
+2025-08-25 16:48:57,747 - engineio.server - INFO - mL-ZwOpRC-T56g2JAAAI: Sending packet MESSAGE data 0{"sid":"KByU6FnV2jxmTQYvAAAJ"}
+2025-08-25 16:48:57,749 - engineio.server - INFO - mL-ZwOpRC-T56g2JAAAI: Received request to upgrade to websocket
+2025-08-25 16:48:57,814 - engineio.server - INFO - mL-ZwOpRC-T56g2JAAAI: Upgrade to websocket successful
+2025-08-25 16:48:57,822 - __main__ - INFO - Client disconnected: KByU6FnV2jxmTQYvAAAJ
+2025-08-25 16:48:57,822 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:48:57,868 - engineio.server - INFO - -KJDXVzI0zAR3s86AAAK: Sending packet OPEN data {'sid': '-KJDXVzI0zAR3s86AAAK', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:48:57,916 - engineio.server - INFO - -KJDXVzI0zAR3s86AAAK: Received packet MESSAGE data 0
+2025-08-25 16:48:57,918 - __main__ - INFO - Client connected: RJ-sjZ_CMq1QimrtAAAL
+2025-08-25 16:48:57,918 - socketio.server - INFO - emitting event "connected" to RJ-sjZ_CMq1QimrtAAAL [/]
+2025-08-25 16:48:57,919 - engineio.server - INFO - -KJDXVzI0zAR3s86AAAK: Sending packet MESSAGE data 2["connected",{"sid":"RJ-sjZ_CMq1QimrtAAAL"}]
+2025-08-25 16:48:57,919 - engineio.server - INFO - -KJDXVzI0zAR3s86AAAK: Sending packet MESSAGE data 0{"sid":"RJ-sjZ_CMq1QimrtAAAL"}
+2025-08-25 16:48:57,922 - engineio.server - INFO - -KJDXVzI0zAR3s86AAAK: Received request to upgrade to websocket
+2025-08-25 16:48:57,981 - engineio.server - INFO - -KJDXVzI0zAR3s86AAAK: Upgrade to websocket successful
+2025-08-25 16:48:57,998 - __main__ - INFO - Client disconnected: RJ-sjZ_CMq1QimrtAAAL
+2025-08-25 16:48:57,999 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:48:58,045 - engineio.server - INFO - LAmcSMnZVfPb2RXfAAAM: Sending packet OPEN data {'sid': 'LAmcSMnZVfPb2RXfAAAM', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:48:58,102 - engineio.server - INFO - LAmcSMnZVfPb2RXfAAAM: Received packet MESSAGE data 0
+2025-08-25 16:48:58,103 - __main__ - INFO - Client connected: i5fD3iba5yJmKVTQAAAN
+2025-08-25 16:48:58,103 - socketio.server - INFO - emitting event "connected" to i5fD3iba5yJmKVTQAAAN [/]
+2025-08-25 16:48:58,104 - engineio.server - INFO - LAmcSMnZVfPb2RXfAAAM: Sending packet MESSAGE data 2["connected",{"sid":"i5fD3iba5yJmKVTQAAAN"}]
+2025-08-25 16:48:58,104 - engineio.server - INFO - LAmcSMnZVfPb2RXfAAAM: Sending packet MESSAGE data 0{"sid":"i5fD3iba5yJmKVTQAAAN"}
+2025-08-25 16:48:58,106 - engineio.server - INFO - LAmcSMnZVfPb2RXfAAAM: Received request to upgrade to websocket
+2025-08-25 16:48:58,167 - engineio.server - INFO - LAmcSMnZVfPb2RXfAAAM: Upgrade to websocket successful
+2025-08-25 16:49:00,461 - __main__ - INFO - Client disconnected: i5fD3iba5yJmKVTQAAAN
+2025-08-25 16:49:00,462 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:49:14,776 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Sending packet OPEN data {'sid': 'ch3f1z4qZbdxvH6jAAAO', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:49:14,839 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Received packet MESSAGE data 0
+2025-08-25 16:49:14,840 - __main__ - INFO - Client connected: hdHKSYru4SeTmeioAAAP
+2025-08-25 16:49:14,841 - socketio.server - INFO - emitting event "connected" to hdHKSYru4SeTmeioAAAP [/]
+2025-08-25 16:49:14,841 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Sending packet MESSAGE data 2["connected",{"sid":"hdHKSYru4SeTmeioAAAP"}]
+2025-08-25 16:49:14,842 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Sending packet MESSAGE data 0{"sid":"hdHKSYru4SeTmeioAAAP"}
+2025-08-25 16:49:14,844 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Received request to upgrade to websocket
+2025-08-25 16:49:15,455 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Upgrade to websocket successful
+2025-08-25 16:49:28,067 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 16:49:28,068 - socketio.server - INFO - received event "get_available_rooms" from hdHKSYru4SeTmeioAAAP [/]
+2025-08-25 16:49:28,069 - socketio.server - INFO - emitting event "available_rooms" to hdHKSYru4SeTmeioAAAP [/]
+2025-08-25 16:49:28,069 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 16:49:39,784 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Sending packet PING data None
+2025-08-25 16:49:39,787 - engineio.server - INFO - ch3f1z4qZbdxvH6jAAAO: Received packet PONG data 
+2025-08-25 16:49:48,498 - __main__ - INFO - Client disconnected: hdHKSYru4SeTmeioAAAP
+2025-08-25 16:49:48,499 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:49:48,582 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Sending packet OPEN data {'sid': 'CNIh71shRrSMMxANAAAQ', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:49:48,648 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Received packet MESSAGE data 0
+2025-08-25 16:49:48,649 - __main__ - INFO - Client connected: RWDuijsxsupA_5GJAAAR
+2025-08-25 16:49:48,650 - socketio.server - INFO - emitting event "connected" to RWDuijsxsupA_5GJAAAR [/]
+2025-08-25 16:49:48,650 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Sending packet MESSAGE data 2["connected",{"sid":"RWDuijsxsupA_5GJAAAR"}]
+2025-08-25 16:49:48,651 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Sending packet MESSAGE data 0{"sid":"RWDuijsxsupA_5GJAAAR"}
+2025-08-25 16:49:48,655 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Received request to upgrade to websocket
+2025-08-25 16:49:48,712 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Upgrade to websocket successful
+2025-08-25 16:49:52,295 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"Tuấn","password":""}]
+2025-08-25 16:49:52,296 - socketio.server - INFO - received event "join_room" from RWDuijsxsupA_5GJAAAR [/]
+2025-08-25 16:49:52,297 - __main__ - INFO - Found previous score for Tuấn: 34, total_guesses: 1, correct_guesses: 1
+2025-08-25 16:49:52,298 - __main__ - INFO - Restored player Tuấn with score 34, streak 0
+2025-08-25 16:49:52,298 - socketio.server - INFO - emitting event "new_round" to lobby [/]
+2025-08-25 16:49:52,298 - socketio.server - INFO - emitting event "round" to lobby [/]
+2025-08-25 16:49:52,299 - __main__ - INFO - Started new round 3 in room lobby
+2025-08-25 16:49:52,299 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:49:52,300 - __main__ - INFO - Round ended, started new round for new player Tuấn
+2025-08-25 16:49:52,300 - __main__ - INFO - Player Tuấn joined room lobby
+2025-08-25 16:49:52,300 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:49:52,301 - socketio.server - INFO - RWDuijsxsupA_5GJAAAR is entering room lobby [/]
+2025-08-25 16:49:52,301 - __main__ - INFO - Player Tuấn joined Socket.IO room lobby
+2025-08-25 16:49:52,302 - socketio.server - INFO - emitting event "room_joined" to RWDuijsxsupA_5GJAAAR [/]
+2025-08-25 16:49:52,302 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"Tu\u1ea5n","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":3,"current_round":{"range":[1,100],"end_time":1756140892.2984662,"total_guesses":0},"players":[{"name":"Tu\u1ea5n","score":34,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 16:49:52,303 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 16:49:52,303 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"Tu\u1ea5n","current_players":1}]
+2025-08-25 16:49:52,303 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 16:49:52,304 - __main__ - INFO - Player Tuấn successfully joined room lobby
+2025-08-25 16:49:52,304 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:49:57,724 - __main__ - INFO - Client disconnected: RWDuijsxsupA_5GJAAAR
+2025-08-25 16:49:57,724 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 16:49:57,725 - engineio.server - INFO - CNIh71shRrSMMxANAAAQ: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"Tu\u1ea5n","current_players":0}]
+2025-08-25 16:49:57,725 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:49:57,725 - __main__ - INFO - Player Tuấn left room lobby
+2025-08-25 16:49:57,726 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:49:57,786 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet OPEN data {'sid': 'nwJ0SriXG_YBjUwhAAAS', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:49:57,838 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet MESSAGE data 0
+2025-08-25 16:49:57,841 - __main__ - INFO - Client connected: 8raV6NrwxwoKjZ3lAAAT
+2025-08-25 16:49:57,842 - socketio.server - INFO - emitting event "connected" to 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:49:57,843 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["connected",{"sid":"8raV6NrwxwoKjZ3lAAAT"}]
+2025-08-25 16:49:57,844 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 0{"sid":"8raV6NrwxwoKjZ3lAAAT"}
+2025-08-25 16:49:57,846 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received request to upgrade to websocket
+2025-08-25 16:49:57,876 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Upgrade to websocket successful
+2025-08-25 16:50:02,688 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"Tuấn","password":""}]
+2025-08-25 16:50:02,689 - socketio.server - INFO - received event "join_room" from 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:50:02,690 - __main__ - INFO - Found previous score for Tuấn: 34, total_guesses: 1, correct_guesses: 1
+2025-08-25 16:50:02,690 - __main__ - INFO - Restored player Tuấn with score 34, streak 0
+2025-08-25 16:50:02,691 - __main__ - INFO - Player Tuấn joined room lobby
+2025-08-25 16:50:02,691 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:50:02,692 - socketio.server - INFO - 8raV6NrwxwoKjZ3lAAAT is entering room lobby [/]
+2025-08-25 16:50:02,692 - __main__ - INFO - Player Tuấn joined Socket.IO room lobby
+2025-08-25 16:50:02,693 - socketio.server - INFO - emitting event "room_joined" to 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:50:02,693 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"Tu\u1ea5n","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":3,"current_round":{"range":[1,100],"end_time":1756140892.2984662,"total_guesses":0},"players":[{"name":"Tu\u1ea5n","score":34,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 16:50:02,693 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 16:50:02,694 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"Tu\u1ea5n","current_players":1}]
+2025-08-25 16:50:02,694 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 16:50:02,694 - __main__ - INFO - Player Tuấn successfully joined room lobby
+2025-08-25 16:50:02,695 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:50:21,268 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet OPEN data {'sid': 'TSYOVB7lXwqW-jjDAAAU', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:50:21,321 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 0
+2025-08-25 16:50:21,323 - __main__ - INFO - Client connected: nVTn7OFl9RYGlGZcAAAV
+2025-08-25 16:50:21,324 - socketio.server - INFO - emitting event "connected" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:50:21,324 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["connected",{"sid":"nVTn7OFl9RYGlGZcAAAV"}]
+2025-08-25 16:50:21,326 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 0{"sid":"nVTn7OFl9RYGlGZcAAAV"}
+2025-08-25 16:50:21,328 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received request to upgrade to websocket
+2025-08-25 16:50:21,889 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Upgrade to websocket successful
+2025-08-25 16:50:22,787 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:50:22,789 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:50:44,325 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 16:50:44,325 - socketio.server - INFO - received event "join_room" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:50:44,326 - __main__ - INFO - Created new player guest
+2025-08-25 16:50:44,327 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 16:50:44,327 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:50:44,328 - socketio.server - INFO - nVTn7OFl9RYGlGZcAAAV is entering room lobby [/]
+2025-08-25 16:50:44,328 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 16:50:44,328 - socketio.server - INFO - emitting event "room_joined" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:50:44,329 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":3,"current_round":{"range":[1,100],"end_time":1756140892.2984662,"total_guesses":0},"players":[{"name":"Tu\u1ea5n","score":34,"streak":0,"correct_guesses":1},{"name":"guest","score":0,"streak":0,"correct_guesses":0}],"scores":{"Tu\u1ea5n":34},"is_private":false,"max_players":20,"current_players":2}}]
+2025-08-25 16:50:44,330 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 16:50:44,330 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":2}]
+2025-08-25 16:50:44,330 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":2}]
+2025-08-25 16:50:44,331 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 16:50:44,331 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:50:46,271 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet PING data None
+2025-08-25 16:50:46,273 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet PONG data 
+2025-08-25 16:50:47,790 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:50:47,792 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:50:49,897 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["chat_message",{"room_id":"lobby","message":"Hi"}]
+2025-08-25 16:50:49,898 - socketio.server - INFO - received event "chat_message" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:50:49,899 - socketio.server - INFO - emitting event "chat_message" to lobby [/]
+2025-08-25 16:50:49,900 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["chat_message",{"room_id":"lobby","player_name":"guest","message":"Hi","timestamp":1756140649.8990724,"type":"chat"}]
+2025-08-25 16:50:49,900 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["chat_message",{"room_id":"lobby","player_name":"guest","message":"Hi","timestamp":1756140649.8990724,"type":"chat"}]
+2025-08-25 16:50:49,901 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:50:49,902 - __main__ - INFO - Chat in room lobby: guest: Hi
+2025-08-25 16:50:54,816 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet MESSAGE data 2["chat_message",{"room_id":"lobby","message":"Chào"}]
+2025-08-25 16:50:54,816 - socketio.server - INFO - received event "chat_message" from 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:50:54,818 - socketio.server - INFO - emitting event "chat_message" to lobby [/]
+2025-08-25 16:50:54,819 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["chat_message",{"room_id":"lobby","player_name":"Tu\u1ea5n","message":"Ch\u00e0o","timestamp":1756140654.8186,"type":"chat"}]
+2025-08-25 16:50:54,821 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["chat_message",{"room_id":"lobby","player_name":"Tu\u1ea5n","message":"Ch\u00e0o","timestamp":1756140654.8186,"type":"chat"}]
+2025-08-25 16:50:54,822 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:50:54,823 - __main__ - INFO - Chat in room lobby: Tuấn: Chào
+2025-08-25 16:51:00,894 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet MESSAGE data 2["make_guess",{"room_id":"lobby","guess":25}]
+2025-08-25 16:51:00,895 - socketio.server - INFO - received event "make_guess" from 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:51:00,896 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:51:00,897 - socketio.server - INFO - emitting event "guess_result" to 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:51:00,897 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 25","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 25","range":[1,100],"total_guesses":1}}]
+2025-08-25 16:51:00,899 - socketio.server - INFO - emitting event "message" to 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:51:00,899 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["message",{"room":"lobby","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 25"}]
+2025-08-25 16:51:04,472 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet MESSAGE data 2["make_guess",{"room_id":"lobby","guess":12}]
+2025-08-25 16:51:04,473 - socketio.server - INFO - received event "make_guess" from 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:51:04,474 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:51:04,475 - socketio.server - INFO - emitting event "guess_result" to 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:51:04,475 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 12","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 12","range":[1,100],"total_guesses":2}}]
+2025-08-25 16:51:04,476 - socketio.server - INFO - emitting event "message" to 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:51:04,477 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["message",{"room":"lobby","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 12"}]
+2025-08-25 16:51:11,276 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet PING data None
+2025-08-25 16:51:11,278 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet PONG data 
+2025-08-25 16:51:12,792 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:51:12,793 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:51:36,280 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet PING data None
+2025-08-25 16:51:36,282 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet PONG data 
+2025-08-25 16:51:37,796 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:51:37,802 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:51:55,781 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["make_guess",{"room_id":"lobby","guess":20}]
+2025-08-25 16:51:55,782 - socketio.server - INFO - received event "make_guess" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:51:55,783 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:51:55,784 - socketio.server - INFO - emitting event "guess_result" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:51:55,784 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 20","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 20","range":[1,100],"total_guesses":3}}]
+2025-08-25 16:51:55,786 - socketio.server - INFO - emitting event "message" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:51:55,786 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["message",{"room":"lobby","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 20"}]
+2025-08-25 16:51:58,699 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["make_guess",{"room_id":"lobby","guess":17}]
+2025-08-25 16:51:58,700 - socketio.server - INFO - received event "make_guess" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:51:58,701 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:51:58,702 - socketio.server - INFO - emitting event "guess_result" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:51:58,703 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 17","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 17","range":[1,100],"total_guesses":4}}]
+2025-08-25 16:51:58,704 - socketio.server - INFO - emitting event "message" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:51:58,705 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["message",{"room":"lobby","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 17"}]
+2025-08-25 16:52:01,285 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet PING data None
+2025-08-25 16:52:01,287 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet PONG data 
+2025-08-25 16:52:01,708 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["make_guess",{"room_id":"lobby","guess":18}]
+2025-08-25 16:52:01,709 - socketio.server - INFO - received event "make_guess" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:01,710 - socketio.server - INFO - emitting event "new_round" to lobby [/]
+2025-08-25 16:52:01,711 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["new_round",{"room_id":"lobby","round_number":4,"range":[1,100],"end_time":1756141021.7107277,"previous_winner":null,"message":"\ud83c\udfae V\u00f2ng 4: \u0110o\u00e1n s\u1ed1 t\u1eeb 1 \u0111\u1ebfn 100"}]
+2025-08-25 16:52:01,712 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["new_round",{"room_id":"lobby","round_number":4,"range":[1,100],"end_time":1756141021.7107277,"previous_winner":null,"message":"\ud83c\udfae V\u00f2ng 4: \u0110o\u00e1n s\u1ed1 t\u1eeb 1 \u0111\u1ebfn 100"}]
+2025-08-25 16:52:01,714 - socketio.server - INFO - emitting event "round" to lobby [/]
+2025-08-25 16:52:01,714 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["round",{"room":"lobby","round":4,"range":[1,100],"endsAt":1756141021710.7278}]
+2025-08-25 16:52:01,715 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["round",{"room":"lobby","round":4,"range":[1,100],"endsAt":1756141021710.7278}]
+2025-08-25 16:52:01,715 - __main__ - INFO - Started new round 4 in room lobby
+2025-08-25 16:52:01,716 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:52:01,716 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:52:01,716 - socketio.server - INFO - emitting event "guess_result" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:01,717 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["guess_result",{"message":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 18","details":{"correct":true,"score_gained":27,"new_total_score":27,"streak":1,"time_bonus":17,"streak_bonus":0,"total_guesses":0}}]
+2025-08-25 16:52:01,717 - socketio.server - INFO - emitting event "message" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:01,718 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["message",{"room":"lobby","msg":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 18"}]
+2025-08-25 16:52:01,718 - socketio.server - INFO - emitting event "scoreboard_updated" to lobby [/]
+2025-08-25 16:52:01,718 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["scoreboard_updated",{"scores":{"Tu\u1ea5n":34,"guest":27}}]
+2025-08-25 16:52:01,719 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["scoreboard_updated",{"scores":{"Tu\u1ea5n":34,"guest":27}}]
+2025-08-25 16:52:01,719 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:52:02,803 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:52:02,805 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:52:08,922 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["leave_room"]
+2025-08-25 16:52:08,922 - socketio.server - INFO - received event "leave_room" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:08,923 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 16:52:08,924 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 16:52:08,925 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 16:52:08,925 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:52:08,925 - __main__ - INFO - Player guest left room lobby
+2025-08-25 16:52:08,926 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:52:08,926 - socketio.server - INFO - emitting event "room_left" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:08,927 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["room_left",{"message":"\u0110\u00e3 r\u1eddi ph\u00f2ng"}]
+2025-08-25 16:52:22,833 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 16:52:22,833 - socketio.server - INFO - received event "get_available_rooms" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:22,834 - socketio.server - INFO - emitting event "available_rooms" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:22,834 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 16:52:26,289 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet PING data None
+2025-08-25 16:52:26,291 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet PONG data 
+2025-08-25 16:52:27,806 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:52:27,808 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:52:44,452 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 16:52:44,453 - socketio.server - INFO - received event "join_room" from nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:44,454 - __main__ - INFO - Found previous score for guest: 27, total_guesses: 5, correct_guesses: 1
+2025-08-25 16:52:44,454 - __main__ - INFO - Restored player guest with score 27, streak 0
+2025-08-25 16:52:44,454 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 16:52:44,455 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:52:44,455 - socketio.server - INFO - nVTn7OFl9RYGlGZcAAAV is entering room lobby [/]
+2025-08-25 16:52:44,456 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 16:52:44,456 - socketio.server - INFO - emitting event "room_joined" to nVTn7OFl9RYGlGZcAAAV [/]
+2025-08-25 16:52:44,457 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":4,"current_round":{"range":[1,100],"end_time":1756141021.7107277,"total_guesses":0},"players":[{"name":"Tu\u1ea5n","score":34,"streak":0,"correct_guesses":1},{"name":"guest","score":27,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34,"guest":27},"is_private":false,"max_players":20,"current_players":2}}]
+2025-08-25 16:52:44,457 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 16:52:44,457 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":2}]
+2025-08-25 16:52:44,458 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":2}]
+2025-08-25 16:52:44,458 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 16:52:44,458 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:52:51,293 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet PING data None
+2025-08-25 16:52:51,295 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Received packet PONG data 
+2025-08-25 16:52:52,809 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:52:52,811 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:53:00,710 - __main__ - INFO - Client disconnected: nVTn7OFl9RYGlGZcAAAV
+2025-08-25 16:53:00,711 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 16:53:00,711 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 16:53:00,712 - engineio.server - INFO - TSYOVB7lXwqW-jjDAAAU: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 16:53:00,712 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:53:00,712 - __main__ - INFO - Player guest left room lobby
+2025-08-25 16:53:00,713 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:53:04,365 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet MESSAGE data 2["leave_room"]
+2025-08-25 16:53:04,366 - socketio.server - INFO - received event "leave_room" from 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:53:04,367 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 16:53:04,367 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"Tu\u1ea5n","current_players":0}]
+2025-08-25 16:53:04,368 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:53:04,369 - __main__ - INFO - Player Tuấn left room lobby
+2025-08-25 16:53:04,370 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:53:04,370 - socketio.server - INFO - emitting event "room_left" to 8raV6NrwxwoKjZ3lAAAT [/]
+2025-08-25 16:53:04,371 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet MESSAGE data 2["room_left",{"message":"\u0110\u00e3 r\u1eddi ph\u00f2ng"}]
+2025-08-25 16:53:17,813 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:53:17,816 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:53:42,818 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:53:42,820 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:54:07,826 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:54:07,828 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:54:32,834 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:54:32,836 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:54:57,841 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:54:57,844 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:55:22,846 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:55:22,849 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:55:47,855 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:55:47,859 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:56:12,861 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:56:12,863 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:56:37,870 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Sending packet PING data None
+2025-08-25 16:56:37,872 - engineio.server - INFO - nwJ0SriXG_YBjUwhAAAS: Received packet PONG data 
+2025-08-25 16:56:43,350 - __main__ - INFO - Client disconnected: 8raV6NrwxwoKjZ3lAAAT
+2025-08-25 16:56:43,351 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 16:56:43,417 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet OPEN data {'sid': 'e2S_CsE16gJxShXQAAAW', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 16:56:43,470 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet MESSAGE data 0
+2025-08-25 16:56:43,473 - __main__ - INFO - Client connected: 5Z6IhcfBz-QmLbVgAAAX
+2025-08-25 16:56:43,473 - socketio.server - INFO - emitting event "connected" to 5Z6IhcfBz-QmLbVgAAAX [/]
+2025-08-25 16:56:43,474 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet MESSAGE data 2["connected",{"sid":"5Z6IhcfBz-QmLbVgAAAX"}]
+2025-08-25 16:56:43,474 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet MESSAGE data 0{"sid":"5Z6IhcfBz-QmLbVgAAAX"}
+2025-08-25 16:56:43,476 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received request to upgrade to websocket
+2025-08-25 16:56:43,529 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Upgrade to websocket successful
+2025-08-25 16:57:08,424 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 16:57:08,427 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 16:57:33,432 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 16:57:33,436 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 16:57:58,440 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 16:57:58,443 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 16:58:23,446 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 16:58:23,449 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 16:58:48,454 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 16:58:48,456 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 16:59:13,462 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 16:59:13,465 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 16:59:38,472 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 16:59:38,475 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:00:03,476 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:00:03,479 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:00:28,485 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:00:28,488 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:00:53,493 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:00:53,497 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:01:18,502 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:01:18,505 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:01:43,506 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:01:43,508 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:02:08,515 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:02:08,518 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:02:33,522 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:02:33,526 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:02:58,532 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Sending packet PING data None
+2025-08-25 17:02:58,534 - engineio.server - INFO - e2S_CsE16gJxShXQAAAW: Received packet PONG data 
+2025-08-25 17:02:59,591 - __main__ - INFO - Client disconnected: 5Z6IhcfBz-QmLbVgAAAX
+2025-08-25 17:02:59,591 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:02:59,665 - engineio.server - INFO - flc_Eao9SYrMdAtNAAAY: Sending packet OPEN data {'sid': 'flc_Eao9SYrMdAtNAAAY', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:02:59,715 - engineio.server - INFO - flc_Eao9SYrMdAtNAAAY: Received packet MESSAGE data 0
+2025-08-25 17:02:59,716 - __main__ - INFO - Client connected: hd-ItNqrsgjnqjbXAAAZ
+2025-08-25 17:02:59,717 - socketio.server - INFO - emitting event "connected" to hd-ItNqrsgjnqjbXAAAZ [/]
+2025-08-25 17:02:59,717 - engineio.server - INFO - flc_Eao9SYrMdAtNAAAY: Sending packet MESSAGE data 2["connected",{"sid":"hd-ItNqrsgjnqjbXAAAZ"}]
+2025-08-25 17:02:59,718 - engineio.server - INFO - flc_Eao9SYrMdAtNAAAY: Sending packet MESSAGE data 0{"sid":"hd-ItNqrsgjnqjbXAAAZ"}
+2025-08-25 17:02:59,721 - engineio.server - INFO - flc_Eao9SYrMdAtNAAAY: Received request to upgrade to websocket
+2025-08-25 17:02:59,756 - engineio.server - INFO - flc_Eao9SYrMdAtNAAAY: Upgrade to websocket successful
+2025-08-25 17:03:00,245 - __main__ - INFO - Client disconnected: hd-ItNqrsgjnqjbXAAAZ
+2025-08-25 17:03:00,245 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:00,299 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Sending packet OPEN data {'sid': 'spDHtSdAMog0KQ9pAAAa', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:03:00,362 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Received packet MESSAGE data 0
+2025-08-25 17:03:00,363 - __main__ - INFO - Client connected: wql0jGxJE4tyBtOgAAAb
+2025-08-25 17:03:00,365 - socketio.server - INFO - emitting event "connected" to wql0jGxJE4tyBtOgAAAb [/]
+2025-08-25 17:03:00,366 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Sending packet MESSAGE data 2["connected",{"sid":"wql0jGxJE4tyBtOgAAAb"}]
+2025-08-25 17:03:00,367 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Sending packet MESSAGE data 0{"sid":"wql0jGxJE4tyBtOgAAAb"}
+2025-08-25 17:03:00,370 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Received request to upgrade to websocket
+2025-08-25 17:03:00,408 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Upgrade to websocket successful
+2025-08-25 17:03:02,334 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 17:03:02,335 - socketio.server - INFO - received event "join_room" from wql0jGxJE4tyBtOgAAAb [/]
+2025-08-25 17:03:02,336 - __main__ - INFO - Found previous score for guest: 27, total_guesses: 5, correct_guesses: 1
+2025-08-25 17:03:02,336 - __main__ - INFO - Restored player guest with score 27, streak 0
+2025-08-25 17:03:02,337 - socketio.server - INFO - emitting event "new_round" to lobby [/]
+2025-08-25 17:03:02,337 - socketio.server - INFO - emitting event "round" to lobby [/]
+2025-08-25 17:03:02,337 - __main__ - INFO - Started new round 5 in room lobby
+2025-08-25 17:03:02,338 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:02,338 - __main__ - INFO - Round ended, started new round for new player guest
+2025-08-25 17:03:02,339 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 17:03:02,339 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:02,339 - socketio.server - INFO - wql0jGxJE4tyBtOgAAAb is entering room lobby [/]
+2025-08-25 17:03:02,340 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 17:03:02,340 - socketio.server - INFO - emitting event "room_joined" to wql0jGxJE4tyBtOgAAAb [/]
+2025-08-25 17:03:02,341 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":5,"current_round":{"range":[1,100],"end_time":1756141682.3370306,"total_guesses":0},"players":[{"name":"guest","score":27,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34,"guest":27},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 17:03:02,341 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 17:03:02,341 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 17:03:02,342 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 17:03:02,342 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 17:03:02,343 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:18,487 - __main__ - INFO - Client disconnected: wql0jGxJE4tyBtOgAAAb
+2025-08-25 17:03:18,488 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 17:03:18,488 - engineio.server - INFO - spDHtSdAMog0KQ9pAAAa: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":0}]
+2025-08-25 17:03:18,488 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:18,489 - __main__ - INFO - Player guest left room lobby
+2025-08-25 17:03:18,489 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:18,539 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Sending packet OPEN data {'sid': 'FkordvP4VNYGUjbCAAAc', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:03:18,591 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Received packet MESSAGE data 0
+2025-08-25 17:03:18,592 - __main__ - INFO - Client connected: GzUmlJRVjN_6Fy2cAAAd
+2025-08-25 17:03:18,592 - socketio.server - INFO - emitting event "connected" to GzUmlJRVjN_6Fy2cAAAd [/]
+2025-08-25 17:03:18,593 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Sending packet MESSAGE data 2["connected",{"sid":"GzUmlJRVjN_6Fy2cAAAd"}]
+2025-08-25 17:03:18,593 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Sending packet MESSAGE data 0{"sid":"GzUmlJRVjN_6Fy2cAAAd"}
+2025-08-25 17:03:18,595 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Received request to upgrade to websocket
+2025-08-25 17:03:18,629 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Upgrade to websocket successful
+2025-08-25 17:03:20,227 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 17:03:20,228 - socketio.server - INFO - received event "join_room" from GzUmlJRVjN_6Fy2cAAAd [/]
+2025-08-25 17:03:20,229 - __main__ - INFO - Found previous score for guest: 27, total_guesses: 5, correct_guesses: 1
+2025-08-25 17:03:20,230 - __main__ - INFO - Restored player guest with score 27, streak 0
+2025-08-25 17:03:20,231 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 17:03:20,233 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:20,234 - socketio.server - INFO - GzUmlJRVjN_6Fy2cAAAd is entering room lobby [/]
+2025-08-25 17:03:20,235 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 17:03:20,236 - socketio.server - INFO - emitting event "room_joined" to GzUmlJRVjN_6Fy2cAAAd [/]
+2025-08-25 17:03:20,236 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":5,"current_round":{"range":[1,100],"end_time":1756141682.3370306,"total_guesses":0},"players":[{"name":"guest","score":27,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34,"guest":27},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 17:03:20,237 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 17:03:20,237 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 17:03:20,238 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 17:03:20,238 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 17:03:20,239 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:26,967 - __main__ - INFO - Client disconnected: GzUmlJRVjN_6Fy2cAAAd
+2025-08-25 17:03:26,968 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 17:03:26,968 - engineio.server - INFO - FkordvP4VNYGUjbCAAAc: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":0}]
+2025-08-25 17:03:26,969 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:26,969 - __main__ - INFO - Player guest left room lobby
+2025-08-25 17:03:26,970 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:27,017 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Sending packet OPEN data {'sid': 'fPyPzkZsNLYuzB22AAAe', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:03:27,062 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Received packet MESSAGE data 0
+2025-08-25 17:03:27,064 - __main__ - INFO - Client connected: oDpkLMHIIbx5FK0oAAAf
+2025-08-25 17:03:27,065 - socketio.server - INFO - emitting event "connected" to oDpkLMHIIbx5FK0oAAAf [/]
+2025-08-25 17:03:27,066 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Sending packet MESSAGE data 2["connected",{"sid":"oDpkLMHIIbx5FK0oAAAf"}]
+2025-08-25 17:03:27,066 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Sending packet MESSAGE data 0{"sid":"oDpkLMHIIbx5FK0oAAAf"}
+2025-08-25 17:03:27,069 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Received request to upgrade to websocket
+2025-08-25 17:03:27,098 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Upgrade to websocket successful
+2025-08-25 17:03:28,182 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 17:03:28,183 - socketio.server - INFO - received event "join_room" from oDpkLMHIIbx5FK0oAAAf [/]
+2025-08-25 17:03:28,184 - __main__ - INFO - Found previous score for guest: 27, total_guesses: 5, correct_guesses: 1
+2025-08-25 17:03:28,185 - __main__ - INFO - Restored player guest with score 27, streak 0
+2025-08-25 17:03:28,185 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 17:03:28,186 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:28,186 - socketio.server - INFO - oDpkLMHIIbx5FK0oAAAf is entering room lobby [/]
+2025-08-25 17:03:28,187 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 17:03:28,187 - socketio.server - INFO - emitting event "room_joined" to oDpkLMHIIbx5FK0oAAAf [/]
+2025-08-25 17:03:28,187 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":5,"current_round":{"range":[1,100],"end_time":1756141682.3370306,"total_guesses":0},"players":[{"name":"guest","score":27,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34,"guest":27},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 17:03:28,188 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 17:03:28,188 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 17:03:28,189 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 17:03:28,189 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 17:03:28,190 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:30,995 - __main__ - INFO - Client disconnected: oDpkLMHIIbx5FK0oAAAf
+2025-08-25 17:03:30,995 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 17:03:30,996 - engineio.server - INFO - fPyPzkZsNLYuzB22AAAe: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":0}]
+2025-08-25 17:03:30,997 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:03:30,997 - __main__ - INFO - Player guest left room lobby
+2025-08-25 17:03:30,997 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:06:36,068 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet OPEN data {'sid': 'NdEo43qe6Ns4iCOOAAAg', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:06:36,119 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet MESSAGE data 0
+2025-08-25 17:06:36,121 - __main__ - INFO - Client connected: 91gn7XJnuO0-9lVbAAAh
+2025-08-25 17:06:36,122 - socketio.server - INFO - emitting event "connected" to 91gn7XJnuO0-9lVbAAAh [/]
+2025-08-25 17:06:36,123 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet MESSAGE data 2["connected",{"sid":"91gn7XJnuO0-9lVbAAAh"}]
+2025-08-25 17:06:36,123 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet MESSAGE data 0{"sid":"91gn7XJnuO0-9lVbAAAh"}
+2025-08-25 17:06:36,125 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received request to upgrade to websocket
+2025-08-25 17:06:36,696 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Upgrade to websocket successful
+2025-08-25 17:07:01,089 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:07:01,091 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:07:26,094 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:07:26,097 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:07:51,102 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:07:51,104 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:07:53,686 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 17:07:53,687 - socketio.server - INFO - received event "join_room" from 91gn7XJnuO0-9lVbAAAh [/]
+2025-08-25 17:07:53,688 - __main__ - INFO - Found previous score for guest: 27, total_guesses: 5, correct_guesses: 1
+2025-08-25 17:07:53,688 - __main__ - INFO - Restored player guest with score 27, streak 0
+2025-08-25 17:07:53,689 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 17:07:53,689 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:07:53,690 - socketio.server - INFO - 91gn7XJnuO0-9lVbAAAh is entering room lobby [/]
+2025-08-25 17:07:53,690 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 17:07:53,691 - socketio.server - INFO - emitting event "room_joined" to 91gn7XJnuO0-9lVbAAAh [/]
+2025-08-25 17:07:53,691 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":5,"current_round":{"range":[1,100],"end_time":1756141682.3370306,"total_guesses":0},"players":[{"name":"guest","score":27,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34,"guest":27},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 17:07:53,692 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 17:07:53,692 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 17:07:53,693 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 17:07:53,693 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 17:07:53,694 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:08:16,109 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:08:16,111 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:08:41,112 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:08:41,114 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:09:06,119 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:09:06,121 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:09:31,125 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:09:31,127 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:09:56,132 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:09:56,134 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:10:21,138 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:10:21,140 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:10:46,143 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:10:46,145 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:11:11,149 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet PING data None
+2025-08-25 17:11:11,151 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Received packet PONG data 
+2025-08-25 17:11:34,238 - __main__ - INFO - Client disconnected: 91gn7XJnuO0-9lVbAAAh
+2025-08-25 17:11:34,239 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 17:11:34,240 - engineio.server - INFO - NdEo43qe6Ns4iCOOAAAg: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":0}]
+2025-08-25 17:11:34,241 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:11:34,242 - __main__ - INFO - Player guest left room lobby
+2025-08-25 17:11:34,243 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:11:36,714 - engineio.server - INFO - Lamv17AK6vhP6hWaAAAi: Sending packet OPEN data {'sid': 'Lamv17AK6vhP6hWaAAAi', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:11:36,765 - engineio.server - INFO - Lamv17AK6vhP6hWaAAAi: Received packet MESSAGE data 0
+2025-08-25 17:11:36,767 - __main__ - INFO - Client connected: gArkwiqZVFj83_xkAAAj
+2025-08-25 17:11:36,768 - socketio.server - INFO - emitting event "connected" to gArkwiqZVFj83_xkAAAj [/]
+2025-08-25 17:11:36,769 - engineio.server - INFO - Lamv17AK6vhP6hWaAAAi: Sending packet MESSAGE data 2["connected",{"sid":"gArkwiqZVFj83_xkAAAj"}]
+2025-08-25 17:11:36,770 - engineio.server - INFO - Lamv17AK6vhP6hWaAAAi: Sending packet MESSAGE data 0{"sid":"gArkwiqZVFj83_xkAAAj"}
+2025-08-25 17:11:36,773 - engineio.server - INFO - Lamv17AK6vhP6hWaAAAi: Received request to upgrade to websocket
+2025-08-25 17:11:37,341 - engineio.server - INFO - Lamv17AK6vhP6hWaAAAi: Upgrade to websocket successful
+2025-08-25 17:11:39,605 - __main__ - INFO - Client disconnected: gArkwiqZVFj83_xkAAAj
+2025-08-25 17:11:39,606 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:11:39,657 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Sending packet OPEN data {'sid': 'EmoiJv68xoug7k7DAAAk', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:11:39,705 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Received packet MESSAGE data 0
+2025-08-25 17:11:39,707 - __main__ - INFO - Client connected: HhjleXwWowUn_AhEAAAl
+2025-08-25 17:11:39,707 - socketio.server - INFO - emitting event "connected" to HhjleXwWowUn_AhEAAAl [/]
+2025-08-25 17:11:39,708 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Sending packet MESSAGE data 2["connected",{"sid":"HhjleXwWowUn_AhEAAAl"}]
+2025-08-25 17:11:39,709 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Sending packet MESSAGE data 0{"sid":"HhjleXwWowUn_AhEAAAl"}
+2025-08-25 17:11:39,711 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Received request to upgrade to websocket
+2025-08-25 17:11:39,779 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Upgrade to websocket successful
+2025-08-25 17:12:04,660 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Sending packet PING data None
+2025-08-25 17:12:04,663 - engineio.server - INFO - EmoiJv68xoug7k7DAAAk: Received packet PONG data 
+2025-08-25 17:12:18,747 - __main__ - INFO - Client disconnected: HhjleXwWowUn_AhEAAAl
+2025-08-25 17:12:18,747 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:12:18,828 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Sending packet OPEN data {'sid': '4QIpXdzY-TWFOGspAAAm', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:12:18,892 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Received packet MESSAGE data 0
+2025-08-25 17:12:18,894 - __main__ - INFO - Client connected: WcwXvskKB23EcdVkAAAn
+2025-08-25 17:12:18,894 - socketio.server - INFO - emitting event "connected" to WcwXvskKB23EcdVkAAAn [/]
+2025-08-25 17:12:18,896 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Sending packet MESSAGE data 2["connected",{"sid":"WcwXvskKB23EcdVkAAAn"}]
+2025-08-25 17:12:18,897 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Sending packet MESSAGE data 0{"sid":"WcwXvskKB23EcdVkAAAn"}
+2025-08-25 17:12:18,899 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Received request to upgrade to websocket
+2025-08-25 17:12:18,969 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Upgrade to websocket successful
+2025-08-25 17:12:20,283 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 17:12:20,285 - socketio.server - INFO - received event "join_room" from WcwXvskKB23EcdVkAAAn [/]
+2025-08-25 17:12:20,287 - __main__ - INFO - Found previous score for guest: 27, total_guesses: 5, correct_guesses: 1
+2025-08-25 17:12:20,288 - __main__ - INFO - Restored player guest with score 27, streak 0
+2025-08-25 17:12:20,289 - socketio.server - INFO - emitting event "new_round" to lobby [/]
+2025-08-25 17:12:20,290 - socketio.server - INFO - emitting event "round" to lobby [/]
+2025-08-25 17:12:20,291 - __main__ - INFO - Started new round 6 in room lobby
+2025-08-25 17:12:20,291 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:12:20,292 - __main__ - INFO - Round ended, started new round for new player guest
+2025-08-25 17:12:20,292 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 17:12:20,293 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:12:20,293 - socketio.server - INFO - WcwXvskKB23EcdVkAAAn is entering room lobby [/]
+2025-08-25 17:12:20,294 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 17:12:20,294 - socketio.server - INFO - emitting event "room_joined" to WcwXvskKB23EcdVkAAAn [/]
+2025-08-25 17:12:20,295 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":6,"current_round":{"range":[1,100],"end_time":1756142240.289494,"total_guesses":0},"players":[{"name":"guest","score":27,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34,"guest":27},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 17:12:20,296 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 17:12:20,297 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 17:12:20,298 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 17:12:20,298 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 17:12:20,299 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:12:22,203 - __main__ - INFO - Client disconnected: WcwXvskKB23EcdVkAAAn
+2025-08-25 17:12:22,203 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 17:12:22,204 - engineio.server - INFO - 4QIpXdzY-TWFOGspAAAm: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":0}]
+2025-08-25 17:12:22,204 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:12:22,205 - __main__ - INFO - Player guest left room lobby
+2025-08-25 17:12:22,206 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:13:40,415 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Sending packet OPEN data {'sid': 'XNXF74k6k14XJWRBAAAo', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:13:40,471 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Received packet MESSAGE data 0
+2025-08-25 17:13:40,472 - __main__ - INFO - Client connected: Y3Gr0uTD5_Ry3NNcAAAp
+2025-08-25 17:13:40,473 - socketio.server - INFO - emitting event "connected" to Y3Gr0uTD5_Ry3NNcAAAp [/]
+2025-08-25 17:13:40,473 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Sending packet MESSAGE data 2["connected",{"sid":"Y3Gr0uTD5_Ry3NNcAAAp"}]
+2025-08-25 17:13:40,474 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Sending packet MESSAGE data 0{"sid":"Y3Gr0uTD5_Ry3NNcAAAp"}
+2025-08-25 17:13:41,013 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Received request to upgrade to websocket
+2025-08-25 17:13:41,117 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Upgrade to websocket successful
+2025-08-25 17:13:59,346 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"guest","password":""}]
+2025-08-25 17:13:59,346 - socketio.server - INFO - received event "join_room" from Y3Gr0uTD5_Ry3NNcAAAp [/]
+2025-08-25 17:13:59,347 - __main__ - INFO - Found previous score for guest: 27, total_guesses: 5, correct_guesses: 1
+2025-08-25 17:13:59,348 - __main__ - INFO - Restored player guest with score 27, streak 0
+2025-08-25 17:13:59,348 - __main__ - INFO - Player guest joined room lobby
+2025-08-25 17:13:59,349 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:13:59,350 - socketio.server - INFO - Y3Gr0uTD5_Ry3NNcAAAp is entering room lobby [/]
+2025-08-25 17:13:59,350 - __main__ - INFO - Player guest joined Socket.IO room lobby
+2025-08-25 17:13:59,351 - socketio.server - INFO - emitting event "room_joined" to Y3Gr0uTD5_Ry3NNcAAAp [/]
+2025-08-25 17:13:59,351 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"guest","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":6,"current_round":{"range":[1,100],"end_time":1756142240.289494,"total_guesses":0},"players":[{"name":"guest","score":27,"streak":0,"correct_guesses":1}],"scores":{"Tu\u1ea5n":34,"guest":27},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-25 17:13:59,352 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-25 17:13:59,352 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"guest","current_players":1}]
+2025-08-25 17:13:59,352 - __main__ - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-25 17:13:59,353 - __main__ - INFO - Player guest successfully joined room lobby
+2025-08-25 17:13:59,354 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:14:00,740 - __main__ - INFO - Client disconnected: Y3Gr0uTD5_Ry3NNcAAAp
+2025-08-25 17:14:00,740 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-25 17:14:00,741 - engineio.server - INFO - XNXF74k6k14XJWRBAAAo: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"guest","current_players":0}]
+2025-08-25 17:14:00,741 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:14:00,741 - __main__ - INFO - Player guest left room lobby
+2025-08-25 17:14:00,742 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-26 00:14:47,841 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-26 00:14:47,844 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-26 00:14:47,844 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-26 00:14:47,845 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:14:47,845 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-26 00:14:47,845 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-26 00:14:47,846 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:14:47,846 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-26 00:14:47,848 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-26 00:14:47,848 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 17:15:04,423 - engineio.server - INFO - sQiLi8IGt_hHCxx5AAAq: Sending packet OPEN data {'sid': 'sQiLi8IGt_hHCxx5AAAq', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:15:04,439 - engineio.server - INFO - sQiLi8IGt_hHCxx5AAAq: Received packet MESSAGE data 0
+2025-08-25 17:15:04,441 - __main__ - INFO - Client connected: hheFyYx7JX97R7teAAAr
+2025-08-25 17:15:04,441 - socketio.server - INFO - emitting event "connected" to hheFyYx7JX97R7teAAAr [/]
+2025-08-25 17:15:04,442 - engineio.server - INFO - sQiLi8IGt_hHCxx5AAAq: Sending packet MESSAGE data 2["connected",{"sid":"hheFyYx7JX97R7teAAAr"}]
+2025-08-25 17:15:04,443 - engineio.server - INFO - sQiLi8IGt_hHCxx5AAAq: Sending packet MESSAGE data 0{"sid":"hheFyYx7JX97R7teAAAr"}
+2025-08-25 17:15:04,444 - engineio.server - INFO - sQiLi8IGt_hHCxx5AAAq: Received request to upgrade to websocket
+2025-08-25 17:15:04,459 - engineio.server - INFO - sQiLi8IGt_hHCxx5AAAq: Upgrade to websocket successful
+2025-08-25 17:15:05,998 - __main__ - INFO - Client disconnected: hheFyYx7JX97R7teAAAr
+2025-08-25 17:15:05,999 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:15:06,027 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet OPEN data {'sid': '5AOUP7Y3rA9rROGAAAAs', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:15:06,039 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 0
+2025-08-25 17:15:06,040 - __main__ - INFO - Client connected: tyj9VFTusfyrCYqFAAAt
+2025-08-25 17:15:06,041 - socketio.server - INFO - emitting event "connected" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:15:06,041 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["connected",{"sid":"tyj9VFTusfyrCYqFAAAt"}]
+2025-08-25 17:15:06,042 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 0{"sid":"tyj9VFTusfyrCYqFAAAt"}
+2025-08-25 17:15:06,044 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received request to upgrade to websocket
+2025-08-25 17:15:06,053 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Upgrade to websocket successful
+2025-08-25 17:15:31,029 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:15:31,031 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:15:56,035 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:15:56,037 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:16:10,927 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 17:16:10,927 - socketio.server - INFO - received event "get_available_rooms" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:10,928 - socketio.server - INFO - emitting event "available_rooms" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:10,929 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 17:16:18,868 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 17:16:18,869 - socketio.server - INFO - received event "get_available_rooms" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:18,870 - socketio.server - INFO - emitting event "available_rooms" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:18,871 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 17:16:19,689 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["join_room",{"room_id":"demo","player_name":"Tuấn","password":""}]
+2025-08-25 17:16:19,689 - socketio.server - INFO - received event "join_room" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:19,690 - __main__ - INFO - Created new player Tuấn
+2025-08-25 17:16:19,691 - socketio.server - INFO - emitting event "new_round" to demo [/]
+2025-08-25 17:16:19,691 - socketio.server - INFO - emitting event "round" to demo [/]
+2025-08-25 17:16:19,692 - __main__ - INFO - Started new round 2 in room demo
+2025-08-25 17:16:19,692 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:19,693 - __main__ - INFO - Round ended, started new round for new player Tuấn
+2025-08-25 17:16:19,693 - __main__ - INFO - Player Tuấn joined room demo
+2025-08-25 17:16:19,693 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:19,693 - socketio.server - INFO - tyj9VFTusfyrCYqFAAAt is entering room demo [/]
+2025-08-25 17:16:19,694 - __main__ - INFO - Player Tuấn joined Socket.IO room demo
+2025-08-25 17:16:19,694 - socketio.server - INFO - emitting event "room_joined" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:19,695 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["room_joined",{"room_id":"demo","room_name":"Ph\u00f2ng Demo","player_name":"Tu\u1ea5n","room_info":{"id":"demo","name":"Ph\u00f2ng Demo","round_number":2,"current_round":{"range":[1,100],"end_time":1756142479.6911914,"total_guesses":0},"players":[{"name":"Tu\u1ea5n","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":1}}]
+2025-08-25 17:16:19,695 - socketio.server - INFO - emitting event "player_joined" to demo [/]
+2025-08-25 17:16:19,695 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["player_joined",{"room_id":"demo","player_name":"Tu\u1ea5n","current_players":1}]
+2025-08-25 17:16:19,696 - __main__ - INFO - First player joined room demo, room already has round 1 ready
+2025-08-25 17:16:19,696 - __main__ - INFO - Player Tuấn successfully joined room demo
+2025-08-25 17:16:19,696 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:21,039 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:16:21,040 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:16:24,038 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["chat_message",{"room_id":"demo","message":"Hi"}]
+2025-08-25 17:16:24,039 - socketio.server - INFO - received event "chat_message" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:24,040 - socketio.server - INFO - emitting event "chat_message" to demo [/]
+2025-08-25 17:16:24,040 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["chat_message",{"room_id":"demo","player_name":"Tu\u1ea5n","message":"Hi","timestamp":1756142184.0399933,"type":"chat"}]
+2025-08-25 17:16:24,040 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:24,041 - __main__ - INFO - Chat in room demo: Tuấn: Hi
+2025-08-25 17:16:27,189 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":10}]
+2025-08-25 17:16:27,190 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:27,191 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:27,191 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:27,192 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 10","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 10","range":[1,100],"total_guesses":1}}]
+2025-08-25 17:16:27,192 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:27,193 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 10"}]
+2025-08-25 17:16:30,561 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":90}]
+2025-08-25 17:16:30,562 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:30,563 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:30,563 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:30,564 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 90","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 90","range":[1,100],"total_guesses":2}}]
+2025-08-25 17:16:30,564 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:30,565 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 90"}]
+2025-08-25 17:16:33,781 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":76}]
+2025-08-25 17:16:33,782 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:33,783 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:33,783 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:33,783 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 76","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 76","range":[1,100],"total_guesses":3}}]
+2025-08-25 17:16:33,784 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:33,784 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 76"}]
+2025-08-25 17:16:36,968 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":88}]
+2025-08-25 17:16:36,968 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:36,969 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:36,970 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:36,971 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 88","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 88","range":[1,100],"total_guesses":4}}]
+2025-08-25 17:16:36,972 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:36,972 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 88"}]
+2025-08-25 17:16:41,225 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":78}]
+2025-08-25 17:16:41,226 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:41,227 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:41,227 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:41,228 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 78","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 78","range":[1,100],"total_guesses":5}}]
+2025-08-25 17:16:41,228 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:41,228 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 78"}]
+2025-08-25 17:16:44,344 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":80}]
+2025-08-25 17:16:44,345 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:44,346 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:44,346 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:44,347 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 80","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 80","range":[1,100],"total_guesses":6}}]
+2025-08-25 17:16:44,347 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:44,348 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 80"}]
+2025-08-25 17:16:46,042 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:16:46,044 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:16:46,990 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":85}]
+2025-08-25 17:16:46,990 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:46,991 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:46,992 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:46,992 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 85","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 85","range":[1,100],"total_guesses":7}}]
+2025-08-25 17:16:46,993 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:46,993 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 85"}]
+2025-08-25 17:16:49,788 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":89}]
+2025-08-25 17:16:49,789 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:49,790 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:49,790 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:49,791 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 89","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 89","range":[1,100],"total_guesses":8}}]
+2025-08-25 17:16:49,791 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:49,792 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 89"}]
+2025-08-25 17:16:52,490 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":88}]
+2025-08-25 17:16:52,491 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:52,492 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:52,492 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:52,493 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 88","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 88","range":[1,100],"total_guesses":9}}]
+2025-08-25 17:16:52,493 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:52,494 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 88"}]
+2025-08-25 17:16:56,061 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":87}]
+2025-08-25 17:16:56,061 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:56,063 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:56,063 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:56,064 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 87","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 87","range":[1,100],"total_guesses":10}}]
+2025-08-25 17:16:56,065 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:56,065 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 87"}]
+2025-08-25 17:16:58,656 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["make_guess",{"room_id":"demo","guess":86}]
+2025-08-25 17:16:58,657 - socketio.server - INFO - received event "make_guess" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:58,658 - socketio.server - INFO - emitting event "new_round" to demo [/]
+2025-08-25 17:16:58,658 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["new_round",{"room_id":"demo","round_number":3,"range":[1,100],"end_time":1756142518.6582725,"previous_winner":null,"message":"\ud83c\udfae V\u00f2ng 3: \u0110o\u00e1n s\u1ed1 t\u1eeb 1 \u0111\u1ebfn 100"}]
+2025-08-25 17:16:58,659 - socketio.server - INFO - emitting event "round" to demo [/]
+2025-08-25 17:16:58,659 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["round",{"room":"demo","round":3,"range":[1,100],"endsAt":1756142518658.2725}]
+2025-08-25 17:16:58,659 - __main__ - INFO - Started new round 3 in room demo
+2025-08-25 17:16:58,660 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:58,660 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:16:58,660 - socketio.server - INFO - emitting event "guess_result" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:58,661 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["guess_result",{"message":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 86","details":{"correct":true,"score_gained":36,"new_total_score":36,"streak":1,"time_bonus":26,"streak_bonus":0,"total_guesses":0}}]
+2025-08-25 17:16:58,661 - socketio.server - INFO - emitting event "message" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:16:58,661 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["message",{"room":"demo","msg":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 86"}]
+2025-08-25 17:16:58,662 - socketio.server - INFO - emitting event "scoreboard_updated" to demo [/]
+2025-08-25 17:16:58,662 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["scoreboard_updated",{"scores":{"Tu\u1ea5n":36}}]
+2025-08-25 17:16:58,662 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:17:11,045 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:17:11,047 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:17:14,604 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet MESSAGE data 2["leave_room"]
+2025-08-25 17:17:14,604 - socketio.server - INFO - received event "leave_room" from tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:17:14,605 - socketio.server - INFO - emitting event "player_left" to demo [/]
+2025-08-25 17:17:14,606 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["player_left",{"room_id":"demo","player_name":"Tu\u1ea5n","current_players":0}]
+2025-08-25 17:17:14,607 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:17:14,607 - __main__ - INFO - Player Tuấn left room demo
+2025-08-25 17:17:14,607 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:17:14,608 - socketio.server - INFO - emitting event "room_left" to tyj9VFTusfyrCYqFAAAt [/]
+2025-08-25 17:17:14,609 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet MESSAGE data 2["room_left",{"message":"\u0110\u00e3 r\u1eddi ph\u00f2ng"}]
+2025-08-25 17:17:36,050 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:17:36,053 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:17:47,555 - engineio.server - INFO - d9JlGachGGgsXY-bAAAu: Sending packet OPEN data {'sid': 'd9JlGachGGgsXY-bAAAu', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:17:47,606 - engineio.server - INFO - d9JlGachGGgsXY-bAAAu: Received packet MESSAGE data 0
+2025-08-25 17:17:47,608 - __main__ - INFO - Client connected: 6IHiXOvdBpIeh_58AAAv
+2025-08-25 17:17:47,609 - socketio.server - INFO - emitting event "connected" to 6IHiXOvdBpIeh_58AAAv [/]
+2025-08-25 17:17:47,610 - engineio.server - INFO - d9JlGachGGgsXY-bAAAu: Sending packet MESSAGE data 2["connected",{"sid":"6IHiXOvdBpIeh_58AAAv"}]
+2025-08-25 17:17:47,610 - engineio.server - INFO - d9JlGachGGgsXY-bAAAu: Sending packet MESSAGE data 0{"sid":"6IHiXOvdBpIeh_58AAAv"}
+2025-08-25 17:17:48,136 - engineio.server - INFO - d9JlGachGGgsXY-bAAAu: Received request to upgrade to websocket
+2025-08-25 17:17:48,232 - engineio.server - INFO - d9JlGachGGgsXY-bAAAu: Upgrade to websocket successful
+2025-08-25 17:17:54,318 - __main__ - INFO - Client disconnected: 6IHiXOvdBpIeh_58AAAv
+2025-08-25 17:17:54,318 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:17:54,370 - engineio.server - INFO - iyBXHcL3wxxI34zcAAAw: Sending packet OPEN data {'sid': 'iyBXHcL3wxxI34zcAAAw', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:17:54,419 - engineio.server - INFO - iyBXHcL3wxxI34zcAAAw: Received packet MESSAGE data 0
+2025-08-25 17:17:54,421 - __main__ - INFO - Client connected: DQtSfotjc3rTM3bkAAAx
+2025-08-25 17:17:54,422 - socketio.server - INFO - emitting event "connected" to DQtSfotjc3rTM3bkAAAx [/]
+2025-08-25 17:17:54,422 - engineio.server - INFO - iyBXHcL3wxxI34zcAAAw: Sending packet MESSAGE data 2["connected",{"sid":"DQtSfotjc3rTM3bkAAAx"}]
+2025-08-25 17:17:54,423 - engineio.server - INFO - iyBXHcL3wxxI34zcAAAw: Sending packet MESSAGE data 0{"sid":"DQtSfotjc3rTM3bkAAAx"}
+2025-08-25 17:17:54,474 - engineio.server - INFO - iyBXHcL3wxxI34zcAAAw: Received request to upgrade to websocket
+2025-08-25 17:17:54,494 - engineio.server - INFO - iyBXHcL3wxxI34zcAAAw: Upgrade to websocket successful
+2025-08-25 17:17:55,319 - __main__ - INFO - Client disconnected: DQtSfotjc3rTM3bkAAAx
+2025-08-25 17:17:55,319 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:18:01,055 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:18:01,057 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:18:26,060 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Sending packet PING data None
+2025-08-25 17:18:26,062 - engineio.server - INFO - 5AOUP7Y3rA9rROGAAAAs: Received packet PONG data 
+2025-08-25 17:18:36,013 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-25 17:18:36,017 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-25 17:18:36,017 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-25 17:18:36,021 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:18:36,021 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-25 17:18:36,024 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-25 17:18:36,024 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:18:36,025 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-25 17:18:36,028 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-25 17:18:36,028 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 17:18:36,337 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Sending packet OPEN data {'sid': '7bFnRgfL7hajdesnAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:18:36,344 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Received packet MESSAGE data 0
+2025-08-25 17:18:36,346 - __main__ - INFO - Client connected: 7SoWoSqew-8eXc-RAAAB
+2025-08-25 17:18:36,346 - socketio.server - INFO - emitting event "connected" to 7SoWoSqew-8eXc-RAAAB [/]
+2025-08-25 17:18:36,347 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Sending packet MESSAGE data 2["connected",{"sid":"7SoWoSqew-8eXc-RAAAB"}]
+2025-08-25 17:18:36,348 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Sending packet MESSAGE data 0{"sid":"7SoWoSqew-8eXc-RAAAB"}
+2025-08-25 17:18:36,350 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Received request to upgrade to websocket
+2025-08-25 17:18:36,360 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Upgrade to websocket successful
+2025-08-25 17:19:01,343 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Sending packet PING data None
+2025-08-25 17:19:01,346 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Received packet PONG data 
+2025-08-25 17:19:26,351 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Sending packet PING data None
+2025-08-25 17:19:26,353 - engineio.server - INFO - 7bFnRgfL7hajdesnAAAA: Received packet PONG data 
+2025-08-25 17:19:29,854 - __main__ - INFO - Client disconnected: 7SoWoSqew-8eXc-RAAAB
+2025-08-25 17:19:29,855 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:19:29,878 - engineio.server - INFO - uDf1hcy73elbBr6pAAAC: Sending packet OPEN data {'sid': 'uDf1hcy73elbBr6pAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:19:29,894 - engineio.server - INFO - uDf1hcy73elbBr6pAAAC: Received packet MESSAGE data 0
+2025-08-25 17:19:29,897 - __main__ - INFO - Client connected: srpZ7v8OppcdudKuAAAD
+2025-08-25 17:19:29,898 - socketio.server - INFO - emitting event "connected" to srpZ7v8OppcdudKuAAAD [/]
+2025-08-25 17:19:29,901 - engineio.server - INFO - uDf1hcy73elbBr6pAAAC: Sending packet MESSAGE data 2["connected",{"sid":"srpZ7v8OppcdudKuAAAD"}]
+2025-08-25 17:19:29,902 - engineio.server - INFO - uDf1hcy73elbBr6pAAAC: Sending packet MESSAGE data 0{"sid":"srpZ7v8OppcdudKuAAAD"}
+2025-08-25 17:19:29,904 - engineio.server - INFO - uDf1hcy73elbBr6pAAAC: Received request to upgrade to websocket
+2025-08-25 17:19:29,915 - engineio.server - INFO - uDf1hcy73elbBr6pAAAC: Upgrade to websocket successful
+2025-08-25 17:19:30,573 - __main__ - INFO - Client disconnected: srpZ7v8OppcdudKuAAAD
+2025-08-25 17:19:30,574 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:19:30,603 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Sending packet OPEN data {'sid': 'gkAhebtwxOc6fs9zAAAE', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:19:30,611 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Received packet MESSAGE data 0
+2025-08-25 17:19:30,613 - __main__ - INFO - Client connected: bhVmgQGTLgfc2tF6AAAF
+2025-08-25 17:19:30,614 - socketio.server - INFO - emitting event "connected" to bhVmgQGTLgfc2tF6AAAF [/]
+2025-08-25 17:19:30,616 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Sending packet MESSAGE data 2["connected",{"sid":"bhVmgQGTLgfc2tF6AAAF"}]
+2025-08-25 17:19:30,617 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Sending packet MESSAGE data 0{"sid":"bhVmgQGTLgfc2tF6AAAF"}
+2025-08-25 17:19:30,619 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Received request to upgrade to websocket
+2025-08-25 17:19:30,630 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Upgrade to websocket successful
+2025-08-25 17:19:35,662 - engineio.server - INFO - R3TX5qVq5510WKTqAAAG: Sending packet OPEN data {'sid': 'R3TX5qVq5510WKTqAAAG', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:19:35,714 - engineio.server - INFO - R3TX5qVq5510WKTqAAAG: Received packet MESSAGE data 0
+2025-08-25 17:19:35,715 - __main__ - INFO - Client connected: Q8eon6hDvrDsrxnfAAAH
+2025-08-25 17:19:35,716 - socketio.server - INFO - emitting event "connected" to Q8eon6hDvrDsrxnfAAAH [/]
+2025-08-25 17:19:35,717 - engineio.server - INFO - R3TX5qVq5510WKTqAAAG: Sending packet MESSAGE data 2["connected",{"sid":"Q8eon6hDvrDsrxnfAAAH"}]
+2025-08-25 17:19:35,719 - engineio.server - INFO - R3TX5qVq5510WKTqAAAG: Sending packet MESSAGE data 0{"sid":"Q8eon6hDvrDsrxnfAAAH"}
+2025-08-25 17:19:36,284 - engineio.server - INFO - R3TX5qVq5510WKTqAAAG: Received request to upgrade to websocket
+2025-08-25 17:19:36,390 - engineio.server - INFO - R3TX5qVq5510WKTqAAAG: Upgrade to websocket successful
+2025-08-25 17:19:37,959 - __main__ - INFO - Client disconnected: Q8eon6hDvrDsrxnfAAAH
+2025-08-25 17:19:37,959 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:19:38,016 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Sending packet OPEN data {'sid': 'X021cCO1Kl8gMGUkAAAI', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:19:38,070 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Received packet MESSAGE data 0
+2025-08-25 17:19:38,071 - __main__ - INFO - Client connected: cH1mTXapmdHP2-auAAAJ
+2025-08-25 17:19:38,071 - socketio.server - INFO - emitting event "connected" to cH1mTXapmdHP2-auAAAJ [/]
+2025-08-25 17:19:38,072 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Sending packet MESSAGE data 2["connected",{"sid":"cH1mTXapmdHP2-auAAAJ"}]
+2025-08-25 17:19:38,073 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Sending packet MESSAGE data 0{"sid":"cH1mTXapmdHP2-auAAAJ"}
+2025-08-25 17:19:38,075 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Received request to upgrade to websocket
+2025-08-25 17:19:38,153 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Upgrade to websocket successful
+2025-08-25 17:19:55,605 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Sending packet PING data None
+2025-08-25 17:19:55,607 - engineio.server - INFO - gkAhebtwxOc6fs9zAAAE: Received packet PONG data 
+2025-08-25 17:20:03,018 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Sending packet PING data None
+2025-08-25 17:20:03,020 - engineio.server - INFO - X021cCO1Kl8gMGUkAAAI: Received packet PONG data 
+2025-08-25 17:20:06,688 - __main__ - INFO - Client disconnected: cH1mTXapmdHP2-auAAAJ
+2025-08-25 17:20:06,689 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:20:06,737 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet OPEN data {'sid': 'uPKYX72JSfs7pwSvAAAK', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:20:06,787 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet MESSAGE data 0
+2025-08-25 17:20:06,789 - __main__ - INFO - Client connected: Az2rzNhNhhHMRrOmAAAL
+2025-08-25 17:20:06,791 - socketio.server - INFO - emitting event "connected" to Az2rzNhNhhHMRrOmAAAL [/]
+2025-08-25 17:20:06,792 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet MESSAGE data 2["connected",{"sid":"Az2rzNhNhhHMRrOmAAAL"}]
+2025-08-25 17:20:06,793 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet MESSAGE data 0{"sid":"Az2rzNhNhhHMRrOmAAAL"}
+2025-08-25 17:20:06,796 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received request to upgrade to websocket
+2025-08-25 17:20:06,827 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Upgrade to websocket successful
+2025-08-25 17:20:09,528 - __main__ - INFO - Client disconnected: bhVmgQGTLgfc2tF6AAAF
+2025-08-25 17:20:09,529 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:20:31,741 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:20:31,743 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:20:56,743 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:20:56,746 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:21:21,750 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:21:21,752 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:21:46,757 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:21:46,796 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:22:11,802 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:22:11,804 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:22:36,806 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:22:36,810 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:23:01,815 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:23:01,819 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:23:26,824 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:23:26,826 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:23:51,831 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:23:51,833 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:24:16,834 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:24:16,837 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:24:41,842 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:24:41,846 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:25:06,852 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:25:06,857 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:25:31,862 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:25:31,867 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:25:56,867 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:25:56,869 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:26:21,874 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:26:21,877 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:26:46,882 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:26:46,884 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:27:11,889 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:27:11,893 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:27:36,895 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:27:36,897 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:28:01,902 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:28:01,905 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:28:26,910 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:28:26,912 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:28:51,917 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:28:51,922 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:29:16,923 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:29:16,928 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:29:41,933 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:29:41,935 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:30:06,941 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:30:06,943 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:30:31,946 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:30:31,948 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:30:56,948 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:30:56,950 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:31:21,957 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:31:21,959 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:31:46,963 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:31:46,966 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:32:11,971 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:32:11,972 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:32:36,974 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:32:36,976 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:33:01,979 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Sending packet PING data None
+2025-08-25 17:33:01,981 - engineio.server - INFO - uPKYX72JSfs7pwSvAAAK: Received packet PONG data 
+2025-08-25 17:33:11,126 - __main__ - INFO - Client disconnected: Az2rzNhNhhHMRrOmAAAL
+2025-08-25 17:33:11,128 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:33:11,461 - engineio.server - INFO - 494TmBJcQABsRI69AAAM: Sending packet OPEN data {'sid': '494TmBJcQABsRI69AAAM', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:33:12,051 - engineio.server - INFO - 494TmBJcQABsRI69AAAM: Received packet MESSAGE data 0
+2025-08-25 17:33:12,052 - __main__ - INFO - Client connected: ZJIxGoyYMVAEyZsPAAAN
+2025-08-25 17:33:12,053 - socketio.server - INFO - emitting event "connected" to ZJIxGoyYMVAEyZsPAAAN [/]
+2025-08-25 17:33:12,054 - engineio.server - INFO - 494TmBJcQABsRI69AAAM: Sending packet MESSAGE data 2["connected",{"sid":"ZJIxGoyYMVAEyZsPAAAN"}]
+2025-08-25 17:33:12,055 - engineio.server - INFO - 494TmBJcQABsRI69AAAM: Sending packet MESSAGE data 0{"sid":"ZJIxGoyYMVAEyZsPAAAN"}
+2025-08-25 17:33:12,058 - engineio.server - INFO - 494TmBJcQABsRI69AAAM: Received request to upgrade to websocket
+2025-08-25 17:33:12,143 - engineio.server - INFO - 494TmBJcQABsRI69AAAM: Upgrade to websocket successful
+2025-08-25 17:33:17,220 - __main__ - INFO - Client disconnected: ZJIxGoyYMVAEyZsPAAAN
+2025-08-25 17:33:17,221 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-26 00:35:27,724 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-26 00:35:27,727 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-26 00:35:27,728 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-26 00:35:27,728 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:35:27,729 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-26 00:35:27,729 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-26 00:35:27,730 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:35:27,730 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-26 00:35:27,732 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-26 00:35:27,732 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 17:35:38,604 - engineio.server - INFO - uWY1Kqz5H-Qua4vwAAAO: Sending packet OPEN data {'sid': 'uWY1Kqz5H-Qua4vwAAAO', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:35:38,606 - engineio.server - INFO - uWY1Kqz5H-Qua4vwAAAO: Received request to upgrade to websocket
+2025-08-25 17:35:38,608 - engineio.server - INFO - uWY1Kqz5H-Qua4vwAAAO: Upgrade to websocket successful
+2025-08-25 17:35:38,615 - engineio.server - INFO - uWY1Kqz5H-Qua4vwAAAO: Received packet MESSAGE data 0
+2025-08-25 17:35:38,616 - __main__ - INFO - Client connected: EpkTXBeGel2iU4JQAAAP
+2025-08-25 17:35:38,617 - socketio.server - INFO - emitting event "connected" to EpkTXBeGel2iU4JQAAAP [/]
+2025-08-25 17:35:38,617 - engineio.server - INFO - uWY1Kqz5H-Qua4vwAAAO: Sending packet MESSAGE data 2["connected",{"sid":"EpkTXBeGel2iU4JQAAAP"}]
+2025-08-25 17:35:38,618 - engineio.server - INFO - uWY1Kqz5H-Qua4vwAAAO: Sending packet MESSAGE data 0{"sid":"EpkTXBeGel2iU4JQAAAP"}
+2025-08-25 17:35:39,944 - __main__ - INFO - Client disconnected: EpkTXBeGel2iU4JQAAAP
+2025-08-25 17:35:39,945 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:35:39,964 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Sending packet OPEN data {'sid': 'gZgg5CKs6DGLm0qsAAAQ', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:35:39,965 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Received request to upgrade to websocket
+2025-08-25 17:35:39,966 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Upgrade to websocket successful
+2025-08-25 17:35:39,968 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Received packet MESSAGE data 0
+2025-08-25 17:35:39,969 - __main__ - INFO - Client connected: 4678ot563nSUv0NBAAAR
+2025-08-25 17:35:39,969 - socketio.server - INFO - emitting event "connected" to 4678ot563nSUv0NBAAAR [/]
+2025-08-25 17:35:39,969 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Sending packet MESSAGE data 2["connected",{"sid":"4678ot563nSUv0NBAAAR"}]
+2025-08-25 17:35:39,969 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Sending packet MESSAGE data 0{"sid":"4678ot563nSUv0NBAAAR"}
+2025-08-25 17:35:45,224 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Received packet MESSAGE data 20["list_rooms",{}]
+2025-08-25 17:35:45,225 - socketio.server - INFO - received event "list_rooms" from 4678ot563nSUv0NBAAAR [/]
+2025-08-25 17:35:48,701 - engineio.server - INFO - gZgg5CKs6DGLm0qsAAAQ: Received packet MESSAGE data 21["list_rooms",{}]
+2025-08-25 17:35:48,702 - socketio.server - INFO - received event "list_rooms" from 4678ot563nSUv0NBAAAR [/]
+2025-08-25 17:35:49,963 - __main__ - INFO - Client disconnected: 4678ot563nSUv0NBAAAR
+2025-08-25 17:35:49,964 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:35:49,988 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet OPEN data {'sid': 'wquUJ1knJZvoJw2zAAAS', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:35:49,989 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received request to upgrade to websocket
+2025-08-25 17:35:49,990 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Upgrade to websocket successful
+2025-08-25 17:35:49,992 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet MESSAGE data 0
+2025-08-25 17:35:49,993 - __main__ - INFO - Client connected: feYYRHTyXGa8B6LbAAAT
+2025-08-25 17:35:49,993 - socketio.server - INFO - emitting event "connected" to feYYRHTyXGa8B6LbAAAT [/]
+2025-08-25 17:35:49,994 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet MESSAGE data 2["connected",{"sid":"feYYRHTyXGa8B6LbAAAT"}]
+2025-08-25 17:35:49,995 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet MESSAGE data 0{"sid":"feYYRHTyXGa8B6LbAAAT"}
+2025-08-25 17:35:51,308 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet MESSAGE data 20["list_rooms",{}]
+2025-08-25 17:35:51,309 - socketio.server - INFO - received event "list_rooms" from feYYRHTyXGa8B6LbAAAT [/]
+2025-08-25 17:36:15,000 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet PING data None
+2025-08-25 17:36:15,003 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet PONG data 
+2025-08-25 17:36:40,007 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet PING data None
+2025-08-25 17:36:40,009 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet PONG data 
+2025-08-25 17:37:05,016 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet PING data None
+2025-08-25 17:37:05,019 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet PONG data 
+2025-08-25 17:37:30,024 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet PING data None
+2025-08-25 17:37:30,026 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet PONG data 
+2025-08-25 17:37:55,032 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet PING data None
+2025-08-25 17:37:55,034 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet PONG data 
+2025-08-25 17:38:20,037 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Sending packet PING data None
+2025-08-25 17:38:20,039 - engineio.server - INFO - wquUJ1knJZvoJw2zAAAS: Received packet PONG data 
+2025-08-25 17:38:32,231 - __main__ - INFO - Client disconnected: feYYRHTyXGa8B6LbAAAT
+2025-08-25 17:38:32,232 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:38:32,270 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Sending packet OPEN data {'sid': 'iqAOYe5BjUZD8YMCAAAU', 'upgrades': [], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:38:32,270 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received request to upgrade to websocket
+2025-08-25 17:38:32,271 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Upgrade to websocket successful
+2025-08-25 17:38:32,274 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received packet MESSAGE data 0
+2025-08-25 17:38:32,275 - __main__ - INFO - Client connected: FXGeVdwZ8F9VeC4eAAAV
+2025-08-25 17:38:32,276 - socketio.server - INFO - emitting event "connected" to FXGeVdwZ8F9VeC4eAAAV [/]
+2025-08-25 17:38:32,276 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Sending packet MESSAGE data 2["connected",{"sid":"FXGeVdwZ8F9VeC4eAAAV"}]
+2025-08-25 17:38:32,277 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Sending packet MESSAGE data 0{"sid":"FXGeVdwZ8F9VeC4eAAAV"}
+2025-08-25 17:38:33,595 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received packet MESSAGE data 20["list_rooms",{}]
+2025-08-25 17:38:33,596 - socketio.server - INFO - received event "list_rooms" from FXGeVdwZ8F9VeC4eAAAV [/]
+2025-08-25 17:38:57,271 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Sending packet PING data None
+2025-08-25 17:38:57,274 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received packet PONG data 
+2025-08-25 17:39:22,276 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Sending packet PING data None
+2025-08-25 17:39:22,325 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received packet PONG data 
+2025-08-25 17:39:47,331 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Sending packet PING data None
+2025-08-25 17:39:47,333 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received packet PONG data 
+2025-08-26 00:39:58,556 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-26 00:39:58,559 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-26 00:39:58,560 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-26 00:39:58,560 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:39:58,561 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-26 00:39:58,561 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-26 00:39:58,562 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:39:58,562 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-26 00:39:58,564 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-26 00:39:58,564 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 17:40:06,841 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet OPEN data {'sid': 'lH-KKzl8j8fa7JWCAAAW', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:40:06,853 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet MESSAGE data 0
+2025-08-25 17:40:06,855 - __main__ - INFO - Client connected: OHIqQQuIQ7CC1SBgAAAX
+2025-08-25 17:40:06,856 - socketio.server - INFO - emitting event "connected" to OHIqQQuIQ7CC1SBgAAAX [/]
+2025-08-25 17:40:06,856 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet MESSAGE data 2["connected",{"sid":"OHIqQQuIQ7CC1SBgAAAX"}]
+2025-08-25 17:40:06,857 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet MESSAGE data 0{"sid":"OHIqQQuIQ7CC1SBgAAAX"}
+2025-08-25 17:40:06,858 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received request to upgrade to websocket
+2025-08-25 17:40:06,865 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Upgrade to websocket successful
+2025-08-25 17:40:07,844 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 17:40:07,844 - socketio.server - INFO - received event "get_available_rooms" from OHIqQQuIQ7CC1SBgAAAX [/]
+2025-08-25 17:40:07,845 - socketio.server - INFO - emitting event "available_rooms" to OHIqQQuIQ7CC1SBgAAAX [/]
+2025-08-25 17:40:07,845 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 17:40:12,337 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Sending packet PING data None
+2025-08-25 17:40:12,339 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received packet PONG data 
+2025-08-25 17:40:14,069 - engineio.server - INFO - iqAOYe5BjUZD8YMCAAAU: Received packet MESSAGE data 21["list_rooms",{}]
+2025-08-25 17:40:14,070 - socketio.server - INFO - received event "list_rooms" from FXGeVdwZ8F9VeC4eAAAV [/]
+2025-08-25 17:40:15,679 - __main__ - INFO - Client disconnected: FXGeVdwZ8F9VeC4eAAAV
+2025-08-25 17:40:15,679 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:40:15,705 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Sending packet OPEN data {'sid': 'kirvHyzuMFKXeLGNAAAY', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 17:40:15,712 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Received packet MESSAGE data 0
+2025-08-25 17:40:15,714 - __main__ - INFO - Client connected: xA6PmvrZVw_u4IPVAAAZ
+2025-08-25 17:40:15,714 - socketio.server - INFO - emitting event "connected" to xA6PmvrZVw_u4IPVAAAZ [/]
+2025-08-25 17:40:15,715 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Sending packet MESSAGE data 2["connected",{"sid":"xA6PmvrZVw_u4IPVAAAZ"}]
+2025-08-25 17:40:15,715 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Sending packet MESSAGE data 0{"sid":"xA6PmvrZVw_u4IPVAAAZ"}
+2025-08-25 17:40:15,718 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Received request to upgrade to websocket
+2025-08-25 17:40:15,727 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Upgrade to websocket successful
+2025-08-25 17:40:17,069 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 17:40:17,070 - socketio.server - INFO - received event "get_available_rooms" from xA6PmvrZVw_u4IPVAAAZ [/]
+2025-08-25 17:40:17,071 - socketio.server - INFO - emitting event "available_rooms" to xA6PmvrZVw_u4IPVAAAZ [/]
+2025-08-25 17:40:17,072 - engineio.server - INFO - kirvHyzuMFKXeLGNAAAY: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 17:40:19,869 - __main__ - INFO - Client disconnected: xA6PmvrZVw_u4IPVAAAZ
+2025-08-25 17:40:19,869 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 17:40:31,846 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:40:31,849 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:40:56,852 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:40:56,854 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:41:21,860 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:41:21,862 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:41:46,866 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:41:46,869 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:42:11,870 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:42:11,873 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:42:36,879 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:42:36,881 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:43:01,886 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:43:01,888 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:43:26,893 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:43:26,896 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:43:51,901 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:43:51,905 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:44:16,910 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Sending packet PING data None
+2025-08-25 17:44:16,911 - engineio.server - INFO - lH-KKzl8j8fa7JWCAAAW: Received packet PONG data 
+2025-08-25 17:44:35,096 - __main__ - INFO - Client disconnected: OHIqQQuIQ7CC1SBgAAAX
+2025-08-25 17:44:35,097 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-26 00:44:54,084 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-26 00:44:54,087 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-26 00:44:54,088 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-26 00:44:54,088 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:44:54,088 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-26 00:44:54,089 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-26 00:44:54,089 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:44:54,089 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-26 00:44:54,091 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-26 00:44:54,091 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 18:06:03,591 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-25 18:06:03,595 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-25 18:06:03,596 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-25 18:06:03,596 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 18:06:03,596 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-25 18:06:03,597 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-25 18:06:03,597 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 18:06:03,598 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-25 18:06:03,600 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-25 18:06:03,601 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-25 18:06:13,490 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Sending packet OPEN data {'sid': 'gfX6tsuKW67L4ms-AAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 18:06:13,544 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Received packet MESSAGE data 0
+2025-08-25 18:06:13,545 - __main__ - INFO - Client connected: NqMoUwKKDOULsaXPAAAB
+2025-08-25 18:06:13,546 - socketio.server - INFO - emitting event "connected" to NqMoUwKKDOULsaXPAAAB [/]
+2025-08-25 18:06:13,546 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Sending packet MESSAGE data 2["connected",{"sid":"NqMoUwKKDOULsaXPAAAB"}]
+2025-08-25 18:06:13,547 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Sending packet MESSAGE data 0{"sid":"NqMoUwKKDOULsaXPAAAB"}
+2025-08-25 18:06:14,076 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Received request to upgrade to websocket
+2025-08-25 18:06:14,178 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Upgrade to websocket successful
+2025-08-25 18:06:15,614 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-25 18:06:15,615 - socketio.server - INFO - received event "get_available_rooms" from NqMoUwKKDOULsaXPAAAB [/]
+2025-08-25 18:06:15,618 - socketio.server - INFO - emitting event "available_rooms" to NqMoUwKKDOULsaXPAAAB [/]
+2025-08-25 18:06:15,620 - engineio.server - INFO - gfX6tsuKW67L4ms-AAAA: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-25 18:06:17,784 - __main__ - INFO - Client disconnected: NqMoUwKKDOULsaXPAAAB
+2025-08-25 18:06:17,785 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
+2025-08-25 18:06:17,840 - engineio.server - INFO - Y92F_EIirYHv7dDWAAAC: Sending packet OPEN data {'sid': 'Y92F_EIirYHv7dDWAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-25 18:06:17,897 - engineio.server - INFO - Y92F_EIirYHv7dDWAAAC: Received packet MESSAGE data 0
+2025-08-25 18:06:17,899 - __main__ - INFO - Client connected: cA4qQC3njTV6RqvZAAAD
+2025-08-25 18:06:17,900 - socketio.server - INFO - emitting event "connected" to cA4qQC3njTV6RqvZAAAD [/]
+2025-08-25 18:06:17,901 - engineio.server - INFO - Y92F_EIirYHv7dDWAAAC: Sending packet MESSAGE data 2["connected",{"sid":"cA4qQC3njTV6RqvZAAAD"}]
+2025-08-25 18:06:17,902 - engineio.server - INFO - Y92F_EIirYHv7dDWAAAC: Sending packet MESSAGE data 0{"sid":"cA4qQC3njTV6RqvZAAAD"}
+2025-08-25 18:06:17,904 - engineio.server - INFO - Y92F_EIirYHv7dDWAAAC: Received request to upgrade to websocket
+2025-08-25 18:06:17,962 - engineio.server - INFO - Y92F_EIirYHv7dDWAAAC: Upgrade to websocket successful
+2025-08-25 18:06:28,380 - __main__ - INFO - Client disconnected: cA4qQC3njTV6RqvZAAAD
+2025-08-25 18:06:28,380 - __main__ - ERROR - Error saving rooms to file: first argument must be callable or None
