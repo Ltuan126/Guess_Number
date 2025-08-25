@@ -376,8 +376,8 @@ function startCountdown(endTime) {
   if (!countdownElement) return;
   
   const updateCountdown = () => {
-    const now = Date.now();
-    const timeLeft = Math.max(0, Math.floor((endTime - now) / 1000));
+    const now = Date.now() / 1000; // Convert to seconds to match server time
+    const timeLeft = Math.max(0, Math.floor(endTime - now));
     
     if (timeLeft <= 0) {
       countdownElement.textContent = "Hết giờ!";
@@ -516,6 +516,8 @@ socket.on("room_joined", (data) => {
       
       if (data.room_info.current_round.end_time) {
         startCountdown(data.room_info.current_round.end_time);
+        // Cập nhật game status khi có countdown
+        document.getElementById("game-status-text").textContent = "Đang chơi";
       }
     }
     
@@ -580,6 +582,9 @@ socket.on("new_round", (data) => {
     message: data.message
   });
   
+  // Cập nhật game status cho vòng mới
+  document.getElementById("game-status-text").textContent = "Đang chơi";
+  
   // Reset result message
   if (result) {
     result.textContent = "";
@@ -621,6 +626,9 @@ socket.on("room_reset", (data) => {
   document.getElementById("round-number").textContent = "1";
   document.getElementById("total-guesses").textContent = "0";
   if (result) result.textContent = "";
+  
+  // Cập nhật game status khi reset phòng
+  document.getElementById("game-status-text").textContent = "Đang chờ...";
   
   addChatMessage({
     player_name: "Hệ thống",

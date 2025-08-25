@@ -389,13 +389,95 @@ class GameManager:
             logger.warning(f"Join room failed: Player name {player_name} already exists in room {room_id}")
             return False, "Tên người chơi đã tồn tại"
 
-        # Tạo người chơi mới
-        player = Player(
-            name=player_name,
-            sid=sid,
-            joined_at=time.time(),
-            last_guess_at=0
-        )
+        # Kiểm tra xem có người chơi cũ với tên này không (để khôi phục điểm)
+        existing_player_data = None
+        
+        # 1. Kiểm tra trong room.players hiện tại (nếu có)
+        for old_sid, old_player in list(room.players.items()):
+            if old_player.name == player_name:
+                # Lưu thông tin người chơi cũ trước khi xóa
+                existing_player_data = {
+                    'score': old_player.score,
+                    'streak': old_player.streak,
+                    'total_guesses': old_player.total_guesses,
+                    'correct_guesses': old_player.correct_guesses,
+                    'last_guess_at': old_player.last_guess_at
+                }
+                # Xóa người chơi cũ
+                del room.players[old_sid]
+                if old_sid in self.player_rooms:
+                    del self.player_rooms[old_sid]
+                logger.info(f"Removed old player {player_name} to allow rejoin with same name")
+                break
+        
+        # 2. Nếu không tìm thấy trong room.players, kiểm tra trong room.scores (người chơi đã rời phòng trước đó)
+        if not existing_player_data and player_name in room.scores:
+            # Khôi phục điểm số từ room.scores (người chơi đã rời phòng trước đó)
+            existing_score = room.scores[player_name]
+            
+            # Tìm thông tin thống kê từ game_history nếu có
+            total_guesses = 0
+            correct_guesses = 0
+            for history in room.game_history:
+                if history.get('winner') == player_name:
+                    # Nếu người chơi này đã thắng trước đó, ước tính thống kê
+                    total_guesses = max(total_guesses, history.get('total_guesses', 0))
+                    correct_guesses += 1  # Mỗi lần thắng = 1 lần đoán đúng
+            
+            existing_player_data = {
+                'score': existing_score,
+                'streak': 0,  # Reset streak khi join lại
+                'total_guesses': total_guesses,
+                'correct_guesses': correct_guesses,
+                'last_guess_at': 0  # Reset last guess time
+            }
+            logger.info(f"Found previous score for {player_name}: {existing_score}, total_guesses: {total_guesses}, correct_guesses: {correct_guesses}")
+        
+        # 3. Nếu vẫn không tìm thấy, kiểm tra trong game_history để khôi phục thống kê
+        if not existing_player_data and room.game_history:
+            for history in room.game_history:
+                if history.get('winner') == player_name:
+                    # Tìm thấy người chơi trong lịch sử, khôi phục một phần thông tin
+                    total_guesses = history.get('total_guesses', 0)
+                    correct_guesses = 1  # Ít nhất 1 lần đoán đúng vì đã thắng
+                    
+                    existing_player_data = {
+                        'score': room.scores.get(player_name, 0),  # Lấy điểm từ scores nếu có
+                        'streak': 0,  # Reset streak
+                        'total_guesses': total_guesses,
+                        'correct_guesses': correct_guesses,
+                        'last_guess_at': 0  # Reset time
+                    }
+                    logger.info(f"Found {player_name} in game history, will restore partial info: score={existing_player_data['score']}, total_guesses={total_guesses}")
+                    break
+
+        # Tạo người chơi mới hoặc khôi phục từ người chơi cũ
+        if existing_player_data:
+            # Khôi phục điểm số và thống kê từ người chơi cũ
+            player = Player(
+                name=player_name,
+                sid=sid,
+                joined_at=time.time(),
+                last_guess_at=existing_player_data['last_guess_at']
+            )
+            player.score = existing_player_data['score']
+            player.streak = existing_player_data['streak']
+            player.total_guesses = existing_player_data['total_guesses']
+            player.correct_guesses = existing_player_data['correct_guesses']
+            
+            # Khôi phục điểm số trong room.scores
+            room.scores[player_name] = existing_player_data['score']
+            
+            logger.info(f"Restored player {player_name} with score {player.score}, streak {player.streak}")
+        else:
+            # Tạo người chơi mới hoàn toàn
+            player = Player(
+                name=player_name,
+                sid=sid,
+                joined_at=time.time(),
+                last_guess_at=0
+            )
+            logger.info(f"Created new player {player_name}")
 
         room.players[sid] = player
         self.player_rooms[sid] = room_id
