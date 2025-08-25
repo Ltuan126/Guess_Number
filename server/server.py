@@ -124,17 +124,99 @@ class Room:
     password: Optional[str] = None
     is_private: bool = False
     game_history: deque = None
+    last_activity: float = 0 # Thêm trường để theo dõi hoạt động gần đây
 
     def __post_init__(self):
         if self.game_history is None:
             self.game_history = deque(maxlen=10)
+        self.last_activity = time.time() # Khởi tạo khi tạo phòng
 
 class GameManager:
     def __init__(self):
         self.rooms: Dict[str, Room] = {}
         self.player_rooms: Dict[str, str] = {}  # sid -> room_id
         self.cleanup_thread = None
+        self.persistence_file = Path(__file__).parent / 'game_data.json'
+        self.load_rooms_from_file()  # Load rooms từ file khi khởi động
         self.start_cleanup_thread()
+
+    def save_rooms_to_file(self):
+        """Lưu rooms vào file JSON"""
+        try:
+            # Chuyển đổi rooms thành dict có thể serialize
+            rooms_data = {}
+            for room_id, room in self.rooms.items():
+                # Chỉ lưu rooms có người chơi hoặc mới tạo gần đây
+                if len(room.players) > 0 or (time.time() - room.created_at) < 3600:  # 1 giờ
+                    room_dict = asdict(room)
+                    # Chuyển đổi datetime objects thành timestamp
+                    room_dict['created_at'] = room.created_at
+                    room_dict['last_activity'] = room.last_activity
+                    if room.current_round:
+                        room_dict['current_round'] = asdict(room.current_round)
+                        room_dict['current_round']['start_time'] = room.current_round.start_time
+                        room_dict['current_round']['end_time'] = room.current_round.end_time
+                    rooms_data[room_id] = room_dict
+            
+            with open(self.persistence_file, 'w', encoding='utf-8') as f:
+                json.dump(rooms_data, f, ensure_ascii=False, indent=2)
+            
+            logger.info(f"Saved {len(rooms_data)} rooms to file")
+        except Exception as e:
+            logger.error(f"Error saving rooms to file: {e}")
+
+    def load_rooms_from_file(self):
+        """Load rooms từ file JSON"""
+        try:
+            if self.persistence_file.exists():
+                with open(self.persistence_file, 'r', encoding='utf-8') as f:
+                    rooms_data = json.load(f)
+                
+                for room_id, room_dict in rooms_data.items():
+                    try:
+                        # Tạo lại Room object từ data
+                        room = Room(
+                            id=room_dict['id'],
+                            name=room_dict['name'],
+                            max_players=room_dict['max_players'],
+                            password=room_dict.get('password'),
+                            is_private=room_dict.get('is_private', False),
+                            created_at=room_dict['created_at'],
+                            last_activity=room_dict['last_activity']
+                        )
+                        
+                        # Khôi phục current_round nếu có
+                        if 'current_round' in room_dict and room_dict['current_round']:
+                            round_data = room_dict['current_round']
+                            room.current_round = GameRound(
+                                number=round_data['number'],
+                                range_low=round_data['range_low'],
+                                range_high=round_data['range_high'],
+                                start_time=round_data['start_time'],
+                                end_time=round_data['end_time']
+                            )
+                        
+                        # Khôi phục scores
+                        if 'scores' in room_dict:
+                            room.scores = room_dict['scores']
+                        
+                        # Khôi phục round_number
+                        if 'round_number' in room_dict:
+                            room.round_number = room_dict['round_number']
+                        
+                        self.rooms[room_id] = room
+                        logger.info(f"Loaded room: {room_id} - {room.name}")
+                        
+                    except Exception as e:
+                        logger.error(f"Error loading room {room_id}: {e}")
+                        continue
+                
+                logger.info(f"Successfully loaded {len(self.rooms)} rooms from file")
+            else:
+                logger.info("No persistence file found, starting with empty rooms")
+                
+        except Exception as e:
+            logger.error(f"Error loading rooms from file: {e}")
 
     def start_cleanup_thread(self):
         """Khởi động thread dọn dẹp phòng không hoạt động"""
@@ -155,6 +237,9 @@ class GameManager:
                     for room_id in inactive_rooms:
                         self.delete_room(room_id)
                         logger.info(f"Cleaned up inactive room: {room_id}")
+
+                    # Lưu rooms vào file sau mỗi lần cleanup
+                    self.save_rooms_to_file()
 
                 except Exception as e:
                     logger.error(f"Error in cleanup thread: {e}")
@@ -247,6 +332,10 @@ class GameManager:
 
         self.rooms[room_id] = room
         logger.info(f"Created room: {room_id} ({room_name})")
+        
+        # Lưu rooms vào file sau khi tạo phòng
+        self.save_rooms_to_file()
+        
         return room
 
     def delete_room(self, room_id: str):
@@ -300,13 +389,95 @@ class GameManager:
             logger.warning(f"Join room failed: Player name {player_name} already exists in room {room_id}")
             return False, "Tên người chơi đã tồn tại"
 
-        # Tạo người chơi mới
-        player = Player(
-            name=player_name,
-            sid=sid,
-            joined_at=time.time(),
-            last_guess_at=0
-        )
+        # Kiểm tra xem có người chơi cũ với tên này không (để khôi phục điểm)
+        existing_player_data = None
+        
+        # 1. Kiểm tra trong room.players hiện tại (nếu có)
+        for old_sid, old_player in list(room.players.items()):
+            if old_player.name == player_name:
+                # Lưu thông tin người chơi cũ trước khi xóa
+                existing_player_data = {
+                    'score': old_player.score,
+                    'streak': old_player.streak,
+                    'total_guesses': old_player.total_guesses,
+                    'correct_guesses': old_player.correct_guesses,
+                    'last_guess_at': old_player.last_guess_at
+                }
+                # Xóa người chơi cũ
+                del room.players[old_sid]
+                if old_sid in self.player_rooms:
+                    del self.player_rooms[old_sid]
+                logger.info(f"Removed old player {player_name} to allow rejoin with same name")
+                break
+        
+        # 2. Nếu không tìm thấy trong room.players, kiểm tra trong room.scores (người chơi đã rời phòng trước đó)
+        if not existing_player_data and player_name in room.scores:
+            # Khôi phục điểm số từ room.scores (người chơi đã rời phòng trước đó)
+            existing_score = room.scores[player_name]
+            
+            # Tìm thông tin thống kê từ game_history nếu có
+            total_guesses = 0
+            correct_guesses = 0
+            for history in room.game_history:
+                if history.get('winner') == player_name:
+                    # Nếu người chơi này đã thắng trước đó, ước tính thống kê
+                    total_guesses = max(total_guesses, history.get('total_guesses', 0))
+                    correct_guesses += 1  # Mỗi lần thắng = 1 lần đoán đúng
+            
+            existing_player_data = {
+                'score': existing_score,
+                'streak': 0,  # Reset streak khi join lại
+                'total_guesses': total_guesses,
+                'correct_guesses': correct_guesses,
+                'last_guess_at': 0  # Reset last guess time
+            }
+            logger.info(f"Found previous score for {player_name}: {existing_score}, total_guesses: {total_guesses}, correct_guesses: {correct_guesses}")
+        
+        # 3. Nếu vẫn không tìm thấy, kiểm tra trong game_history để khôi phục thống kê
+        if not existing_player_data and room.game_history:
+            for history in room.game_history:
+                if history.get('winner') == player_name:
+                    # Tìm thấy người chơi trong lịch sử, khôi phục một phần thông tin
+                    total_guesses = history.get('total_guesses', 0)
+                    correct_guesses = 1  # Ít nhất 1 lần đoán đúng vì đã thắng
+                    
+                    existing_player_data = {
+                        'score': room.scores.get(player_name, 0),  # Lấy điểm từ scores nếu có
+                        'streak': 0,  # Reset streak
+                        'total_guesses': total_guesses,
+                        'correct_guesses': correct_guesses,
+                        'last_guess_at': 0  # Reset time
+                    }
+                    logger.info(f"Found {player_name} in game history, will restore partial info: score={existing_player_data['score']}, total_guesses={total_guesses}")
+                    break
+
+        # Tạo người chơi mới hoặc khôi phục từ người chơi cũ
+        if existing_player_data:
+            # Khôi phục điểm số và thống kê từ người chơi cũ
+            player = Player(
+                name=player_name,
+                sid=sid,
+                joined_at=time.time(),
+                last_guess_at=existing_player_data['last_guess_at']
+            )
+            player.score = existing_player_data['score']
+            player.streak = existing_player_data['streak']
+            player.total_guesses = existing_player_data['total_guesses']
+            player.correct_guesses = existing_player_data['correct_guesses']
+            
+            # Khôi phục điểm số trong room.scores
+            room.scores[player_name] = existing_player_data['score']
+            
+            logger.info(f"Restored player {player_name} with score {player.score}, streak {player.streak}")
+        else:
+            # Tạo người chơi mới hoàn toàn
+            player = Player(
+                name=player_name,
+                sid=sid,
+                joined_at=time.time(),
+                last_guess_at=0
+            )
+            logger.info(f"Created new player {player_name}")
 
         room.players[sid] = player
         self.player_rooms[sid] = room_id
@@ -319,6 +490,10 @@ class GameManager:
             logger.info(f"Round ended, started new round for new player {player_name}")
 
         logger.info(f"Player {player_name} joined room {room_id}")
+        
+        # Lưu rooms vào file sau khi có thay đổi
+        self.save_rooms_to_file()
+        
         return True, "Tham gia thành công"
 
     def leave_room(self, sid: str):
@@ -339,12 +514,15 @@ class GameManager:
             socketio.emit('player_left', {
                 'room_id': room_id,
                 'player_name': player_name,
-                'remaining_players': len(room.players)
+                'current_players': len(room.players)
             }, to=room_id)
 
             # Nếu phòng trống, đánh dấu không hoạt động
             if len(room.players) == 0:
                 room.is_active = False
+
+            # Lưu rooms vào file sau khi có thay đổi
+            self.save_rooms_to_file()
 
             logger.info(f"Player {player_name} left room {room_id}")
 
@@ -390,9 +568,6 @@ class GameManager:
         player.total_guesses += 1
         player.guesses_this_round += 1
 
-        # Debug: Log số cần đoán (chỉ để debug, sẽ xóa sau)
-        logger.info(f"DEBUG: Room {room_id}, Target: {room.current_round.number}, Range: [{room.current_round.range_low}, {room.current_round.range_high}], Guess: {guess}")
-
         # Kiểm tra kết quả
         if guess == room.current_round.number:
             # Đoán đúng
@@ -424,6 +599,9 @@ class GameManager:
 
             # Tạo vòng mới
             self._start_new_round(room)
+            
+            # Lưu rooms vào file sau khi có thay đổi điểm số
+            self.save_rooms_to_file()
 
             return True, f"🎉 Chính xác! Số cần tìm là {correct_number}", {
                 'correct': True,
@@ -431,7 +609,8 @@ class GameManager:
                 'new_total_score': player.score,
                 'streak': player.streak,
                 'time_bonus': time_bonus,
-                'streak_bonus': streak_bonus
+                'streak_bonus': streak_bonus,
+                'total_guesses': room.current_round.total_guesses
             }
         else:
             # Đoán sai
@@ -443,6 +622,10 @@ class GameManager:
                 hint = f"Số cần tìm lớn hơn {guess}"
             else:
                 hint = f"Số cần tìm nhỏ hơn {guess}"
+                
+            # Lưu rooms vào file sau khi có thay đổi thống kê
+            self.save_rooms_to_file()
+            
             return True, hint, {
                 'correct': False,
                 'hint': hint,
@@ -476,9 +659,6 @@ class GameManager:
 
         room.current_round = new_round
 
-        # Debug: Log số mới được tạo
-        logger.info(f"DEBUG: New round {room.round_number} in room {room.id}, Target: {new_round.number}, Range: [{new_round.range_low}, {new_round.range_high}]")
-
         # Thông báo vòng mới
         socketio.emit('new_round', {
             'room_id': room.id,
@@ -497,6 +677,9 @@ class GameManager:
         })
 
         logger.info(f"Started new round {room.round_number} in room {room.id}")
+        
+        # Lưu rooms vào file sau khi có thay đổi
+        self.save_rooms_to_file()
 
     def reset_room(self, room_id: str, admin_sid: str) -> Tuple[bool, str]:
         """Reset phòng (chỉ admin)"""
@@ -520,6 +703,10 @@ class GameManager:
         self._start_new_round(room, reset_mode=True)
 
         logger.info(f"Room {room_id} reset by admin")
+        
+        # Lưu rooms vào file sau khi có thay đổi
+        self.save_rooms_to_file()
+        
         return True, "Reset phòng thành công"
 
     def get_room_info(self, room_id: str) -> Optional[dict]:
@@ -700,6 +887,9 @@ def on_create_room(data):
         })
 
         logger.info(f"Room {room_id} created successfully")
+        
+        # Lưu rooms vào file sau khi tạo phòng
+        game_manager.save_rooms_to_file()
     else:
         emit('create_room_error', {'error': 'Không thể tạo phòng'})
         logger.warning(f"Failed to create room {room_id}")
@@ -713,6 +903,9 @@ def on_connect():
 def on_disconnect():
     logger.info(f"Client disconnected: {request.sid}")
     game_manager.leave_room(request.sid)
+    
+    # Lưu rooms vào file sau khi disconnect
+    game_manager.save_rooms_to_file()
 
 @socketio.on('join_room')
 def on_join_room(data):
@@ -751,7 +944,7 @@ def on_join_room(data):
         socketio.emit('player_joined', {
             'room_id': room_id,
             'player_name': player_name,
-            'total_players': len(room.players)
+            'current_players': len(room.players)
         }, to=room_id)
 
         # Nếu đây là người chơi đầu tiên, bắt đầu vòng 1
@@ -760,6 +953,9 @@ def on_join_room(data):
             logger.info(f"First player joined room {room_id}, room already has round 1 ready")
 
         logger.info(f"Player {player_name} successfully joined room {room_id}")
+        
+        # Lưu rooms vào file sau khi tham gia phòng
+        game_manager.save_rooms_to_file()
     else:
         emit('join_error', {'error': message})
         logger.warning(f"Failed to join room: {message}")
@@ -788,6 +984,10 @@ def on_join_legacy(data):
 def on_leave_room():
     """Rời phòng"""
     game_manager.leave_room(request.sid)
+    
+    # Lưu rooms vào file sau khi rời phòng
+    game_manager.save_rooms_to_file()
+    
     emit('room_left', {'message': 'Đã rời phòng'})
 
 @socketio.on('make_guess')
@@ -814,20 +1014,13 @@ def on_make_guess(data):
         }, target_sid=request.sid)
 
         # Cập nhật bảng điểm nếu đoán đúng
-        if details.get('correct', False):
-            room = game_manager.find_room_by_id(room_id)
-            if room:
-                socketio.emit('scoreboard_updated', {
-                    'room_id': room_id,
-                    'scores': dict(room.scores),
-                    'winner': details.get('winner', ''),
-                    'round_number': room.round_number
-                }, to=room_id)
-
-            # Emit event cũ để tương thích ngược
-            emit_legacy_events(room_id, 'scoreboard', {
-                'scores': dict(room.scores)
-            })
+        if details.get('correct'):
+            socketio.emit('scoreboard_updated', {
+                'scores': game_manager.get_room_info(room_id)['scores']
+            }, to=room_id)
+            
+            # Lưu rooms vào file sau khi có thay đổi điểm số
+            game_manager.save_rooms_to_file()
     else:
         emit('guess_error', {'error': message})
 
@@ -891,6 +1084,10 @@ def on_chat_message(data):
     }
 
     socketio.emit('chat_message', chat_data, to=room_id)
+    
+    # Lưu rooms vào file sau khi có thay đổi
+    game_manager.save_rooms_to_file()
+    
     logger.info(f"Chat in room {room_id}: {player.name}: {message}")
 
 @socketio.on('chat')
@@ -918,6 +1115,10 @@ def on_reset_room(data):
     if success:
         emit('room_reset', {'message': message})
         socketio.emit('room_reset', {'message': message}, to=room_id)
+        
+        # Lưu rooms vào file sau khi reset phòng
+        game_manager.save_rooms_to_file()
+        
         logger.info(f"Room {room_id} reset successfully")
     else:
         emit('reset_error', {'error': message})

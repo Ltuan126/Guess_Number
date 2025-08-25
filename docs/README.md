@@ -2,16 +2,30 @@
 
 ## 📌 Giới thiệu
 
-Dự án **Guess Number** là một ứng dụng web nhiều người chơi. Người chơi tham gia vào phòng, nhập tên và dự đoán số bí mật trong khoảng cho trước. Hệ thống ghi nhận điểm, hiển thị bảng xếp hạng, cho phép chat trong phòng và tự động reset vòng chơi sau khi có người đoán đúng hoặc hết thời gian.
+Dự án **Guess Number** là một ứng dụng web nhiều người chơi hoàn chỉnh. Người chơi có thể tạo phòng mới hoặc tham gia phòng có sẵn, đoán số bí mật trong khoảng cho trước. Hệ thống ghi nhận điểm, hiển thị bảng xếp hạng, cho phép chat trong phòng và tự động reset vòng chơi.
 
 ## 🚀 Tính năng chính
 
-- Đăng nhập nhanh bằng tên, tham gia phòng (room).
-- Đoán số với phản hồi **LOW/HIGH/ĐÚNG** theo thời gian thực.
-- Bộ đếm ngược cho mỗi vòng chơi (30 giây).
-- Bảng xếp hạng (scoreboard) cập nhật tức thì.
-- Chat trong phòng với tất cả người chơi.
-- Tích hợp **Docker Compose** để chạy client + server trong 1 lệnh.
+### 🔐 Quản lý phòng
+- **Tạo phòng mới**: Tự động tạo mã phòng 6 ký tự ngẫu nhiên
+- **Tham gia phòng**: Nhập mã phòng có sẵn để tham gia
+- **Danh sách phòng**: Xem và tham gia các phòng đang hoạt động
+- **Copy mã phòng**: Chia sẻ mã phòng dễ dàng với bạn bè
+- **Rời phòng**: Quay lại màn hình chính bất cứ lúc nào
+
+### 🎯 Gameplay
+- Đoán số với phản hồi **LOW/HIGH/ĐÚNG** theo thời gian thực
+- Hiển thị thông tin vòng chơi chi tiết (số vòng, khoảng số)
+- Bảng xếp hạng cập nhật tức thì
+- Chat trong phòng với tất cả người chơi
+- Khôi phục trạng thái game khi refresh trang
+
+### 💻 Giao diện & UX
+- Giao diện responsive, thân thiện với người dùng
+- Status messages rõ ràng cho mọi hành động
+- Keyboard shortcuts (Enter để submit, Tab để navigate)
+- Auto-focus và validation input thông minh
+- Hiệu ứng visual feedback khi thực hiện hành động
 
 ## 🛠️ Công nghệ sử dụng
 
