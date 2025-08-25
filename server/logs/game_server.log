@@ -1,1 +1,112 @@
 2025-08-25 22:55:08,126 - __main__ - INFO - Server stopped by user
+2025-08-26 00:06:55,967 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-26 00:06:55,972 - __main__ - ERROR - Error loading rooms from file: Expecting value: line 22 column 21 (char 494)
+2025-08-26 00:06:55,972 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-26 00:06:55,973 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:06:55,973 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-26 00:06:55,973 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-26 00:06:55,974 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:06:55,974 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-26 00:06:55,976 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-26 00:06:55,976 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-26 00:06:57,997 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet OPEN data {'sid': 'oAh9H3DnfKc8mvLzAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-26 00:06:58,002 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet MESSAGE data 0
+2025-08-26 00:06:58,003 - __main__ - INFO - Client connected: w-Or8NZPMneQFSl4AAAB
+2025-08-26 00:06:58,004 - socketio.server - INFO - emitting event "connected" to w-Or8NZPMneQFSl4AAAB [/]
+2025-08-26 00:06:58,004 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["connected",{"sid":"w-Or8NZPMneQFSl4AAAB"}]
+2025-08-26 00:06:58,004 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 0{"sid":"w-Or8NZPMneQFSl4AAAB"}
+2025-08-26 00:06:58,306 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received request to upgrade to websocket
+2025-08-26 00:06:58,324 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Upgrade to websocket successful
+2025-08-26 00:07:16,199 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-26 00:07:16,200 - socketio.server - INFO - received event "get_available_rooms" from w-Or8NZPMneQFSl4AAAB [/]
+2025-08-26 00:07:16,201 - socketio.server - INFO - emitting event "available_rooms" to w-Or8NZPMneQFSl4AAAB [/]
+2025-08-26 00:07:16,201 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-26 00:07:22,617 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-26 00:07:22,617 - socketio.server - INFO - received event "get_available_rooms" from w-Or8NZPMneQFSl4AAAB [/]
+2025-08-26 00:07:22,618 - socketio.server - INFO - emitting event "available_rooms" to w-Or8NZPMneQFSl4AAAB [/]
+2025-08-26 00:07:22,618 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-26 00:07:23,010 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet PING data None
+2025-08-26 00:07:23,012 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet PONG data 
+2025-08-26 00:07:24,363 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet MESSAGE data 2["join_room",{"room_id":"demo","player_name":"phuong","password":""}]
+2025-08-26 00:07:24,364 - socketio.server - INFO - received event "join_room" from w-Or8NZPMneQFSl4AAAB [/]
+2025-08-26 00:07:24,365 - __main__ - INFO - Created new player phuong
+2025-08-26 00:07:24,365 - __main__ - INFO - Player phuong joined room demo
+2025-08-26 00:07:24,367 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:07:24,367 - socketio.server - INFO - w-Or8NZPMneQFSl4AAAB is entering room demo [/]
+2025-08-26 00:07:24,367 - __main__ - INFO - Player phuong joined Socket.IO room demo
+2025-08-26 00:07:24,368 - socketio.server - INFO - emitting event "room_joined" to w-Or8NZPMneQFSl4AAAB [/]
+2025-08-26 00:07:24,368 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["room_joined",{"room_id":"demo","room_name":"Ph\u00f2ng Demo","player_name":"phuong","room_info":{"id":"demo","name":"Ph\u00f2ng Demo","round_number":1,"current_round":{"range":[1,100],"end_time":1756141915.973463,"total_guesses":0},"players":[{"name":"phuong","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":1}}]
+2025-08-26 00:07:24,369 - socketio.server - INFO - emitting event "player_joined" to demo [/]
+2025-08-26 00:07:24,369 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["player_joined",{"room_id":"demo","player_name":"phuong","current_players":1}]
+2025-08-26 00:07:24,370 - __main__ - INFO - First player joined room demo, room already has round 1 ready
+2025-08-26 00:07:24,370 - __main__ - INFO - Player phuong successfully joined room demo
+2025-08-26 00:07:24,371 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:07:39,960 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet OPEN data {'sid': 'kmY-ZNnZcDPfXvghAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-26 00:07:39,965 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet MESSAGE data 0
+2025-08-26 00:07:39,966 - __main__ - INFO - Client connected: RjLKVd4GIMnex-wFAAAD
+2025-08-26 00:07:39,966 - socketio.server - INFO - emitting event "connected" to RjLKVd4GIMnex-wFAAAD [/]
+2025-08-26 00:07:39,967 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 2["connected",{"sid":"RjLKVd4GIMnex-wFAAAD"}]
+2025-08-26 00:07:39,967 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 0{"sid":"RjLKVd4GIMnex-wFAAAD"}
+2025-08-26 00:07:40,271 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received request to upgrade to websocket
+2025-08-26 00:07:40,277 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Upgrade to websocket successful
+2025-08-26 00:07:43,547 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-26 00:07:43,548 - socketio.server - INFO - received event "get_available_rooms" from RjLKVd4GIMnex-wFAAAD [/]
+2025-08-26 00:07:43,549 - socketio.server - INFO - emitting event "available_rooms" to RjLKVd4GIMnex-wFAAAD [/]
+2025-08-26 00:07:43,549 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":1,"max_players":10,"round_number":1}]}]
+2025-08-26 00:07:44,830 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet MESSAGE data 2["join_room",{"room_id":"demo","player_name":"phuong ne","password":""}]
+2025-08-26 00:07:44,830 - socketio.server - INFO - received event "join_room" from RjLKVd4GIMnex-wFAAAD [/]
+2025-08-26 00:07:44,831 - __main__ - INFO - Created new player phuong ne
+2025-08-26 00:07:44,831 - __main__ - INFO - Player phuong ne joined room demo
+2025-08-26 00:07:44,832 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:07:44,833 - socketio.server - INFO - RjLKVd4GIMnex-wFAAAD is entering room demo [/]
+2025-08-26 00:07:44,833 - __main__ - INFO - Player phuong ne joined Socket.IO room demo
+2025-08-26 00:07:44,834 - socketio.server - INFO - emitting event "room_joined" to RjLKVd4GIMnex-wFAAAD [/]
+2025-08-26 00:07:44,834 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 2["room_joined",{"room_id":"demo","room_name":"Ph\u00f2ng Demo","player_name":"phuong ne","room_info":{"id":"demo","name":"Ph\u00f2ng Demo","round_number":1,"current_round":{"range":[1,100],"end_time":1756141915.973463,"total_guesses":0},"players":[{"name":"phuong","score":0,"streak":0,"correct_guesses":0},{"name":"phuong ne","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":2}}]
+2025-08-26 00:07:44,835 - socketio.server - INFO - emitting event "player_joined" to demo [/]
+2025-08-26 00:07:44,835 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["player_joined",{"room_id":"demo","player_name":"phuong ne","current_players":2}]
+2025-08-26 00:07:44,835 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 2["player_joined",{"room_id":"demo","player_name":"phuong ne","current_players":2}]
+2025-08-26 00:07:44,836 - __main__ - INFO - Player phuong ne successfully joined room demo
+2025-08-26 00:07:44,837 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:07:48,024 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet PING data None
+2025-08-26 00:07:48,025 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet PONG data 
+2025-08-26 00:07:49,013 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet MESSAGE data 2["chat_message",{"room_id":"demo","message":"hiiiii"}]
+2025-08-26 00:07:49,014 - socketio.server - INFO - received event "chat_message" from RjLKVd4GIMnex-wFAAAD [/]
+2025-08-26 00:07:49,015 - socketio.server - INFO - emitting event "chat_message" to demo [/]
+2025-08-26 00:07:49,015 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["chat_message",{"room_id":"demo","player_name":"phuong ne","message":"hiiiii","timestamp":1756141669.0150528,"type":"chat"}]
+2025-08-26 00:07:49,015 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 2["chat_message",{"room_id":"demo","player_name":"phuong ne","message":"hiiiii","timestamp":1756141669.0150528,"type":"chat"}]
+2025-08-26 00:07:49,016 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:07:49,016 - __main__ - INFO - Chat in room demo: phuong ne: hiiiii
+2025-08-26 00:08:04,970 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet PING data None
+2025-08-26 00:08:04,973 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet PONG data 
+2025-08-26 00:08:13,031 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet PING data None
+2025-08-26 00:08:13,033 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet PONG data 
+2025-08-26 00:08:29,987 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet PING data None
+2025-08-26 00:08:29,988 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet PONG data 
+2025-08-26 00:08:38,047 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet PING data None
+2025-08-26 00:08:38,048 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet PONG data 
+2025-08-26 00:08:55,000 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet PING data None
+2025-08-26 00:08:55,001 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet PONG data 
+2025-08-26 00:09:03,064 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet PING data None
+2025-08-26 00:09:03,065 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet PONG data 
+2025-08-26 00:09:20,016 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet PING data None
+2025-08-26 00:09:20,018 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet PONG data 
+2025-08-26 00:09:28,076 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet PING data None
+2025-08-26 00:09:28,077 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet PONG data 
+2025-08-26 00:09:45,023 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet PING data None
+2025-08-26 00:09:45,024 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Received packet PONG data 
+2025-08-26 00:09:53,086 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet PING data None
+2025-08-26 00:09:53,087 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Received packet PONG data 
+2025-08-26 00:09:54,972 - __main__ - INFO - Client disconnected: w-Or8NZPMneQFSl4AAAB
+2025-08-26 00:09:54,972 - socketio.server - INFO - emitting event "player_left" to demo [/]
+2025-08-26 00:09:54,973 - engineio.server - INFO - oAh9H3DnfKc8mvLzAAAA: Sending packet MESSAGE data 2["player_left",{"room_id":"demo","player_name":"phuong","current_players":1}]
+2025-08-26 00:09:54,973 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 2["player_left",{"room_id":"demo","player_name":"phuong","current_players":1}]
+2025-08-26 00:09:54,974 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:09:54,975 - __main__ - INFO - Player phuong left room demo
+2025-08-26 00:09:54,976 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:09:55,662 - __main__ - INFO - Client disconnected: RjLKVd4GIMnex-wFAAAD
+2025-08-26 00:09:55,662 - socketio.server - INFO - emitting event "player_left" to demo [/]
+2025-08-26 00:09:55,662 - engineio.server - INFO - kmY-ZNnZcDPfXvghAAAC: Sending packet MESSAGE data 2["player_left",{"room_id":"demo","player_name":"phuong ne","current_players":0}]
+2025-08-26 00:09:55,663 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:09:55,663 - __main__ - INFO - Player phuong ne left room demo
+2025-08-26 00:09:55,664 - __main__ - ERROR - Error saving rooms to file: Object of type deque is not JSON serializable
+2025-08-26 00:10:05,021 - __main__ - INFO - Server stopped by user
