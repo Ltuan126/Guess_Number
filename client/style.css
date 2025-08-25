@@ -5,14 +5,43 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
   height: 100vh;
   background: linear-gradient(135deg, #89f7fe, #ff77e9);
   margin: 0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Responsive viewport adjustments */
+@media (max-height: 600px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 
@@ -32,19 +61,38 @@ body {
 
 /* Join screen */
 #join-screen {
-  max-width: 350px;
+  max-width: min(90vw, 400px);
   width: 100%;
   text-align: center;
+  margin: 20px;
+  padding: clamp(20px, 4vw, 30px);
 }
 
 .title {
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
 }
 
 .avatar {
-  font-size: 50px;
+  font-size: clamp(3rem, 8vw, 4rem);
   margin-bottom: 15px;
+}
+
+/* Responsive adjustments for join screen */
+@media (max-width: 480px) {
+  #join-screen {
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .avatar {
+    font-size: 3rem;
+  }
 }
 
 .form-group {
@@ -56,13 +104,97 @@ body {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .form-group input {
   width: 100%;
-  padding: 10px;
+  padding: clamp(8px, 2vw, 12px);
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Responsive form adjustments */
+@media (max-width: 480px) {
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+.room-input-group {
+  display: flex;
+  gap: 5px;
+}
+
+.room-input-group input {
+  flex: 1;
+}
+
+.btn-copy {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.btn-copy:hover {
+  background: #5a6268;
+}
+
+.btn-copy:active {
+  transform: scale(0.95);
+}
+
+.help-text {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+/* Status message */
+.status {
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.status.info {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border: 1px solid #bbdefb;
+}
+
+.status.success {
+  background-color: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+.status.error {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
 }
 
 /* Buttons */
@@ -73,50 +205,290 @@ body {
 }
 
 .btn {
-  padding: 10px 16px;
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 18px);
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+  transition: all 0.2s ease;
+  min-height: 44px; /* Touch-friendly minimum size */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .btn.primary { background: #007bff; color: #fff; }
 .btn.success { background: #28a745; color: #fff; }
+.btn.secondary { background: #6c757d; color: #fff; }
+.btn.danger { background: #dc3545; color: #fff; }
+
+/* Responsive button adjustments */
+@media (max-width: 480px) {
+  .btn {
+    padding: 12px 16px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+}
+
+/* Rooms section */
+.rooms-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.rooms-list {
+  margin-top: 15px;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.rooms-list.hidden {
+  display: none;
+}
+
+.rooms-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.rooms-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.rooms-list li:last-child {
+  border-bottom: none;
+}
+
+.room-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.room-name {
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+  text-align: left;
+}
+
+.room-id {
+  font-family: monospace;
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.room-players {
+  color: #666;
+  font-size: 12px;
+}
+
+.btn-join-room {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-join-room:hover {
+  background: #218838;
+}
 
 
+/* Game header improvements */
 #gameheader {
   display: flex;
-  justify-content: space-between; /* RoomID bên trái, Countdown bên phải */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1070px;   
-  padding: 10px 20px;
+  max-width: min(95vw, 1200px);   
+  padding: clamp(10px, 2vw, 20px);
   position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  margin-bottom: clamp(15px, 3vw, 25px);
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 #roomIdBox {
   color: #7e7e7e; 
-  font-size: 20px;
+  font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: bold;
+  flex: 1;
+  min-width: 120px;
 }
 
 #countdownBox {
   color: #6d6d6d;
-  font-size: 20px;
+  font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: bold;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
 }
 
+#leaveRoomBtn {
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 18px);
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  white-space: nowrap;
+}
+
+/* Responsive game header */
+@media (max-width: 768px) {
+  #gameheader {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  #roomIdBox, #countdownBox {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #gameheader {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  #roomIdBox, #countdownBox {
+    font-size: 1rem;
+  }
+}
+
+/* Round info */
+.round-info {
+  text-align: center;
+  margin-bottom: clamp(15px, 3vw, 25px);
+}
+
+.round-info h3 {
+  color: #333;
+  margin-bottom: clamp(8px, 2vw, 12px);
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  line-height: 1.2;
+}
+
+.round-info .hint {
+  color: #666;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  line-height: 1.4;
+}
+
+/* Responsive round info */
+@media (max-width: 600px) {
+  .round-info {
+    margin-bottom: 20px;
+  }
+  
+  .round-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .round-info .hint {
+    font-size: 1rem;
+  }
+}
 
 
 /* Game screen */
 .container {
-  position:relative;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 3fr 1fr; 
-  gap: 20px;
+  gap: clamp(15px, 3vw, 25px);
   width: 95%;
-  max-width: 1600px; 
+  max-width: min(95vw, 1600px); 
   height: 90vh;
+  min-height: 500px;
+}
+
+/* Responsive grid layout */
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+    height: auto;
+    min-height: 80vh;
+  }
+  
+  .chat {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    max-height: 300px;
+  }
+  
+  .game {
+    grid-column: 1 / 2;
+    grid-row: 2;
+  }
+  
+  .leaderboard {
+    grid-column: 2 / 3;
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    width: 98%;
+  }
+  
+  .chat, .game, .leaderboard {
+    grid-column: 1;
+  }
+  
+  .chat {
+    grid-row: 1;
+    max-height: 250px;
+  }
+  
+  .game {
+    grid-row: 2;
+  }
+  
+  .leaderboard {
+    grid-row: 3;
+  }
 }
 
 
@@ -125,22 +497,48 @@ body {
   flex-direction: column;
   background: white;
   border-radius: 12px;
-  padding: 15px;
+  padding: clamp(12px, 3vw, 20px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  min-height: 200px;
+}
+
+/* Responsive card adjustments */
+@media (max-width: 600px) {
+  .chat, .game, .leaderboard {
+    padding: 15px;
+    min-height: 150px;
+  }
 }
 
 /* Chat box */
 .chat-box {
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: clamp(8px, 2vw, 12px);
   margin-bottom: 8px;
   overflow-y: auto;
   background: #fafafa;
   border-radius: 10px;
   box-shadow: inset 0 1px 4px rgba(0,0,0,0.05);
   
-  height: 678px;       
-  max-height: 1000px;  
+  height: clamp(300px, 60vh, 600px);
+  min-height: 200px;
+  max-height: 80vh;
+  flex: 1;
+}
+
+/* Responsive chat adjustments */
+@media (max-width: 900px) {
+  .chat-box {
+    height: clamp(200px, 40vh, 300px);
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .chat-box {
+    height: clamp(150px, 30vh, 250px);
+    min-height: 120px;
+  }
 }
 
 .chat-input {
@@ -165,25 +563,50 @@ body {
 
 
 .guess-box {
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   font-weight: bold;
   text-align: center;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
-  line-height: 120px;
+  width: clamp(150px, 30vw, 250px);
+  height: clamp(150px, 30vw, 250px);
+  line-height: 1;
   border: 1px solid black;
   border-radius: 12px;
   background: #fffefe;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   transition: transform 0.2s;
+  flex-shrink: 0;
 }
 
-.guess-box #secrect{
-  font-size: 100px;
+.guess-box #secrect {
+  font-size: clamp(3rem, 12vw, 6rem);
+  line-height: 1;
+}
+
+/* Responsive guess box adjustments */
+@media (max-width: 900px) {
+  .guess-box {
+    width: clamp(120px, 25vw, 180px);
+    height: clamp(120px, 25vw, 180px);
+  }
+  
+  .guess-box #secrect {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .guess-box {
+    width: clamp(100px, 20vw, 150px);
+    height: clamp(100px, 20vw, 150px);
+  }
+  
+  .guess-box #secrect {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
 }
 
 .guess-input {
@@ -253,4 +676,203 @@ body {
 #leaderboardList li:nth-child(3) {
   background: #ffe5e5;
   font-weight: bold;
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    padding: 10px 0;
+  }
+  
+  #join-screen {
+    max-width: 80vw;
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  .container {
+    height: auto;
+    min-height: 70vh;
+    gap: 10px;
+  }
+  
+  .chat-box {
+    height: clamp(120px, 25vh, 200px);
+    min-height: 100px;
+  }
+  
+  .guess-box {
+    width: clamp(80px, 15vw, 120px);
+    height: clamp(80px, 15vw, 120px);
+  }
+  
+  .guess-box #secrect {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .btn {
+    border: 0.5px solid rgba(0,0,0,0.1);
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+  
+  .btn, #leaveRoomBtn {
+    display: none;
+  }
+  
+  .card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Focus management for accessibility */
+*:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling for all browsers */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent horizontal scroll on mobile */
+body, .container, #gameheader {
+  overflow-x: hidden;
+}
+
+/* Touch-friendly improvements */
+@media (pointer: coarse) {
+  .btn {
+    min-height: 48px;
+    min-width: 48px;
+  }
+  
+  .form-group input {
+    min-height: 48px;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  .chat-box {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Dark mode support (if user prefers) */
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: rgba(30, 30, 30, 0.9);
+    color: #fff;
+  }
+  
+  .form-group input {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+  }
+  
+  .chat-box {
+    background: #2a2a2a;
+    color: #fff;
+  }
+  
+  .guess-box {
+    background: #2a2a2a;
+    color: #fff;
+  }
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .btn:active {
+    transform: none;
+  }
+}
+
+/* Additional responsive improvements */
+@media (max-width: 400px) {
+  .btn-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .room-input-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .btn-copy {
+    align-self: flex-end;
+    width: fit-content;
+  }
+}
+
+/* Ensure proper spacing on very small screens */
+@media (max-width: 320px) {
+  #join-screen {
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Hover effects only on devices that support hover */
+@media (hover: hover) {
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .guess-box:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Ensure proper contrast and readability */
+@media (prefers-contrast: high) {
+  .card {
+    border: 2px solid #000;
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+  
+  .form-group input {
+    border-width: 2px;
+  }
 }

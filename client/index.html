@@ -2,9 +2,14 @@
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#007bff" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
     <title>Number Guessing Game</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>" />
   </head>
   <body>
     <!-- Join Screen -->
@@ -14,17 +19,30 @@
 
       <div class="form-group">
         <label>Tên người chơi</label>
-        <input type="text" id="username" placeholder="" />
+        <input type="text" id="username" placeholder="Nhập tên của bạn" />
       </div>
 
       <div class="form-group">
         <label>Mã phòng</label>
-        <input type="text" id="room" placeholder="" />
+        <div class="room-input-group">
+          <input type="text" id="room" placeholder="Nhập mã phòng hoặc để trống để tạo mới" />
+          <button id="copyRoomBtn" class="btn-copy" title="Copy mã phòng">📋</button>
+        </div>
+        <small class="help-text">Để trống để tạo phòng mới, hoặc nhập mã phòng có sẵn</small>
       </div>
 
+      <!-- Status message -->
+      <div id="joinStatus" class="status info"></div>
+
       <div class="btn-group">
-        <button id="createBtn" class="btn primary">Tạo phòng</button>
-        <button id="joinBtn" class="btn success">Tham gia</button>
+        <button id="createBtn" class="btn primary">Tạo phòng mới</button>
+        <button id="joinBtn" class="btn success">Tham gia phòng</button>
+      </div>
+
+      <!-- Nút hiển thị danh sách phòng -->
+      <div class="rooms-section">
+        <button id="showRoomsBtn" class="btn secondary">📋 Xem phòng có sẵn</button>
+        <div id="roomsList" class="rooms-list hidden"></div>
       </div>
     </section>
 
@@ -33,6 +51,7 @@
       <div id="gameheader" class="hidden">
         <div id="roomIdBox">RoomID: <span id="roomValue">--</span></div>
         <div id="countdownBox">⏳<span id="countdown">--</span></div>
+        <button id="leaveRoomBtn" class="btn danger">🚪 Rời phòng</button>
       </div>
 
       <div class="container">
@@ -48,7 +67,10 @@
 
         <!-- Game Area -->
         <main class="card game">
-          <p class="hint">Hãy đoán số từ 1–100</p>
+          <div class="round-info">
+            <h3>🎮 Vòng <span id="roundNumber">1</span></h3>
+            <p class="hint">Hãy đoán số từ <span id="rangeStart">1</span>–<span id="rangeEnd">100</span></p>
+          </div>
           <div class="guess-box"><p id="secrect">?</p></div>
 
           <div class="guess-input">
@@ -66,19 +88,6 @@
       </div>
     </section>
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
-    <script>
-      const join = document.getElementById("joinBtn");
-      const create = document.getElementById("createBtn");
-      const joinScreen = document.getElementById("join-screen");
-      const gameScreen = document.getElementById("game-screen");
-      const gameheader = document.getElementById("gameheader");
-      function switchScreen() {
-        joinScreen.classList.add("hidden");
-        gameScreen.classList.remove("hidden");
-        gameheader.classList.remove("hidden");
-      }
-      join.addEventListener("click", switchScreen);
-      create.addEventListener("click", switchScreen);
-    </script>
+    <script src="game.js"></script>
   </body>
 </html>

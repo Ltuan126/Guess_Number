@@ -1,0 +1,632 @@
+2025-08-23 03:25:02,311 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-23 03:25:02,327 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-23 03:25:02,328 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-23 03:25:02,329 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-23 03:25:02,329 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-23 03:25:02,331 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-23 03:25:02,332 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-23 03:25:52,801 - engineio.server - INFO - MkF__IJMbzHDSnJfAAAA: Sending packet OPEN data {'sid': 'MkF__IJMbzHDSnJfAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 03:25:52,848 - engineio.server - INFO - MkF__IJMbzHDSnJfAAAA: Received packet MESSAGE data 0
+2025-08-23 03:25:52,851 - __main__ - INFO - Client connected: _sf77zh4GT70yi8JAAAB
+2025-08-23 03:25:52,851 - socketio.server - INFO - emitting event "connected" to _sf77zh4GT70yi8JAAAB [/]
+2025-08-23 03:25:52,852 - engineio.server - INFO - MkF__IJMbzHDSnJfAAAA: Sending packet MESSAGE data 2["connected",{"sid":"_sf77zh4GT70yi8JAAAB"}]
+2025-08-23 03:25:52,853 - engineio.server - INFO - MkF__IJMbzHDSnJfAAAA: Sending packet MESSAGE data 0{"sid":"_sf77zh4GT70yi8JAAAB"}
+2025-08-23 03:25:52,855 - engineio.server - INFO - MkF__IJMbzHDSnJfAAAA: Received request to upgrade to websocket
+2025-08-23 03:25:52,866 - engineio.server - INFO - MkF__IJMbzHDSnJfAAAA: Upgrade to websocket successful
+2025-08-23 03:26:00,379 - __main__ - INFO - Client disconnected: _sf77zh4GT70yi8JAAAB
+2025-08-23 03:26:21,879 - engineio.server - INFO - 4CEv2L8DnX5zlOiXAAAC: Sending packet OPEN data {'sid': '4CEv2L8DnX5zlOiXAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 03:26:21,917 - engineio.server - INFO - 4CEv2L8DnX5zlOiXAAAC: Received packet MESSAGE data 0
+2025-08-23 03:26:21,919 - __main__ - INFO - Client connected: ntQZWAdJpcjUKypoAAAD
+2025-08-23 03:26:21,920 - socketio.server - INFO - emitting event "connected" to ntQZWAdJpcjUKypoAAAD [/]
+2025-08-23 03:26:21,920 - engineio.server - INFO - 4CEv2L8DnX5zlOiXAAAC: Sending packet MESSAGE data 2["connected",{"sid":"ntQZWAdJpcjUKypoAAAD"}]
+2025-08-23 03:26:21,921 - engineio.server - INFO - 4CEv2L8DnX5zlOiXAAAC: Sending packet MESSAGE data 0{"sid":"ntQZWAdJpcjUKypoAAAD"}
+2025-08-23 03:26:21,923 - engineio.server - INFO - 4CEv2L8DnX5zlOiXAAAC: Received request to upgrade to websocket
+2025-08-23 03:26:21,960 - engineio.server - INFO - 4CEv2L8DnX5zlOiXAAAC: Upgrade to websocket successful
+2025-08-23 03:26:23,445 - __main__ - INFO - Client disconnected: ntQZWAdJpcjUKypoAAAD
+2025-08-23 03:26:59,639 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-23 03:26:59,641 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-23 03:26:59,642 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-23 03:26:59,642 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-23 03:26:59,642 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-23 03:26:59,644 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-23 03:26:59,645 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-23 03:27:14,187 - engineio.server - INFO - QcHSBEJSpzfywJ9FAAAA: Sending packet OPEN data {'sid': 'QcHSBEJSpzfywJ9FAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 03:27:14,207 - engineio.server - INFO - QcHSBEJSpzfywJ9FAAAA: Received packet MESSAGE data 0
+2025-08-23 03:27:14,209 - __main__ - INFO - Client connected: DKoLVvOaBhy1S-jeAAAB
+2025-08-23 03:27:14,212 - socketio.server - INFO - emitting event "connected" to DKoLVvOaBhy1S-jeAAAB [/]
+2025-08-23 03:27:14,212 - engineio.server - INFO - QcHSBEJSpzfywJ9FAAAA: Sending packet MESSAGE data 2["connected",{"sid":"DKoLVvOaBhy1S-jeAAAB"}]
+2025-08-23 03:27:14,215 - engineio.server - INFO - QcHSBEJSpzfywJ9FAAAA: Sending packet MESSAGE data 0{"sid":"DKoLVvOaBhy1S-jeAAAB"}
+2025-08-23 03:27:14,220 - engineio.server - INFO - QcHSBEJSpzfywJ9FAAAA: Received request to upgrade to websocket
+2025-08-23 03:27:14,248 - engineio.server - INFO - QcHSBEJSpzfywJ9FAAAA: Upgrade to websocket successful
+2025-08-23 03:27:16,163 - __main__ - INFO - Client disconnected: DKoLVvOaBhy1S-jeAAAB
+2025-08-23 10:42:03,006 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-23 10:42:03,009 - __main__ - INFO - Created room: lobby (Phòng Lobby)
+2025-08-23 10:42:03,009 - __main__ - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-23 10:42:03,009 - __main__ - INFO - Created room: demo (Phòng Demo)
+2025-08-23 10:42:03,009 - __main__ - INFO - ✅ Tạo phòng demo thành công
+2025-08-23 10:42:03,011 - __main__ - INFO - Starting Guess Number Server v2.0...
+2025-08-23 10:42:03,011 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-23 10:54:51,714 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet OPEN data {'sid': 'cGpGHfHKunZDu681AAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 10:54:51,719 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet MESSAGE data 0
+2025-08-23 10:54:51,721 - __main__ - INFO - Client connected: bDAL1q0hqN5a02ucAAAB
+2025-08-23 10:54:51,721 - socketio.server - INFO - emitting event "connected" to bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:54:51,721 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["connected",{"sid":"bDAL1q0hqN5a02ucAAAB"}]
+2025-08-23 10:54:51,721 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 0{"sid":"bDAL1q0hqN5a02ucAAAB"}
+2025-08-23 10:54:52,025 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received request to upgrade to websocket
+2025-08-23 10:54:52,032 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Upgrade to websocket successful
+2025-08-23 10:55:16,727 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet PING data None
+2025-08-23 10:55:16,728 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet PONG data 
+2025-08-23 10:55:41,737 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet PING data None
+2025-08-23 10:55:41,740 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet PONG data 
+2025-08-23 10:55:51,180 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet MESSAGE data 2["create_room",{"room_id":"OYARWE","room_name":"Phòng của phuong","max_players":10}]
+2025-08-23 10:55:51,180 - socketio.server - INFO - received event "create_room" from bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:55:51,181 - __main__ - INFO - Created room: OYARWE (Phòng của phuong)
+2025-08-23 10:55:51,181 - socketio.server - INFO - bDAL1q0hqN5a02ucAAAB is entering room OYARWE [/]
+2025-08-23 10:55:51,181 - socketio.server - INFO - emitting event "room_created" to bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:55:51,182 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["room_created",{"room_id":"OYARWE","room_name":"Ph\u00f2ng c\u1ee7a phuong","max_players":10}]
+2025-08-23 10:55:51,183 - __main__ - INFO - Room OYARWE created successfully
+2025-08-23 10:55:53,189 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet MESSAGE data 2["join_room",{"room_id":"OYARWE","player_name":"phuong"}]
+2025-08-23 10:55:53,189 - socketio.server - INFO - received event "join_room" from bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:55:53,190 - __main__ - INFO - Player phuong joined room OYARWE
+2025-08-23 10:55:53,190 - socketio.server - INFO - bDAL1q0hqN5a02ucAAAB is entering room OYARWE [/]
+2025-08-23 10:55:53,191 - __main__ - INFO - Player phuong joined Socket.IO room OYARWE
+2025-08-23 10:55:53,191 - socketio.server - INFO - emitting event "room_joined" to bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:55:53,191 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["room_joined",{"room_id":"OYARWE","room_name":"Ph\u00f2ng c\u1ee7a phuong","player_name":"phuong","room_info":{"id":"OYARWE","name":"Ph\u00f2ng c\u1ee7a phuong","round_number":1,"current_round":{"range":[1,100],"end_time":1755921651.181312,"total_guesses":0},"players":[{"name":"phuong","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":1}}]
+2025-08-23 10:55:53,191 - socketio.server - INFO - emitting event "player_joined" to OYARWE [/]
+2025-08-23 10:55:53,192 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["player_joined",{"room_id":"OYARWE","player_name":"phuong","total_players":1}]
+2025-08-23 10:55:53,192 - __main__ - INFO - First player joined room OYARWE, room already has round 1 ready
+2025-08-23 10:55:53,192 - __main__ - INFO - Player phuong successfully joined room OYARWE
+2025-08-23 10:55:57,668 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","message":"sasd"}]
+2025-08-23 10:55:57,668 - socketio.server - INFO - received event "chat_message" from bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:55:57,669 - socketio.server - INFO - emitting event "chat_message" to OYARWE [/]
+2025-08-23 10:55:57,670 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","player_name":"phuong","message":"sasd","timestamp":1755921357.6696033,"type":"chat"}]
+2025-08-23 10:55:57,670 - __main__ - INFO - Chat in room OYARWE: phuong: sasd
+2025-08-23 10:56:01,326 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":10}]
+2025-08-23 10:56:01,327 - socketio.server - INFO - received event "make_guess" from bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:56:01,328 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 10
+2025-08-23 10:56:01,328 - socketio.server - INFO - emitting event "guess_result" to bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:56:01,328 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 10","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 10","range":[1,100],"total_guesses":1}}]
+2025-08-23 10:56:01,328 - socketio.server - INFO - emitting event "message" to bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:56:01,329 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 10"}]
+2025-08-23 10:56:04,130 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet OPEN data {'sid': 'r3htj7u8SVIHTB52AAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 10:56:04,142 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 0
+2025-08-23 10:56:04,143 - __main__ - INFO - Client connected: SIbWH0IkUY6slbDlAAAD
+2025-08-23 10:56:04,143 - socketio.server - INFO - emitting event "connected" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:04,144 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["connected",{"sid":"SIbWH0IkUY6slbDlAAAD"}]
+2025-08-23 10:56:04,144 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 0{"sid":"SIbWH0IkUY6slbDlAAAD"}
+2025-08-23 10:56:04,453 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received request to upgrade to websocket
+2025-08-23 10:56:04,456 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Upgrade to websocket successful
+2025-08-23 10:56:06,753 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet PING data None
+2025-08-23 10:56:06,754 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet PONG data 
+2025-08-23 10:56:08,503 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["join_room",{"room_id":"OYARWE","player_name":"Hoang"}]
+2025-08-23 10:56:08,503 - socketio.server - INFO - received event "join_room" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:08,504 - __main__ - INFO - Player Hoang joined room OYARWE
+2025-08-23 10:56:08,504 - socketio.server - INFO - SIbWH0IkUY6slbDlAAAD is entering room OYARWE [/]
+2025-08-23 10:56:08,504 - __main__ - INFO - Player Hoang joined Socket.IO room OYARWE
+2025-08-23 10:56:08,505 - socketio.server - INFO - emitting event "room_joined" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:08,505 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["room_joined",{"room_id":"OYARWE","room_name":"Ph\u00f2ng c\u1ee7a phuong","player_name":"Hoang","room_info":{"id":"OYARWE","name":"Ph\u00f2ng c\u1ee7a phuong","round_number":1,"current_round":{"range":[1,100],"end_time":1755921651.181312,"total_guesses":1},"players":[{"name":"phuong","score":0,"streak":0,"correct_guesses":0},{"name":"Hoang","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":2}}]
+2025-08-23 10:56:08,505 - socketio.server - INFO - emitting event "player_joined" to OYARWE [/]
+2025-08-23 10:56:08,506 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["player_joined",{"room_id":"OYARWE","player_name":"Hoang","total_players":2}]
+2025-08-23 10:56:08,506 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["player_joined",{"room_id":"OYARWE","player_name":"Hoang","total_players":2}]
+2025-08-23 10:56:08,506 - __main__ - INFO - Player Hoang successfully joined room OYARWE
+2025-08-23 10:56:12,797 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","message":"hii"}]
+2025-08-23 10:56:12,798 - socketio.server - INFO - received event "chat_message" from bDAL1q0hqN5a02ucAAAB [/]
+2025-08-23 10:56:12,798 - socketio.server - INFO - emitting event "chat_message" to OYARWE [/]
+2025-08-23 10:56:12,799 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","player_name":"phuong","message":"hii","timestamp":1755921372.7987795,"type":"chat"}]
+2025-08-23 10:56:12,799 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","player_name":"phuong","message":"hii","timestamp":1755921372.7987795,"type":"chat"}]
+2025-08-23 10:56:12,799 - __main__ - INFO - Chat in room OYARWE: phuong: hii
+2025-08-23 10:56:16,336 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","message":"hii"}]
+2025-08-23 10:56:16,336 - socketio.server - INFO - received event "chat_message" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:16,337 - socketio.server - INFO - emitting event "chat_message" to OYARWE [/]
+2025-08-23 10:56:16,337 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","player_name":"Hoang","message":"hii","timestamp":1755921376.3375826,"type":"chat"}]
+2025-08-23 10:56:16,338 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["chat_message",{"room_id":"OYARWE","player_name":"Hoang","message":"hii","timestamp":1755921376.3375826,"type":"chat"}]
+2025-08-23 10:56:16,338 - __main__ - INFO - Chat in room OYARWE: Hoang: hii
+2025-08-23 10:56:18,906 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":20}]
+2025-08-23 10:56:18,906 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:18,907 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 20
+2025-08-23 10:56:18,908 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:18,908 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 20","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 20","range":[1,100],"total_guesses":2}}]
+2025-08-23 10:56:18,908 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:18,909 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 20"}]
+2025-08-23 10:56:20,190 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":50}]
+2025-08-23 10:56:20,190 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:20,191 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 50
+2025-08-23 10:56:20,191 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:20,191 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 50","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 50","range":[1,100],"total_guesses":3}}]
+2025-08-23 10:56:20,192 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:20,192 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 50"}]
+2025-08-23 10:56:21,543 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":70}]
+2025-08-23 10:56:21,543 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:21,544 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 70
+2025-08-23 10:56:21,544 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:21,544 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 70","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 70","range":[1,100],"total_guesses":4}}]
+2025-08-23 10:56:21,545 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:21,545 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 70"}]
+2025-08-23 10:56:22,675 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":90}]
+2025-08-23 10:56:22,675 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:22,676 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 90
+2025-08-23 10:56:22,676 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:22,676 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 90","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 90","range":[1,100],"total_guesses":5}}]
+2025-08-23 10:56:22,677 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:22,677 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 90"}]
+2025-08-23 10:56:24,292 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":86}]
+2025-08-23 10:56:24,292 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:24,293 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 86
+2025-08-23 10:56:24,293 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:24,293 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 86","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 86","range":[1,100],"total_guesses":6}}]
+2025-08-23 10:56:24,294 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:24,294 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 86"}]
+2025-08-23 10:56:26,262 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":84}]
+2025-08-23 10:56:26,263 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:26,263 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 84
+2025-08-23 10:56:26,263 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:26,264 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 84","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 84","range":[1,100],"total_guesses":7}}]
+2025-08-23 10:56:26,264 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:26,264 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 84"}]
+2025-08-23 10:56:27,563 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":80}]
+2025-08-23 10:56:27,563 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:27,564 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 80
+2025-08-23 10:56:27,564 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:27,565 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 80","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 80","range":[1,100],"total_guesses":8}}]
+2025-08-23 10:56:27,565 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:27,565 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 80"}]
+2025-08-23 10:56:28,912 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":81}]
+2025-08-23 10:56:28,913 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:28,913 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 81
+2025-08-23 10:56:28,913 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:28,914 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 81","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 81","range":[1,100],"total_guesses":9}}]
+2025-08-23 10:56:28,914 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:28,914 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm l\u1edbn h\u01a1n 81"}]
+2025-08-23 10:56:29,144 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet PING data None
+2025-08-23 10:56:29,146 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet PONG data 
+2025-08-23 10:56:29,771 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":83}]
+2025-08-23 10:56:29,772 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:29,772 - __main__ - WARNING - Make guess failed: Rate limit exceeded for player Hoang in room OYARWE
+2025-08-23 10:56:29,773 - socketio.server - INFO - emitting event "guess_error" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:29,773 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_error",{"error":"\u0110o\u00e1n qu\u00e1 nhanh, vui l\u00f2ng ch\u1edd"}]
+2025-08-23 10:56:30,980 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":83}]
+2025-08-23 10:56:30,981 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:30,981 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 83
+2025-08-23 10:56:30,982 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:30,982 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 83","details":{"correct":false,"hint":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 83","range":[1,100],"total_guesses":10}}]
+2025-08-23 10:56:30,982 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:30,983 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"S\u1ed1 c\u1ea7n t\u00ecm nh\u1ecf h\u01a1n 83"}]
+2025-08-23 10:56:31,763 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet PING data None
+2025-08-23 10:56:31,766 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Received packet PONG data 
+2025-08-23 10:56:32,478 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Received packet MESSAGE data 2["make_guess",{"room_id":"OYARWE","guess":82}]
+2025-08-23 10:56:32,479 - socketio.server - INFO - received event "make_guess" from SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:32,480 - __main__ - INFO - DEBUG: Room OYARWE, Target: 82, Range: [1, 100], Guess: 82
+2025-08-23 10:56:32,480 - __main__ - INFO - DEBUG: New round 2 in room OYARWE, Target: 51, Range: [1, 100]
+2025-08-23 10:56:32,480 - socketio.server - INFO - emitting event "new_round" to OYARWE [/]
+2025-08-23 10:56:32,480 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["new_round",{"room_id":"OYARWE","round_number":2,"range":[1,100],"end_time":1755921692.4802272,"previous_winner":null,"message":"\ud83c\udfae V\u00f2ng 2: \u0110o\u00e1n s\u1ed1 t\u1eeb 1 \u0111\u1ebfn 100"}]
+2025-08-23 10:56:32,481 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["new_round",{"room_id":"OYARWE","round_number":2,"range":[1,100],"end_time":1755921692.4802272,"previous_winner":null,"message":"\ud83c\udfae V\u00f2ng 2: \u0110o\u00e1n s\u1ed1 t\u1eeb 1 \u0111\u1ebfn 100"}]
+2025-08-23 10:56:32,481 - socketio.server - INFO - emitting event "round" to OYARWE [/]
+2025-08-23 10:56:32,481 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["round",{"room":"OYARWE","round":2,"range":[1,100],"endsAt":1755921692480.2273}]
+2025-08-23 10:56:32,482 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["round",{"room":"OYARWE","round":2,"range":[1,100],"endsAt":1755921692480.2273}]
+2025-08-23 10:56:32,482 - __main__ - INFO - Started new round 2 in room OYARWE
+2025-08-23 10:56:32,482 - socketio.server - INFO - emitting event "guess_result" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:32,482 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["guess_result",{"message":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 82","details":{"correct":true,"score_gained":35,"new_total_score":35,"streak":1,"time_bonus":25,"streak_bonus":0}}]
+2025-08-23 10:56:32,482 - socketio.server - INFO - emitting event "message" to SIbWH0IkUY6slbDlAAAD [/]
+2025-08-23 10:56:32,483 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["message",{"room":"OYARWE","msg":"\ud83c\udf89 Ch\u00ednh x\u00e1c! S\u1ed1 c\u1ea7n t\u00ecm l\u00e0 82"}]
+2025-08-23 10:56:32,483 - socketio.server - INFO - emitting event "scoreboard_updated" to OYARWE [/]
+2025-08-23 10:56:32,483 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["scoreboard_updated",{"room_id":"OYARWE","scores":{"Hoang":35},"winner":"","round_number":2}]
+2025-08-23 10:56:32,483 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["scoreboard_updated",{"room_id":"OYARWE","scores":{"Hoang":35},"winner":"","round_number":2}]
+2025-08-23 10:56:32,484 - socketio.server - INFO - emitting event "scoreboard" to OYARWE [/]
+2025-08-23 10:56:32,484 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["scoreboard",{"Hoang":35}]
+2025-08-23 10:56:32,484 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["scoreboard",{"Hoang":35}]
+2025-08-23 10:56:36,848 - __main__ - INFO - Client disconnected: bDAL1q0hqN5a02ucAAAB
+2025-08-23 10:56:36,848 - socketio.server - INFO - emitting event "player_left" to OYARWE [/]
+2025-08-23 10:56:36,849 - engineio.server - INFO - cGpGHfHKunZDu681AAAA: Sending packet MESSAGE data 2["player_left",{"room_id":"OYARWE","player_name":"phuong","remaining_players":1}]
+2025-08-23 10:56:36,849 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["player_left",{"room_id":"OYARWE","player_name":"phuong","remaining_players":1}]
+2025-08-23 10:56:36,849 - __main__ - INFO - Player phuong left room OYARWE
+2025-08-23 10:56:37,898 - __main__ - INFO - Client disconnected: SIbWH0IkUY6slbDlAAAD
+2025-08-23 10:56:37,898 - socketio.server - INFO - emitting event "player_left" to OYARWE [/]
+2025-08-23 10:56:37,899 - engineio.server - INFO - r3htj7u8SVIHTB52AAAC: Sending packet MESSAGE data 2["player_left",{"room_id":"OYARWE","player_name":"Hoang","remaining_players":0}]
+2025-08-23 10:56:37,899 - __main__ - INFO - Player Hoang left room OYARWE
+2025-08-23 11:18:06,530 - __main__ - INFO - Logging configured for development environment
+2025-08-23 11:18:06,530 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-23 11:18:07,380 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-23 11:18:07,383 - server - INFO - Created room: lobby (Phòng Lobby)
+2025-08-23 11:18:07,383 - server - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-23 11:18:07,383 - server - INFO - Created room: demo (Phòng Demo)
+2025-08-23 11:18:07,384 - server - INFO - ✅ Tạo phòng demo thành công
+2025-08-23 11:18:07,385 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-23 11:18:07,385 - __main__ - INFO - Environment: development
+2025-08-23 11:18:07,385 - __main__ - INFO - Host: 0.0.0.0
+2025-08-23 11:18:07,386 - __main__ - INFO - Port: 5000
+2025-08-23 11:18:07,386 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-23 11:18:07,386 - __main__ - INFO - Development mode with auto-reload
+2025-08-23 11:18:07,442 - werkzeug - INFO -  * Restarting with stat
+2025-08-23 11:18:07,550 - __main__ - INFO - Logging configured for development environment
+2025-08-23 11:18:07,551 - __main__ - INFO - Log file: D:\LapTrinhAI\Guess_Number\server\logs\game_server.log
+2025-08-23 11:18:08,472 - engineio.server - INFO - Server initialized for eventlet.
+2025-08-23 11:18:08,475 - server - INFO - Created room: lobby (Phòng Lobby)
+2025-08-23 11:18:08,475 - server - INFO - ✅ Tạo phòng lobby mặc định thành công
+2025-08-23 11:18:08,475 - server - INFO - Created room: demo (Phòng Demo)
+2025-08-23 11:18:08,475 - server - INFO - ✅ Tạo phòng demo thành công
+2025-08-23 11:18:08,477 - __main__ - INFO - 🚀 Starting Guess Number Game Server...
+2025-08-23 11:18:08,477 - __main__ - INFO - Environment: development
+2025-08-23 11:18:08,477 - __main__ - INFO - Host: 0.0.0.0
+2025-08-23 11:18:08,477 - __main__ - INFO - Port: 5000
+2025-08-23 11:18:08,477 - __main__ - INFO - Game config: {'RANGE_DEFAULT': (1, 100), 'ROUND_TIME': 300, 'MAX_PLAYERS_PER_ROOM': 20, 'MAX_ROOMS': 100, 'RATE_LIMIT_MS': 1000, 'MAX_CHAT_LENGTH': 200, 'SCORE_CORRECT': 10, 'SCORE_BONUS_TIME': 5, 'SCORE_STREAK_MULTIPLIER': 1.5, 'MAX_GUESSES_PER_ROUND': 50, 'MAX_CHAT_PER_MINUTE': 10, 'MIN_PLAYER_NAME_LENGTH': 2, 'MAX_PLAYER_NAME_LENGTH': 20, 'MIN_ROOM_ID_LENGTH': 3, 'MAX_ROOM_ID_LENGTH': 30, 'MIN_ROOM_NAME_LENGTH': 3, 'MAX_ROOM_NAME_LENGTH': 50}
+2025-08-23 11:18:08,477 - __main__ - INFO - Development mode with auto-reload
+2025-08-23 11:18:08,483 - werkzeug - WARNING -  * Debugger is active!
+2025-08-23 11:18:08,490 - werkzeug - INFO -  * Debugger PIN: 793-119-022
+2025-08-23 11:18:49,282 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Sending packet OPEN data {'sid': 'fxFSNrI-IJPqotZPAAAA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:18:49,285 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Received packet MESSAGE data 0
+2025-08-23 11:18:49,286 - server - INFO - Client connected: Gm502D2Kaptv3C60AAAB
+2025-08-23 11:18:49,286 - socketio.server - INFO - emitting event "connected" to Gm502D2Kaptv3C60AAAB [/]
+2025-08-23 11:18:49,287 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Sending packet MESSAGE data 2["connected",{"sid":"Gm502D2Kaptv3C60AAAB"}]
+2025-08-23 11:18:49,287 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Sending packet MESSAGE data 0{"sid":"Gm502D2Kaptv3C60AAAB"}
+2025-08-23 11:18:49,594 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Received request to upgrade to websocket
+2025-08-23 11:18:49,598 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Upgrade to websocket successful
+2025-08-23 11:18:50,665 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-23 11:18:50,666 - socketio.server - INFO - received event "get_available_rooms" from Gm502D2Kaptv3C60AAAB [/]
+2025-08-23 11:18:50,666 - socketio.server - INFO - emitting event "available_rooms" to Gm502D2Kaptv3C60AAAB [/]
+2025-08-23 11:18:50,667 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"lobby","name":"Ph\u00f2ng Lobby","current_players":0,"max_players":20,"round_number":1},{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-23 11:18:53,379 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Received packet MESSAGE data 2["join_room",{"room_id":"lobby","player_name":"Khách"}]
+2025-08-23 11:18:53,379 - socketio.server - INFO - received event "join_room" from Gm502D2Kaptv3C60AAAB [/]
+2025-08-23 11:18:53,381 - server - INFO - Player Khách joined room lobby
+2025-08-23 11:18:53,381 - socketio.server - INFO - Gm502D2Kaptv3C60AAAB is entering room lobby [/]
+2025-08-23 11:18:53,381 - server - INFO - Player Khách joined Socket.IO room lobby
+2025-08-23 11:18:53,382 - socketio.server - INFO - emitting event "room_joined" to Gm502D2Kaptv3C60AAAB [/]
+2025-08-23 11:18:53,382 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Sending packet MESSAGE data 2["room_joined",{"room_id":"lobby","room_name":"Ph\u00f2ng Lobby","player_name":"Kh\u00e1ch","room_info":{"id":"lobby","name":"Ph\u00f2ng Lobby","round_number":1,"current_round":{"range":[1,100],"end_time":1755922988.4753928,"total_guesses":0},"players":[{"name":"Kh\u00e1ch","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":20,"current_players":1}}]
+2025-08-23 11:18:53,382 - socketio.server - INFO - emitting event "player_joined" to lobby [/]
+2025-08-23 11:18:53,383 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Sending packet MESSAGE data 2["player_joined",{"room_id":"lobby","player_name":"Kh\u00e1ch","total_players":1}]
+2025-08-23 11:18:53,383 - server - INFO - First player joined room lobby, room already has round 1 ready
+2025-08-23 11:18:53,383 - server - INFO - Player Khách successfully joined room lobby
+2025-08-23 11:18:58,236 - server - INFO - Client disconnected: Gm502D2Kaptv3C60AAAB
+2025-08-23 11:18:58,237 - socketio.server - INFO - emitting event "player_left" to lobby [/]
+2025-08-23 11:18:58,237 - engineio.server - INFO - fxFSNrI-IJPqotZPAAAA: Sending packet MESSAGE data 2["player_left",{"room_id":"lobby","player_name":"Kh\u00e1ch","remaining_players":0}]
+2025-08-23 11:18:58,237 - server - INFO - Player Khách left room lobby
+2025-08-23 11:19:04,791 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet OPEN data {'sid': 'fB7s2mQNmh-CZT3wAAAC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:19:04,801 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Received packet MESSAGE data 0
+2025-08-23 11:19:04,802 - server - INFO - Client connected: kn9ZQyvKrtxxNXyZAAAD
+2025-08-23 11:19:04,803 - socketio.server - INFO - emitting event "connected" to kn9ZQyvKrtxxNXyZAAAD [/]
+2025-08-23 11:19:04,803 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 2["connected",{"sid":"kn9ZQyvKrtxxNXyZAAAD"}]
+2025-08-23 11:19:04,804 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 0{"sid":"kn9ZQyvKrtxxNXyZAAAD"}
+2025-08-23 11:19:05,112 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Received request to upgrade to websocket
+2025-08-23 11:19:05,119 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Upgrade to websocket successful
+2025-08-23 11:19:11,199 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Received packet MESSAGE data 2["create_room",{"room_id":"G1RDLH","room_name":"Phòng của Khách","max_players":10}]
+2025-08-23 11:19:11,199 - socketio.server - INFO - received event "create_room" from kn9ZQyvKrtxxNXyZAAAD [/]
+2025-08-23 11:19:11,200 - server - INFO - Created room: G1RDLH (Phòng của Khách)
+2025-08-23 11:19:11,200 - socketio.server - INFO - kn9ZQyvKrtxxNXyZAAAD is entering room G1RDLH [/]
+2025-08-23 11:19:11,201 - socketio.server - INFO - emitting event "room_created" to kn9ZQyvKrtxxNXyZAAAD [/]
+2025-08-23 11:19:11,201 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 2["room_created",{"room_id":"G1RDLH","room_name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","max_players":10}]
+2025-08-23 11:19:11,201 - server - INFO - Room G1RDLH created successfully
+2025-08-23 11:19:12,450 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-23 11:19:12,451 - socketio.server - INFO - received event "get_available_rooms" from kn9ZQyvKrtxxNXyZAAAD [/]
+2025-08-23 11:19:12,451 - socketio.server - INFO - emitting event "available_rooms" to kn9ZQyvKrtxxNXyZAAAD [/]
+2025-08-23 11:19:12,452 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1},{"id":"G1RDLH","name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-23 11:19:13,204 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Received packet MESSAGE data 2["join_room",{"room_id":"G1RDLH","player_name":"Khách"}]
+2025-08-23 11:19:13,204 - socketio.server - INFO - received event "join_room" from kn9ZQyvKrtxxNXyZAAAD [/]
+2025-08-23 11:19:13,205 - server - INFO - Player Khách joined room G1RDLH
+2025-08-23 11:19:13,206 - socketio.server - INFO - kn9ZQyvKrtxxNXyZAAAD is entering room G1RDLH [/]
+2025-08-23 11:19:13,207 - server - INFO - Player Khách joined Socket.IO room G1RDLH
+2025-08-23 11:19:13,208 - socketio.server - INFO - emitting event "room_joined" to kn9ZQyvKrtxxNXyZAAAD [/]
+2025-08-23 11:19:13,209 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 2["room_joined",{"room_id":"G1RDLH","room_name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","player_name":"Kh\u00e1ch","room_info":{"id":"G1RDLH","name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","round_number":1,"current_round":{"range":[1,100],"end_time":1755923051.2006729,"total_guesses":0},"players":[{"name":"Kh\u00e1ch","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":1}}]
+2025-08-23 11:19:13,210 - socketio.server - INFO - emitting event "player_joined" to G1RDLH [/]
+2025-08-23 11:19:13,211 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 2["player_joined",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch","total_players":1}]
+2025-08-23 11:19:13,212 - server - INFO - First player joined room G1RDLH, room already has round 1 ready
+2025-08-23 11:19:13,213 - server - INFO - Player Khách successfully joined room G1RDLH
+2025-08-23 11:19:17,691 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet OPEN data {'sid': '6c_e7oSbHZBBTh0cAAAE', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:19:17,699 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Received packet MESSAGE data 0
+2025-08-23 11:19:17,700 - server - INFO - Client connected: lwOW7ejAI4fPwu1GAAAF
+2025-08-23 11:19:17,701 - socketio.server - INFO - emitting event "connected" to lwOW7ejAI4fPwu1GAAAF [/]
+2025-08-23 11:19:17,701 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet MESSAGE data 2["connected",{"sid":"lwOW7ejAI4fPwu1GAAAF"}]
+2025-08-23 11:19:17,702 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet MESSAGE data 0{"sid":"lwOW7ejAI4fPwu1GAAAF"}
+2025-08-23 11:19:18,004 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Received request to upgrade to websocket
+2025-08-23 11:19:18,036 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Upgrade to websocket successful
+2025-08-23 11:19:21,029 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-23 11:19:21,029 - socketio.server - INFO - received event "get_available_rooms" from lwOW7ejAI4fPwu1GAAAF [/]
+2025-08-23 11:19:21,030 - socketio.server - INFO - emitting event "available_rooms" to lwOW7ejAI4fPwu1GAAAF [/]
+2025-08-23 11:19:21,031 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1},{"id":"G1RDLH","name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","current_players":1,"max_players":10,"round_number":1}]}]
+2025-08-23 11:19:24,035 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Received packet MESSAGE data 2["join_room",{"room_id":"G1RDLH","player_name":"Khách1"}]
+2025-08-23 11:19:24,035 - socketio.server - INFO - received event "join_room" from lwOW7ejAI4fPwu1GAAAF [/]
+2025-08-23 11:19:24,036 - server - INFO - Player Khách1 joined room G1RDLH
+2025-08-23 11:19:24,036 - socketio.server - INFO - lwOW7ejAI4fPwu1GAAAF is entering room G1RDLH [/]
+2025-08-23 11:19:24,036 - server - INFO - Player Khách1 joined Socket.IO room G1RDLH
+2025-08-23 11:19:24,037 - socketio.server - INFO - emitting event "room_joined" to lwOW7ejAI4fPwu1GAAAF [/]
+2025-08-23 11:19:24,037 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet MESSAGE data 2["room_joined",{"room_id":"G1RDLH","room_name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","player_name":"Kh\u00e1ch1","room_info":{"id":"G1RDLH","name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","round_number":1,"current_round":{"range":[1,100],"end_time":1755923051.2006729,"total_guesses":0},"players":[{"name":"Kh\u00e1ch","score":0,"streak":0,"correct_guesses":0},{"name":"Kh\u00e1ch1","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":2}}]
+2025-08-23 11:19:24,037 - socketio.server - INFO - emitting event "player_joined" to G1RDLH [/]
+2025-08-23 11:19:24,037 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 2["player_joined",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch1","total_players":2}]
+2025-08-23 11:19:24,037 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet MESSAGE data 2["player_joined",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch1","total_players":2}]
+2025-08-23 11:19:24,038 - server - INFO - Player Khách1 successfully joined room G1RDLH
+2025-08-23 11:19:27,705 - server - INFO - Client disconnected: kn9ZQyvKrtxxNXyZAAAD
+2025-08-23 11:19:27,705 - socketio.server - INFO - emitting event "player_left" to G1RDLH [/]
+2025-08-23 11:19:27,706 - engineio.server - INFO - fB7s2mQNmh-CZT3wAAAC: Sending packet MESSAGE data 2["player_left",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch","remaining_players":1}]
+2025-08-23 11:19:27,706 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet MESSAGE data 2["player_left",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch","remaining_players":1}]
+2025-08-23 11:19:27,707 - server - INFO - Player Khách left room G1RDLH
+2025-08-23 11:19:28,042 - server - INFO - Client disconnected: lwOW7ejAI4fPwu1GAAAF
+2025-08-23 11:19:28,042 - socketio.server - INFO - emitting event "player_left" to G1RDLH [/]
+2025-08-23 11:19:28,043 - engineio.server - INFO - 6c_e7oSbHZBBTh0cAAAE: Sending packet MESSAGE data 2["player_left",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch1","remaining_players":0}]
+2025-08-23 11:19:28,043 - server - INFO - Player Khách1 left room G1RDLH
+2025-08-23 11:23:20,354 - engineio.server - INFO - kOG6HA1nU_OjnWAyAAAG: Sending packet OPEN data {'sid': 'kOG6HA1nU_OjnWAyAAAG', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:20,369 - engineio.server - INFO - kOG6HA1nU_OjnWAyAAAG: Received packet MESSAGE data 0
+2025-08-23 11:23:20,370 - server - INFO - Client connected: YMf8moUVfMmMZNJOAAAH
+2025-08-23 11:23:20,371 - socketio.server - INFO - emitting event "connected" to YMf8moUVfMmMZNJOAAAH [/]
+2025-08-23 11:23:20,371 - engineio.server - INFO - kOG6HA1nU_OjnWAyAAAG: Sending packet MESSAGE data 2["connected",{"sid":"YMf8moUVfMmMZNJOAAAH"}]
+2025-08-23 11:23:20,372 - engineio.server - INFO - kOG6HA1nU_OjnWAyAAAG: Sending packet MESSAGE data 0{"sid":"YMf8moUVfMmMZNJOAAAH"}
+2025-08-23 11:23:20,676 - engineio.server - INFO - kOG6HA1nU_OjnWAyAAAG: Received request to upgrade to websocket
+2025-08-23 11:23:20,681 - engineio.server - INFO - kOG6HA1nU_OjnWAyAAAG: Upgrade to websocket successful
+2025-08-23 11:23:21,032 - server - INFO - Client disconnected: YMf8moUVfMmMZNJOAAAH
+2025-08-23 11:23:21,118 - engineio.server - INFO - YyH-jz9Mcv5uEUW_AAAI: Sending packet OPEN data {'sid': 'YyH-jz9Mcv5uEUW_AAAI', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:21,137 - engineio.server - INFO - YyH-jz9Mcv5uEUW_AAAI: Received packet MESSAGE data 0
+2025-08-23 11:23:21,138 - server - INFO - Client connected: bfQo_bLh8EXni37SAAAJ
+2025-08-23 11:23:21,138 - socketio.server - INFO - emitting event "connected" to bfQo_bLh8EXni37SAAAJ [/]
+2025-08-23 11:23:21,139 - engineio.server - INFO - YyH-jz9Mcv5uEUW_AAAI: Sending packet MESSAGE data 2["connected",{"sid":"bfQo_bLh8EXni37SAAAJ"}]
+2025-08-23 11:23:21,140 - engineio.server - INFO - YyH-jz9Mcv5uEUW_AAAI: Sending packet MESSAGE data 0{"sid":"bfQo_bLh8EXni37SAAAJ"}
+2025-08-23 11:23:21,447 - engineio.server - INFO - YyH-jz9Mcv5uEUW_AAAI: Received request to upgrade to websocket
+2025-08-23 11:23:21,452 - engineio.server - INFO - YyH-jz9Mcv5uEUW_AAAI: Upgrade to websocket successful
+2025-08-23 11:23:21,796 - server - INFO - Client disconnected: bfQo_bLh8EXni37SAAAJ
+2025-08-23 11:23:21,955 - engineio.server - INFO - Cn4dSzIIWaFwCzYaAAAK: Sending packet OPEN data {'sid': 'Cn4dSzIIWaFwCzYaAAAK', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:21,972 - engineio.server - INFO - Cn4dSzIIWaFwCzYaAAAK: Received packet MESSAGE data 0
+2025-08-23 11:23:21,973 - server - INFO - Client connected: w0umgVSWiZ3EspgEAAAL
+2025-08-23 11:23:21,973 - socketio.server - INFO - emitting event "connected" to w0umgVSWiZ3EspgEAAAL [/]
+2025-08-23 11:23:21,974 - engineio.server - INFO - Cn4dSzIIWaFwCzYaAAAK: Sending packet MESSAGE data 2["connected",{"sid":"w0umgVSWiZ3EspgEAAAL"}]
+2025-08-23 11:23:21,974 - engineio.server - INFO - Cn4dSzIIWaFwCzYaAAAK: Sending packet MESSAGE data 0{"sid":"w0umgVSWiZ3EspgEAAAL"}
+2025-08-23 11:23:22,288 - engineio.server - INFO - BTvU5mo4wJPRsnCTAAAM: Sending packet OPEN data {'sid': 'BTvU5mo4wJPRsnCTAAAM', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:22,303 - engineio.server - INFO - BTvU5mo4wJPRsnCTAAAM: Received packet MESSAGE data 0
+2025-08-23 11:23:22,304 - server - INFO - Client connected: Ku3mMcFRW0W9zF6HAAAN
+2025-08-23 11:23:22,304 - socketio.server - INFO - emitting event "connected" to Ku3mMcFRW0W9zF6HAAAN [/]
+2025-08-23 11:23:22,305 - engineio.server - INFO - BTvU5mo4wJPRsnCTAAAM: Sending packet MESSAGE data 2["connected",{"sid":"Ku3mMcFRW0W9zF6HAAAN"}]
+2025-08-23 11:23:22,305 - engineio.server - INFO - BTvU5mo4wJPRsnCTAAAM: Sending packet MESSAGE data 0{"sid":"Ku3mMcFRW0W9zF6HAAAN"}
+2025-08-23 11:23:22,940 - engineio.server - INFO - ilnkSc72NAUYyRrIAAAO: Sending packet OPEN data {'sid': 'ilnkSc72NAUYyRrIAAAO', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:22,952 - engineio.server - INFO - ilnkSc72NAUYyRrIAAAO: Received packet MESSAGE data 0
+2025-08-23 11:23:22,953 - server - INFO - Client connected: GnSEo2EaPCh7FGZ6AAAP
+2025-08-23 11:23:22,953 - socketio.server - INFO - emitting event "connected" to GnSEo2EaPCh7FGZ6AAAP [/]
+2025-08-23 11:23:22,953 - engineio.server - INFO - ilnkSc72NAUYyRrIAAAO: Sending packet MESSAGE data 2["connected",{"sid":"GnSEo2EaPCh7FGZ6AAAP"}]
+2025-08-23 11:23:22,954 - engineio.server - INFO - ilnkSc72NAUYyRrIAAAO: Sending packet MESSAGE data 0{"sid":"GnSEo2EaPCh7FGZ6AAAP"}
+2025-08-23 11:23:23,259 - engineio.server - INFO - fVjPUSUVvHdZc1dkAAAQ: Sending packet OPEN data {'sid': 'fVjPUSUVvHdZc1dkAAAQ', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:23,263 - engineio.server - INFO - fVjPUSUVvHdZc1dkAAAQ: Received packet MESSAGE data 0
+2025-08-23 11:23:23,264 - server - INFO - Client connected: _EummCA2Sx_cR2-8AAAR
+2025-08-23 11:23:23,264 - socketio.server - INFO - emitting event "connected" to _EummCA2Sx_cR2-8AAAR [/]
+2025-08-23 11:23:23,265 - engineio.server - INFO - fVjPUSUVvHdZc1dkAAAQ: Sending packet MESSAGE data 2["connected",{"sid":"_EummCA2Sx_cR2-8AAAR"}]
+2025-08-23 11:23:23,265 - engineio.server - INFO - fVjPUSUVvHdZc1dkAAAQ: Sending packet MESSAGE data 0{"sid":"_EummCA2Sx_cR2-8AAAR"}
+2025-08-23 11:23:23,567 - engineio.server - INFO - fVjPUSUVvHdZc1dkAAAQ: Received request to upgrade to websocket
+2025-08-23 11:23:23,573 - engineio.server - INFO - fVjPUSUVvHdZc1dkAAAQ: Upgrade to websocket successful
+2025-08-23 11:23:23,713 - server - INFO - Client disconnected: _EummCA2Sx_cR2-8AAAR
+2025-08-23 11:23:23,761 - engineio.server - INFO - lWIeeDq3vj_mnPDjAAAS: Sending packet OPEN data {'sid': 'lWIeeDq3vj_mnPDjAAAS', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:23,814 - engineio.server - INFO - lWIeeDq3vj_mnPDjAAAS: Received packet MESSAGE data 0
+2025-08-23 11:23:23,815 - server - INFO - Client connected: LLHtQsgvfRp7mjByAAAT
+2025-08-23 11:23:23,815 - socketio.server - INFO - emitting event "connected" to LLHtQsgvfRp7mjByAAAT [/]
+2025-08-23 11:23:23,816 - engineio.server - INFO - lWIeeDq3vj_mnPDjAAAS: Sending packet MESSAGE data 2["connected",{"sid":"LLHtQsgvfRp7mjByAAAT"}]
+2025-08-23 11:23:23,816 - engineio.server - INFO - lWIeeDq3vj_mnPDjAAAS: Sending packet MESSAGE data 0{"sid":"LLHtQsgvfRp7mjByAAAT"}
+2025-08-23 11:23:24,108 - engineio.server - INFO - TZepQ3PLteBN6XV7AAAU: Sending packet OPEN data {'sid': 'TZepQ3PLteBN6XV7AAAU', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:24,117 - engineio.server - INFO - TZepQ3PLteBN6XV7AAAU: Received packet MESSAGE data 0
+2025-08-23 11:23:24,118 - server - INFO - Client connected: RS9Y2YeMnOcpZydgAAAV
+2025-08-23 11:23:24,119 - socketio.server - INFO - emitting event "connected" to RS9Y2YeMnOcpZydgAAAV [/]
+2025-08-23 11:23:24,119 - engineio.server - INFO - TZepQ3PLteBN6XV7AAAU: Sending packet MESSAGE data 2["connected",{"sid":"RS9Y2YeMnOcpZydgAAAV"}]
+2025-08-23 11:23:24,120 - engineio.server - INFO - TZepQ3PLteBN6XV7AAAU: Sending packet MESSAGE data 0{"sid":"RS9Y2YeMnOcpZydgAAAV"}
+2025-08-23 11:23:24,314 - engineio.server - INFO - 67CNKoVfGDMLZ5GdAAAW: Sending packet OPEN data {'sid': '67CNKoVfGDMLZ5GdAAAW', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:24,355 - engineio.server - INFO - 67CNKoVfGDMLZ5GdAAAW: Received packet MESSAGE data 0
+2025-08-23 11:23:24,356 - server - INFO - Client connected: vNf2bbcwD1gzp6rvAAAX
+2025-08-23 11:23:24,356 - socketio.server - INFO - emitting event "connected" to vNf2bbcwD1gzp6rvAAAX [/]
+2025-08-23 11:23:24,357 - engineio.server - INFO - 67CNKoVfGDMLZ5GdAAAW: Sending packet MESSAGE data 2["connected",{"sid":"vNf2bbcwD1gzp6rvAAAX"}]
+2025-08-23 11:23:24,358 - engineio.server - INFO - 67CNKoVfGDMLZ5GdAAAW: Sending packet MESSAGE data 0{"sid":"vNf2bbcwD1gzp6rvAAAX"}
+2025-08-23 11:23:24,668 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Sending packet OPEN data {'sid': '5aLC9QLXCMpkbpA5AAAY', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:24,671 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Received packet MESSAGE data 0
+2025-08-23 11:23:24,672 - server - INFO - Client connected: 3RJjVW74A0CLHc4xAAAZ
+2025-08-23 11:23:24,673 - socketio.server - INFO - emitting event "connected" to 3RJjVW74A0CLHc4xAAAZ [/]
+2025-08-23 11:23:24,673 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Sending packet MESSAGE data 2["connected",{"sid":"3RJjVW74A0CLHc4xAAAZ"}]
+2025-08-23 11:23:24,673 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Sending packet MESSAGE data 0{"sid":"3RJjVW74A0CLHc4xAAAZ"}
+2025-08-23 11:23:24,980 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Received request to upgrade to websocket
+2025-08-23 11:23:24,983 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Upgrade to websocket successful
+2025-08-23 11:23:25,229 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Received packet MESSAGE data 2["get_available_rooms"]
+2025-08-23 11:23:25,229 - socketio.server - INFO - received event "get_available_rooms" from 3RJjVW74A0CLHc4xAAAZ [/]
+2025-08-23 11:23:25,230 - socketio.server - INFO - emitting event "available_rooms" to 3RJjVW74A0CLHc4xAAAZ [/]
+2025-08-23 11:23:25,230 - engineio.server - INFO - 5aLC9QLXCMpkbpA5AAAY: Sending packet MESSAGE data 2["available_rooms",{"rooms":[{"id":"demo","name":"Ph\u00f2ng Demo","current_players":0,"max_players":10,"round_number":1}]}]
+2025-08-23 11:23:27,843 - server - INFO - Client disconnected: 3RJjVW74A0CLHc4xAAAZ
+2025-08-23 11:23:27,907 - engineio.server - INFO - FJbVD5jTzALCVGAJAAAa: Sending packet OPEN data {'sid': 'FJbVD5jTzALCVGAJAAAa', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:27,923 - engineio.server - INFO - FJbVD5jTzALCVGAJAAAa: Received packet MESSAGE data 0
+2025-08-23 11:23:27,925 - server - INFO - Client connected: 3-m7CdnKLkbtvrNUAAAb
+2025-08-23 11:23:27,925 - socketio.server - INFO - emitting event "connected" to 3-m7CdnKLkbtvrNUAAAb [/]
+2025-08-23 11:23:27,926 - engineio.server - INFO - FJbVD5jTzALCVGAJAAAa: Sending packet MESSAGE data 2["connected",{"sid":"3-m7CdnKLkbtvrNUAAAb"}]
+2025-08-23 11:23:27,926 - engineio.server - INFO - FJbVD5jTzALCVGAJAAAa: Sending packet MESSAGE data 0{"sid":"3-m7CdnKLkbtvrNUAAAb"}
+2025-08-23 11:23:28,037 - engineio.server - INFO - wIkZ1V-haqWP4AYKAAAc: Sending packet OPEN data {'sid': 'wIkZ1V-haqWP4AYKAAAc', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:28,080 - engineio.server - INFO - wIkZ1V-haqWP4AYKAAAc: Received packet MESSAGE data 0
+2025-08-23 11:23:28,082 - server - INFO - Client connected: FbVnZwm1Ra5DP-2sAAAd
+2025-08-23 11:23:28,082 - socketio.server - INFO - emitting event "connected" to FbVnZwm1Ra5DP-2sAAAd [/]
+2025-08-23 11:23:28,083 - engineio.server - INFO - wIkZ1V-haqWP4AYKAAAc: Sending packet MESSAGE data 2["connected",{"sid":"FbVnZwm1Ra5DP-2sAAAd"}]
+2025-08-23 11:23:28,083 - engineio.server - INFO - wIkZ1V-haqWP4AYKAAAc: Sending packet MESSAGE data 0{"sid":"FbVnZwm1Ra5DP-2sAAAd"}
+2025-08-23 11:23:28,204 - engineio.server - INFO - VmKpWkCzvM_G9eiAAAAe: Sending packet OPEN data {'sid': 'VmKpWkCzvM_G9eiAAAAe', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:28,251 - engineio.server - INFO - VmKpWkCzvM_G9eiAAAAe: Received packet MESSAGE data 0
+2025-08-23 11:23:28,253 - server - INFO - Client connected: Bf7msV7QjX9TYI6IAAAf
+2025-08-23 11:23:28,253 - socketio.server - INFO - emitting event "connected" to Bf7msV7QjX9TYI6IAAAf [/]
+2025-08-23 11:23:28,254 - engineio.server - INFO - VmKpWkCzvM_G9eiAAAAe: Sending packet MESSAGE data 2["connected",{"sid":"Bf7msV7QjX9TYI6IAAAf"}]
+2025-08-23 11:23:28,254 - engineio.server - INFO - VmKpWkCzvM_G9eiAAAAe: Sending packet MESSAGE data 0{"sid":"Bf7msV7QjX9TYI6IAAAf"}
+2025-08-23 11:23:28,561 - engineio.server - INFO - ZKz5Pc1vpDKBFuSVAAAg: Sending packet OPEN data {'sid': 'ZKz5Pc1vpDKBFuSVAAAg', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:28,563 - engineio.server - INFO - ZKz5Pc1vpDKBFuSVAAAg: Received packet MESSAGE data 0
+2025-08-23 11:23:28,564 - server - INFO - Client connected: WVdup2sGwOJ5oXwjAAAh
+2025-08-23 11:23:28,564 - socketio.server - INFO - emitting event "connected" to WVdup2sGwOJ5oXwjAAAh [/]
+2025-08-23 11:23:28,564 - engineio.server - INFO - ZKz5Pc1vpDKBFuSVAAAg: Sending packet MESSAGE data 2["connected",{"sid":"WVdup2sGwOJ5oXwjAAAh"}]
+2025-08-23 11:23:28,565 - engineio.server - INFO - ZKz5Pc1vpDKBFuSVAAAg: Sending packet MESSAGE data 0{"sid":"WVdup2sGwOJ5oXwjAAAh"}
+2025-08-23 11:23:28,733 - engineio.server - INFO - a0UWVIMcfuvmxFAvAAAi: Sending packet OPEN data {'sid': 'a0UWVIMcfuvmxFAvAAAi', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:28,737 - engineio.server - INFO - a0UWVIMcfuvmxFAvAAAi: Received packet MESSAGE data 0
+2025-08-23 11:23:28,738 - server - INFO - Client connected: jkVBDrMfzKIhsHCmAAAj
+2025-08-23 11:23:28,738 - socketio.server - INFO - emitting event "connected" to jkVBDrMfzKIhsHCmAAAj [/]
+2025-08-23 11:23:28,738 - engineio.server - INFO - a0UWVIMcfuvmxFAvAAAi: Sending packet MESSAGE data 2["connected",{"sid":"jkVBDrMfzKIhsHCmAAAj"}]
+2025-08-23 11:23:28,739 - engineio.server - INFO - a0UWVIMcfuvmxFAvAAAi: Sending packet MESSAGE data 0{"sid":"jkVBDrMfzKIhsHCmAAAj"}
+2025-08-23 11:23:28,864 - engineio.server - INFO - jqJHNukwQJSaaq4oAAAk: Sending packet OPEN data {'sid': 'jqJHNukwQJSaaq4oAAAk', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:28,914 - engineio.server - INFO - jqJHNukwQJSaaq4oAAAk: Received packet MESSAGE data 0
+2025-08-23 11:23:28,915 - server - INFO - Client connected: PygCTGpbj2LdsF9vAAAl
+2025-08-23 11:23:28,916 - socketio.server - INFO - emitting event "connected" to PygCTGpbj2LdsF9vAAAl [/]
+2025-08-23 11:23:28,917 - engineio.server - INFO - jqJHNukwQJSaaq4oAAAk: Sending packet MESSAGE data 2["connected",{"sid":"PygCTGpbj2LdsF9vAAAl"}]
+2025-08-23 11:23:28,917 - engineio.server - INFO - jqJHNukwQJSaaq4oAAAk: Sending packet MESSAGE data 0{"sid":"PygCTGpbj2LdsF9vAAAl"}
+2025-08-23 11:23:29,023 - engineio.server - INFO - SCWZ_M5bIZBR8iDtAAAm: Sending packet OPEN data {'sid': 'SCWZ_M5bIZBR8iDtAAAm', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:29,043 - engineio.server - INFO - SCWZ_M5bIZBR8iDtAAAm: Received packet MESSAGE data 0
+2025-08-23 11:23:29,044 - server - INFO - Client connected: yo8vep_Q6_3nKjSCAAAn
+2025-08-23 11:23:29,045 - socketio.server - INFO - emitting event "connected" to yo8vep_Q6_3nKjSCAAAn [/]
+2025-08-23 11:23:29,045 - engineio.server - INFO - SCWZ_M5bIZBR8iDtAAAm: Sending packet MESSAGE data 2["connected",{"sid":"yo8vep_Q6_3nKjSCAAAn"}]
+2025-08-23 11:23:29,045 - engineio.server - INFO - SCWZ_M5bIZBR8iDtAAAm: Sending packet MESSAGE data 0{"sid":"yo8vep_Q6_3nKjSCAAAn"}
+2025-08-23 11:23:29,189 - engineio.server - INFO - hQtRkBMrxg93c9SfAAAo: Sending packet OPEN data {'sid': 'hQtRkBMrxg93c9SfAAAo', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:29,238 - engineio.server - INFO - hQtRkBMrxg93c9SfAAAo: Received packet MESSAGE data 0
+2025-08-23 11:23:29,239 - server - INFO - Client connected: kb4PSBUGUGxiiP4NAAAp
+2025-08-23 11:23:29,240 - socketio.server - INFO - emitting event "connected" to kb4PSBUGUGxiiP4NAAAp [/]
+2025-08-23 11:23:29,240 - engineio.server - INFO - hQtRkBMrxg93c9SfAAAo: Sending packet MESSAGE data 2["connected",{"sid":"kb4PSBUGUGxiiP4NAAAp"}]
+2025-08-23 11:23:29,240 - engineio.server - INFO - hQtRkBMrxg93c9SfAAAo: Sending packet MESSAGE data 0{"sid":"kb4PSBUGUGxiiP4NAAAp"}
+2025-08-23 11:23:29,479 - engineio.server - INFO - Wcl_9Vx1AH7uacWLAAAq: Sending packet OPEN data {'sid': 'Wcl_9Vx1AH7uacWLAAAq', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:29,489 - engineio.server - INFO - Wcl_9Vx1AH7uacWLAAAq: Received packet MESSAGE data 0
+2025-08-23 11:23:29,490 - server - INFO - Client connected: gfLbmjlIzdHDM0OTAAAr
+2025-08-23 11:23:29,490 - socketio.server - INFO - emitting event "connected" to gfLbmjlIzdHDM0OTAAAr [/]
+2025-08-23 11:23:29,490 - engineio.server - INFO - Wcl_9Vx1AH7uacWLAAAq: Sending packet MESSAGE data 2["connected",{"sid":"gfLbmjlIzdHDM0OTAAAr"}]
+2025-08-23 11:23:29,491 - engineio.server - INFO - Wcl_9Vx1AH7uacWLAAAq: Sending packet MESSAGE data 0{"sid":"gfLbmjlIzdHDM0OTAAAr"}
+2025-08-23 11:23:29,960 - engineio.server - INFO - HpSchx20le8_Tb6KAAAs: Sending packet OPEN data {'sid': 'HpSchx20le8_Tb6KAAAs', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:29,989 - engineio.server - INFO - HpSchx20le8_Tb6KAAAs: Received packet MESSAGE data 0
+2025-08-23 11:23:29,992 - server - INFO - Client connected: ghgSPbIvHq34YwEpAAAt
+2025-08-23 11:23:29,992 - socketio.server - INFO - emitting event "connected" to ghgSPbIvHq34YwEpAAAt [/]
+2025-08-23 11:23:29,993 - engineio.server - INFO - HpSchx20le8_Tb6KAAAs: Sending packet MESSAGE data 2["connected",{"sid":"ghgSPbIvHq34YwEpAAAt"}]
+2025-08-23 11:23:29,994 - engineio.server - INFO - HpSchx20le8_Tb6KAAAs: Sending packet MESSAGE data 0{"sid":"ghgSPbIvHq34YwEpAAAt"}
+2025-08-23 11:23:30,099 - engineio.server - INFO - NM6KmmxmYnKq4Mm2AAAu: Sending packet OPEN data {'sid': 'NM6KmmxmYnKq4Mm2AAAu', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:30,123 - engineio.server - INFO - NM6KmmxmYnKq4Mm2AAAu: Received packet MESSAGE data 0
+2025-08-23 11:23:30,125 - server - INFO - Client connected: pVZqYm8z5MLHY3MkAAAv
+2025-08-23 11:23:30,126 - socketio.server - INFO - emitting event "connected" to pVZqYm8z5MLHY3MkAAAv [/]
+2025-08-23 11:23:30,126 - engineio.server - INFO - NM6KmmxmYnKq4Mm2AAAu: Sending packet MESSAGE data 2["connected",{"sid":"pVZqYm8z5MLHY3MkAAAv"}]
+2025-08-23 11:23:30,127 - engineio.server - INFO - NM6KmmxmYnKq4Mm2AAAu: Sending packet MESSAGE data 0{"sid":"pVZqYm8z5MLHY3MkAAAv"}
+2025-08-23 11:23:30,247 - engineio.server - INFO - -sr8RGXkGYCagvMPAAAw: Sending packet OPEN data {'sid': '-sr8RGXkGYCagvMPAAAw', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:30,275 - engineio.server - INFO - -sr8RGXkGYCagvMPAAAw: Received packet MESSAGE data 0
+2025-08-23 11:23:30,276 - server - INFO - Client connected: baz-E2J5OaBEht1fAAAx
+2025-08-23 11:23:30,277 - socketio.server - INFO - emitting event "connected" to baz-E2J5OaBEht1fAAAx [/]
+2025-08-23 11:23:30,277 - engineio.server - INFO - -sr8RGXkGYCagvMPAAAw: Sending packet MESSAGE data 2["connected",{"sid":"baz-E2J5OaBEht1fAAAx"}]
+2025-08-23 11:23:30,278 - engineio.server - INFO - -sr8RGXkGYCagvMPAAAw: Sending packet MESSAGE data 0{"sid":"baz-E2J5OaBEht1fAAAx"}
+2025-08-23 11:23:30,398 - engineio.server - INFO - 36sjaYo9I7WypuMYAAAy: Sending packet OPEN data {'sid': '36sjaYo9I7WypuMYAAAy', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:30,417 - engineio.server - INFO - 36sjaYo9I7WypuMYAAAy: Received packet MESSAGE data 0
+2025-08-23 11:23:30,418 - server - INFO - Client connected: gC9n1ITwA63682cbAAAz
+2025-08-23 11:23:30,418 - socketio.server - INFO - emitting event "connected" to gC9n1ITwA63682cbAAAz [/]
+2025-08-23 11:23:30,419 - engineio.server - INFO - 36sjaYo9I7WypuMYAAAy: Sending packet MESSAGE data 2["connected",{"sid":"gC9n1ITwA63682cbAAAz"}]
+2025-08-23 11:23:30,419 - engineio.server - INFO - 36sjaYo9I7WypuMYAAAy: Sending packet MESSAGE data 0{"sid":"gC9n1ITwA63682cbAAAz"}
+2025-08-23 11:23:30,588 - engineio.server - INFO - ERQs5uJJODv8ygaXAAA0: Sending packet OPEN data {'sid': 'ERQs5uJJODv8ygaXAAA0', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:30,605 - engineio.server - INFO - ERQs5uJJODv8ygaXAAA0: Received packet MESSAGE data 0
+2025-08-23 11:23:30,607 - server - INFO - Client connected: NixbITj0JwOduC4QAAA1
+2025-08-23 11:23:30,607 - socketio.server - INFO - emitting event "connected" to NixbITj0JwOduC4QAAA1 [/]
+2025-08-23 11:23:30,607 - engineio.server - INFO - ERQs5uJJODv8ygaXAAA0: Sending packet MESSAGE data 2["connected",{"sid":"NixbITj0JwOduC4QAAA1"}]
+2025-08-23 11:23:30,608 - engineio.server - INFO - ERQs5uJJODv8ygaXAAA0: Sending packet MESSAGE data 0{"sid":"NixbITj0JwOduC4QAAA1"}
+2025-08-23 11:23:30,719 - engineio.server - INFO - saW-RD22ClvzX6uZAAA2: Sending packet OPEN data {'sid': 'saW-RD22ClvzX6uZAAA2', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:30,739 - engineio.server - INFO - saW-RD22ClvzX6uZAAA2: Received packet MESSAGE data 0
+2025-08-23 11:23:30,740 - server - INFO - Client connected: 1mhwhvLoJS9iRj66AAA3
+2025-08-23 11:23:30,740 - socketio.server - INFO - emitting event "connected" to 1mhwhvLoJS9iRj66AAA3 [/]
+2025-08-23 11:23:30,741 - engineio.server - INFO - saW-RD22ClvzX6uZAAA2: Sending packet MESSAGE data 2["connected",{"sid":"1mhwhvLoJS9iRj66AAA3"}]
+2025-08-23 11:23:30,741 - engineio.server - INFO - saW-RD22ClvzX6uZAAA2: Sending packet MESSAGE data 0{"sid":"1mhwhvLoJS9iRj66AAA3"}
+2025-08-23 11:23:31,191 - engineio.server - INFO - -u42WzlKeuUng7nwAAA4: Sending packet OPEN data {'sid': '-u42WzlKeuUng7nwAAA4', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:31,243 - engineio.server - INFO - -u42WzlKeuUng7nwAAA4: Received packet MESSAGE data 0
+2025-08-23 11:23:31,244 - server - INFO - Client connected: LU34PQuP-ss-1IU6AAA5
+2025-08-23 11:23:31,245 - socketio.server - INFO - emitting event "connected" to LU34PQuP-ss-1IU6AAA5 [/]
+2025-08-23 11:23:31,245 - engineio.server - INFO - -u42WzlKeuUng7nwAAA4: Sending packet MESSAGE data 2["connected",{"sid":"LU34PQuP-ss-1IU6AAA5"}]
+2025-08-23 11:23:31,246 - engineio.server - INFO - -u42WzlKeuUng7nwAAA4: Sending packet MESSAGE data 0{"sid":"LU34PQuP-ss-1IU6AAA5"}
+2025-08-23 11:23:31,360 - engineio.server - INFO - rzA3qAkHioQDSo0oAAA6: Sending packet OPEN data {'sid': 'rzA3qAkHioQDSo0oAAA6', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:31,406 - engineio.server - INFO - rzA3qAkHioQDSo0oAAA6: Received packet MESSAGE data 0
+2025-08-23 11:23:31,407 - server - INFO - Client connected: hNEY7n0Sc82vfUBkAAA7
+2025-08-23 11:23:31,408 - socketio.server - INFO - emitting event "connected" to hNEY7n0Sc82vfUBkAAA7 [/]
+2025-08-23 11:23:31,408 - engineio.server - INFO - rzA3qAkHioQDSo0oAAA6: Sending packet MESSAGE data 2["connected",{"sid":"hNEY7n0Sc82vfUBkAAA7"}]
+2025-08-23 11:23:31,409 - engineio.server - INFO - rzA3qAkHioQDSo0oAAA6: Sending packet MESSAGE data 0{"sid":"hNEY7n0Sc82vfUBkAAA7"}
+2025-08-23 11:23:31,548 - engineio.server - INFO - rNj5wRjdFcWf7_BYAAA8: Sending packet OPEN data {'sid': 'rNj5wRjdFcWf7_BYAAA8', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:31,588 - engineio.server - INFO - rNj5wRjdFcWf7_BYAAA8: Received packet MESSAGE data 0
+2025-08-23 11:23:31,589 - server - INFO - Client connected: yvvJuA2rv3HWn7GiAAA9
+2025-08-23 11:23:31,590 - socketio.server - INFO - emitting event "connected" to yvvJuA2rv3HWn7GiAAA9 [/]
+2025-08-23 11:23:31,590 - engineio.server - INFO - rNj5wRjdFcWf7_BYAAA8: Sending packet MESSAGE data 2["connected",{"sid":"yvvJuA2rv3HWn7GiAAA9"}]
+2025-08-23 11:23:31,591 - engineio.server - INFO - rNj5wRjdFcWf7_BYAAA8: Sending packet MESSAGE data 0{"sid":"yvvJuA2rv3HWn7GiAAA9"}
+2025-08-23 11:23:31,774 - engineio.server - INFO - PBpJ-ZglumzZDLB5AAA-: Sending packet OPEN data {'sid': 'PBpJ-ZglumzZDLB5AAA-', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:31,786 - engineio.server - INFO - PBpJ-ZglumzZDLB5AAA-: Received packet MESSAGE data 0
+2025-08-23 11:23:31,787 - server - INFO - Client connected: PnKUe1MtNKS7RVNKAAA_
+2025-08-23 11:23:31,788 - socketio.server - INFO - emitting event "connected" to PnKUe1MtNKS7RVNKAAA_ [/]
+2025-08-23 11:23:31,788 - engineio.server - INFO - PBpJ-ZglumzZDLB5AAA-: Sending packet MESSAGE data 2["connected",{"sid":"PnKUe1MtNKS7RVNKAAA_"}]
+2025-08-23 11:23:31,789 - engineio.server - INFO - PBpJ-ZglumzZDLB5AAA-: Sending packet MESSAGE data 0{"sid":"PnKUe1MtNKS7RVNKAAA_"}
+2025-08-23 11:23:31,906 - engineio.server - INFO - PoyCj8dT-lQZ-VX2AABA: Sending packet OPEN data {'sid': 'PoyCj8dT-lQZ-VX2AABA', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:31,956 - engineio.server - INFO - PoyCj8dT-lQZ-VX2AABA: Received packet MESSAGE data 0
+2025-08-23 11:23:31,957 - server - INFO - Client connected: acmoHN6v6ZUSu9B0AABB
+2025-08-23 11:23:31,957 - socketio.server - INFO - emitting event "connected" to acmoHN6v6ZUSu9B0AABB [/]
+2025-08-23 11:23:31,958 - engineio.server - INFO - PoyCj8dT-lQZ-VX2AABA: Sending packet MESSAGE data 2["connected",{"sid":"acmoHN6v6ZUSu9B0AABB"}]
+2025-08-23 11:23:31,958 - engineio.server - INFO - PoyCj8dT-lQZ-VX2AABA: Sending packet MESSAGE data 0{"sid":"acmoHN6v6ZUSu9B0AABB"}
+2025-08-23 11:23:32,024 - engineio.server - INFO - wAiCskEI-WplUXicAABC: Sending packet OPEN data {'sid': 'wAiCskEI-WplUXicAABC', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:32,045 - engineio.server - INFO - wAiCskEI-WplUXicAABC: Received packet MESSAGE data 0
+2025-08-23 11:23:32,046 - server - INFO - Client connected: BnLoPyD1rFzlvL2wAABD
+2025-08-23 11:23:32,047 - socketio.server - INFO - emitting event "connected" to BnLoPyD1rFzlvL2wAABD [/]
+2025-08-23 11:23:32,047 - engineio.server - INFO - wAiCskEI-WplUXicAABC: Sending packet MESSAGE data 2["connected",{"sid":"BnLoPyD1rFzlvL2wAABD"}]
+2025-08-23 11:23:32,047 - engineio.server - INFO - wAiCskEI-WplUXicAABC: Sending packet MESSAGE data 0{"sid":"BnLoPyD1rFzlvL2wAABD"}
+2025-08-23 11:23:32,190 - engineio.server - INFO - C0PYkah0wme1B5wsAABE: Sending packet OPEN data {'sid': 'C0PYkah0wme1B5wsAABE', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:32,237 - engineio.server - INFO - C0PYkah0wme1B5wsAABE: Received packet MESSAGE data 0
+2025-08-23 11:23:32,238 - server - INFO - Client connected: UIyn0mU2jpcoxFcAAABF
+2025-08-23 11:23:32,238 - socketio.server - INFO - emitting event "connected" to UIyn0mU2jpcoxFcAAABF [/]
+2025-08-23 11:23:32,239 - engineio.server - INFO - C0PYkah0wme1B5wsAABE: Sending packet MESSAGE data 2["connected",{"sid":"UIyn0mU2jpcoxFcAAABF"}]
+2025-08-23 11:23:32,239 - engineio.server - INFO - C0PYkah0wme1B5wsAABE: Sending packet MESSAGE data 0{"sid":"UIyn0mU2jpcoxFcAAABF"}
+2025-08-23 11:23:32,547 - engineio.server - INFO - KZJWZtc_5GHFTrkVAABG: Sending packet OPEN data {'sid': 'KZJWZtc_5GHFTrkVAABG', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:32,560 - engineio.server - INFO - KZJWZtc_5GHFTrkVAABG: Received packet MESSAGE data 0
+2025-08-23 11:23:32,561 - server - INFO - Client connected: Y8ZD2zXhkWWSECGoAABH
+2025-08-23 11:23:32,562 - socketio.server - INFO - emitting event "connected" to Y8ZD2zXhkWWSECGoAABH [/]
+2025-08-23 11:23:32,562 - engineio.server - INFO - KZJWZtc_5GHFTrkVAABG: Sending packet MESSAGE data 2["connected",{"sid":"Y8ZD2zXhkWWSECGoAABH"}]
+2025-08-23 11:23:32,563 - engineio.server - INFO - KZJWZtc_5GHFTrkVAABG: Sending packet MESSAGE data 0{"sid":"Y8ZD2zXhkWWSECGoAABH"}
+2025-08-23 11:23:32,664 - engineio.server - INFO - 7w6W69e7rjW7jjhyAABI: Sending packet OPEN data {'sid': '7w6W69e7rjW7jjhyAABI', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:32,711 - engineio.server - INFO - 7w6W69e7rjW7jjhyAABI: Received packet MESSAGE data 0
+2025-08-23 11:23:32,712 - server - INFO - Client connected: oa5B0_aXJSXMZzdTAABJ
+2025-08-23 11:23:32,713 - socketio.server - INFO - emitting event "connected" to oa5B0_aXJSXMZzdTAABJ [/]
+2025-08-23 11:23:32,713 - engineio.server - INFO - 7w6W69e7rjW7jjhyAABI: Sending packet MESSAGE data 2["connected",{"sid":"oa5B0_aXJSXMZzdTAABJ"}]
+2025-08-23 11:23:32,714 - engineio.server - INFO - 7w6W69e7rjW7jjhyAABI: Sending packet MESSAGE data 0{"sid":"oa5B0_aXJSXMZzdTAABJ"}
+2025-08-23 11:23:32,854 - engineio.server - INFO - 53XiZvUsgbV1k7-gAABK: Sending packet OPEN data {'sid': '53XiZvUsgbV1k7-gAABK', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:32,877 - engineio.server - INFO - 53XiZvUsgbV1k7-gAABK: Received packet MESSAGE data 0
+2025-08-23 11:23:32,878 - server - INFO - Client connected: 8pukGZLyAc4LVIolAABL
+2025-08-23 11:23:32,879 - socketio.server - INFO - emitting event "connected" to 8pukGZLyAc4LVIolAABL [/]
+2025-08-23 11:23:32,879 - engineio.server - INFO - 53XiZvUsgbV1k7-gAABK: Sending packet MESSAGE data 2["connected",{"sid":"8pukGZLyAc4LVIolAABL"}]
+2025-08-23 11:23:32,879 - engineio.server - INFO - 53XiZvUsgbV1k7-gAABK: Sending packet MESSAGE data 0{"sid":"8pukGZLyAc4LVIolAABL"}
+2025-08-23 11:23:32,993 - engineio.server - INFO - Y2LLYiavCd0dxH_TAABM: Sending packet OPEN data {'sid': 'Y2LLYiavCd0dxH_TAABM', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:33,011 - engineio.server - INFO - Y2LLYiavCd0dxH_TAABM: Received packet MESSAGE data 0
+2025-08-23 11:23:33,013 - server - INFO - Client connected: A7zIdrO1QtP0EpO_AABN
+2025-08-23 11:23:33,013 - socketio.server - INFO - emitting event "connected" to A7zIdrO1QtP0EpO_AABN [/]
+2025-08-23 11:23:33,013 - engineio.server - INFO - Y2LLYiavCd0dxH_TAABM: Sending packet MESSAGE data 2["connected",{"sid":"A7zIdrO1QtP0EpO_AABN"}]
+2025-08-23 11:23:33,014 - engineio.server - INFO - Y2LLYiavCd0dxH_TAABM: Sending packet MESSAGE data 0{"sid":"A7zIdrO1QtP0EpO_AABN"}
+2025-08-23 11:23:33,170 - engineio.server - INFO - GW_Ylh2T7LfONrG-AABO: Sending packet OPEN data {'sid': 'GW_Ylh2T7LfONrG-AABO', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:33,223 - engineio.server - INFO - GW_Ylh2T7LfONrG-AABO: Received packet MESSAGE data 0
+2025-08-23 11:23:33,224 - server - INFO - Client connected: _D023PsKxXPcSdSXAABP
+2025-08-23 11:23:33,224 - socketio.server - INFO - emitting event "connected" to _D023PsKxXPcSdSXAABP [/]
+2025-08-23 11:23:33,225 - engineio.server - INFO - GW_Ylh2T7LfONrG-AABO: Sending packet MESSAGE data 2["connected",{"sid":"_D023PsKxXPcSdSXAABP"}]
+2025-08-23 11:23:33,225 - engineio.server - INFO - GW_Ylh2T7LfONrG-AABO: Sending packet MESSAGE data 0{"sid":"_D023PsKxXPcSdSXAABP"}
+2025-08-23 11:23:33,538 - engineio.server - INFO - GW_Ylh2T7LfONrG-AABO: Received request to upgrade to websocket
+2025-08-23 11:23:33,543 - engineio.server - INFO - GW_Ylh2T7LfONrG-AABO: Upgrade to websocket successful
+2025-08-23 11:23:33,634 - server - INFO - Client disconnected: _D023PsKxXPcSdSXAABP
+2025-08-23 11:23:33,661 - engineio.server - INFO - jUKZVf5VBjC13BPIAABQ: Sending packet OPEN data {'sid': 'jUKZVf5VBjC13BPIAABQ', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:33,680 - engineio.server - INFO - jUKZVf5VBjC13BPIAABQ: Received packet MESSAGE data 0
+2025-08-23 11:23:33,682 - server - INFO - Client connected: CTiXsu4aeTI1Shb9AABR
+2025-08-23 11:23:33,682 - socketio.server - INFO - emitting event "connected" to CTiXsu4aeTI1Shb9AABR [/]
+2025-08-23 11:23:33,683 - engineio.server - INFO - jUKZVf5VBjC13BPIAABQ: Sending packet MESSAGE data 2["connected",{"sid":"CTiXsu4aeTI1Shb9AABR"}]
+2025-08-23 11:23:33,683 - engineio.server - INFO - jUKZVf5VBjC13BPIAABQ: Sending packet MESSAGE data 0{"sid":"CTiXsu4aeTI1Shb9AABR"}
+2025-08-23 11:23:33,813 - engineio.server - INFO - Gqb0P_eJN0MFHFRuAABS: Sending packet OPEN data {'sid': 'Gqb0P_eJN0MFHFRuAABS', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:33,877 - engineio.server - INFO - Gqb0P_eJN0MFHFRuAABS: Received packet MESSAGE data 0
+2025-08-23 11:23:33,878 - server - INFO - Client connected: Rn6DF51e1y_H9maCAABT
+2025-08-23 11:23:33,878 - socketio.server - INFO - emitting event "connected" to Rn6DF51e1y_H9maCAABT [/]
+2025-08-23 11:23:33,879 - engineio.server - INFO - Gqb0P_eJN0MFHFRuAABS: Sending packet MESSAGE data 2["connected",{"sid":"Rn6DF51e1y_H9maCAABT"}]
+2025-08-23 11:23:33,879 - engineio.server - INFO - Gqb0P_eJN0MFHFRuAABS: Sending packet MESSAGE data 0{"sid":"Rn6DF51e1y_H9maCAABT"}
+2025-08-23 11:23:33,974 - engineio.server - INFO - oRT7yw5JqtTTRwgYAABU: Sending packet OPEN data {'sid': 'oRT7yw5JqtTTRwgYAABU', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:33,989 - engineio.server - INFO - oRT7yw5JqtTTRwgYAABU: Received packet MESSAGE data 0
+2025-08-23 11:23:33,990 - server - INFO - Client connected: aaeqCRU-3q5-IcdkAABV
+2025-08-23 11:23:33,991 - socketio.server - INFO - emitting event "connected" to aaeqCRU-3q5-IcdkAABV [/]
+2025-08-23 11:23:33,991 - engineio.server - INFO - oRT7yw5JqtTTRwgYAABU: Sending packet MESSAGE data 2["connected",{"sid":"aaeqCRU-3q5-IcdkAABV"}]
+2025-08-23 11:23:33,992 - engineio.server - INFO - oRT7yw5JqtTTRwgYAABU: Sending packet MESSAGE data 0{"sid":"aaeqCRU-3q5-IcdkAABV"}
+2025-08-23 11:23:34,298 - engineio.server - INFO - snknRknr75dQuQtBAABW: Sending packet OPEN data {'sid': 'snknRknr75dQuQtBAABW', 'upgrades': ['websocket'], 'pingTimeout': 20000, 'pingInterval': 25000}
+2025-08-23 11:23:34,303 - engineio.server - INFO - snknRknr75dQuQtBAABW: Received packet MESSAGE data 0
+2025-08-23 11:23:34,304 - server - INFO - Client connected: uwMfhedYngukeJEFAABX
+2025-08-23 11:23:34,304 - socketio.server - INFO - emitting event "connected" to uwMfhedYngukeJEFAABX [/]
+2025-08-23 11:23:34,305 - engineio.server - INFO - snknRknr75dQuQtBAABW: Sending packet MESSAGE data 2["connected",{"sid":"uwMfhedYngukeJEFAABX"}]
+2025-08-23 11:23:34,305 - engineio.server - INFO - snknRknr75dQuQtBAABW: Sending packet MESSAGE data 0{"sid":"uwMfhedYngukeJEFAABX"}
+2025-08-23 11:23:34,623 - engineio.server - INFO - snknRknr75dQuQtBAABW: Received request to upgrade to websocket
+2025-08-23 11:23:34,627 - engineio.server - INFO - snknRknr75dQuQtBAABW: Upgrade to websocket successful
+2025-08-23 11:23:34,989 - engineio.server - INFO - snknRknr75dQuQtBAABW: Received packet MESSAGE data 2["join_room",{"room_id":"G1RDLH","player_name":"Khách1"}]
+2025-08-23 11:23:34,989 - socketio.server - INFO - received event "join_room" from uwMfhedYngukeJEFAABX [/]
+2025-08-23 11:23:34,990 - server - INFO - Player Khách1 joined room G1RDLH
+2025-08-23 11:23:34,991 - socketio.server - INFO - uwMfhedYngukeJEFAABX is entering room G1RDLH [/]
+2025-08-23 11:23:34,991 - server - INFO - Player Khách1 joined Socket.IO room G1RDLH
+2025-08-23 11:23:34,992 - socketio.server - INFO - emitting event "room_joined" to uwMfhedYngukeJEFAABX [/]
+2025-08-23 11:23:34,992 - engineio.server - INFO - snknRknr75dQuQtBAABW: Sending packet MESSAGE data 2["room_joined",{"room_id":"G1RDLH","room_name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","player_name":"Kh\u00e1ch1","room_info":{"id":"G1RDLH","name":"Ph\u00f2ng c\u1ee7a Kh\u00e1ch","round_number":1,"current_round":{"range":[1,100],"end_time":1755923051.2006729,"total_guesses":0},"players":[{"name":"Kh\u00e1ch1","score":0,"streak":0,"correct_guesses":0}],"scores":{},"is_private":false,"max_players":10,"current_players":1}}]
+2025-08-23 11:23:34,993 - socketio.server - INFO - emitting event "player_joined" to G1RDLH [/]
+2025-08-23 11:23:34,993 - engineio.server - INFO - snknRknr75dQuQtBAABW: Sending packet MESSAGE data 2["player_joined",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch1","total_players":1}]
+2025-08-23 11:23:34,993 - server - INFO - First player joined room G1RDLH, room already has round 1 ready
+2025-08-23 11:23:34,993 - server - INFO - Player Khách1 successfully joined room G1RDLH
+2025-08-23 11:23:37,029 - engineio.server - INFO - snknRknr75dQuQtBAABW: Received packet MESSAGE data 2["leave_room"]
+2025-08-23 11:23:37,030 - socketio.server - INFO - received event "leave_room" from uwMfhedYngukeJEFAABX [/]
+2025-08-23 11:23:37,030 - socketio.server - INFO - emitting event "player_left" to G1RDLH [/]
+2025-08-23 11:23:37,031 - engineio.server - INFO - snknRknr75dQuQtBAABW: Sending packet MESSAGE data 2["player_left",{"room_id":"G1RDLH","player_name":"Kh\u00e1ch1","remaining_players":0}]
+2025-08-23 11:23:37,031 - server - INFO - Player Khách1 left room G1RDLH
+2025-08-23 11:23:37,031 - socketio.server - INFO - emitting event "room_left" to uwMfhedYngukeJEFAABX [/]
+2025-08-23 11:23:37,031 - engineio.server - INFO - snknRknr75dQuQtBAABW: Sending packet MESSAGE data 2["room_left",{"message":"\u0110\u00e3 r\u1eddi ph\u00f2ng"}]
+2025-08-23 11:23:46,963 - engineio.server - INFO - Cn4dSzIIWaFwCzYaAAAK: Sending packet PING data None
+2025-08-23 11:23:47,291 - engineio.server - INFO - BTvU5mo4wJPRsnCTAAAM: Sending packet PING data None
+2025-08-23 11:23:47,410 - server - INFO - Client disconnected: uwMfhedYngukeJEFAABX
+2025-08-23 11:23:47,943 - engineio.server - INFO - ilnkSc72NAUYyRrIAAAO: Sending packet PING data None
